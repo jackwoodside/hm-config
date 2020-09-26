@@ -148,7 +148,7 @@
   # Git
   programs.git = {
     enable = true;
-    userEmail = "jack.a.woodside@gmail.com";
+    userEmail = "20267593+0003c9fe@users.noreply.github.com";
     userName = "0003c9fe";
   };
 
