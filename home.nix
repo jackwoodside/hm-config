@@ -19,9 +19,9 @@
     # Fonts
     roboto-mono
     font-awesome
-    #(nerdfonts.override {
-    #  fonts = [ "FiraCode" "DroidSansMono" ];
-    #})
+    (nerdfonts.override {
+      withFont = "RobotoMono";
+    })
 
     # Misc.
     bitwarden-cli
@@ -46,7 +46,7 @@
     settings = {
       font = {
         size = 10.0;
-        normal.family = "RobotoMono";
+        normal.family = "RobotoMono Nerd Font";
       };      
       colors = {
         primary = {
