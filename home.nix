@@ -267,7 +267,7 @@
       " Vimtex Conceal
       highlight Conceal ctermbg=none ctermfg=red
       " Brackets
-      highlight MatchParen cterm=bold ctermbg=none ctermfg=magenta
+      highlight MatchParen cterm=bold ctermbg=none ctermfg=red
       
       " Always show signcolumns
       set signcolumn=yes
@@ -383,15 +383,15 @@
         foreground = "\${colors.foreground}";
         line-size = 2;
         padding-right = 2;
-        module-margin-left = 2;
-        module-margin-right = 2;
-        font-0 = "fixed:pixelsize=12;1";
+        module-margin-left = 1;
+        module-margin-right = 1;
+        font-0 = "RobotoMono:style=regular:pixelsize=12;1";
         font-1 = "Font Awesome 5 Brands Regular:style=regular:pixelsize=12;1";
         font-2 = "Font Awesome 5 Free Regular:style=regular:pixelsize=12;1";
         font-3 = "Font Awesome 5 Free Solid :style=regular:pixelsize=12;1";
         modules-left = "i3";
         #modules-center = "spotify";
-        #modules-right = "pulseaudio xbacklight wlan eth battery date";
+        modules-right = "pulseaudio xbacklight wlan eth battery date";
       };
       "module/i3" = {
         type = "internal/i3";
@@ -412,6 +412,60 @@
         label-urgent = "%index% %name%";
         label-urgent-background = "\${colors.alert}";
         label-urgent-padding = 2;
+      };
+      "module/pulseaudio" = {
+        type = "internal/pulseaudio";
+        label-volume = " %percentage%%";
+        label-muted = "  %percentage%%";
+        label-muted-foreground = "\${colors.foreground-alt}";
+      };
+      "module/xbacklight" = {
+        type = "internal/xbacklight";
+        label = "label =  %percentage%%";
+      };
+      "module/wlan" = {
+        type = "internal/network";
+        interface = "wlo1";
+        interval = 3;
+        label-connected = "";
+        label-disconnected = "";
+        label-disconnected-foreground = "\${colors.alert}";
+        format-disconnected-underline = "\${colors.background}";
+      };
+      "module/eth" = {
+        type = "internal/network";
+        interface = "enp0s25";
+        interval = 3;
+        label-connected = "";
+        label-disconnected = "";
+        label-disconnected-foreground = "\${colors.alert}";
+        format-disconnected-underline = "\${colors.background}";
+      };
+      "module/battery" = {
+        type = "internal/battery";
+        battery = "BAT0";
+        adapter = "AC";
+        full-at = 98;
+        poll-interval = 60;
+        time-format = "%H:%M";
+        format-charging = "<label-charging>";
+        label-charging = " %percentage%% (%time%)";
+        format-discharging = "<ramp-capacity> <label-discharging>";
+        label-discharging = "%percentage%% (%time%)";
+        format-full = "<ramp-capacity> <label-full>";
+        label-full = "%percentage%% (0:00)";
+        ramp-capacity-0 = "";
+        ramp-capacity-1 = "";
+        ramp-capacity-2 = "";
+        ramp-capacity-3 = "";
+        ramp-capacity-0-underline = "\${colors.alert}";
+      };
+      "module/date" = {
+        type = "internal/date";
+        interval = 5;
+        date = "%d-%m";
+        time = "%H:%M";
+        label = "%date% %time%";
       };
     };
   };
