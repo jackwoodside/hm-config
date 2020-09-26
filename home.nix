@@ -218,10 +218,6 @@
       " Open completion menu
       inoremap <silent><expr> <c-space> coc#refresh()
       
-      " Completion menu colours
-      highlight Pmenu ctermbg=darkgrey ctermfg=white
-      highlight PmenuSel ctermbg=green ctermfg=white
-      
       " Accept completion option
       inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
       
@@ -249,26 +245,33 @@
       let g:UltiSnipsExpandTrigger='�'
       let g:UltiSnipsJumpForwardTrigger='<tab>'
       let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
-      highlight Conceal ctermfg=red ctermbg=None
       autocmd VimLeave *.tex !tex-clear %
       autocmd FileType tex setlocal spell
       set spelllang=en_gb
       inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
       nnoremap <Leader>lw :VimtexCountWords<CR>
-      
-      " Always show signcolumns
-      set signcolumn=yes
-      highlight clear SignColumn
-
-      " Gitgutter settings
-      highlight GitGutterAdd ctermfg=green
-      highlight GitGutterChange ctermfg=yellow
-      highlight GitGutterDelete ctermfg=red
 
       " Fugitive settings
       nnoremap <silent> <Leader>ga :G add %<CR>
       nnoremap <silent> <Leader>gc :G commit<CR>
       nnoremap <silent> <Leader>gp :G push<CR>
+      
+      " Colours
+      " Gitgutter
+      highlight GitGutterAdd ctermfg=green
+      highlight GitGutterChange ctermfg=yellow
+      highlight GitGutterDelete ctermfg=red
+      # CoC menu
+      highlight Pmenu ctermbg=darkgrey ctermfg=white
+      highlight PmenuSel ctermbg=green ctermfg=white
+      # Vimtex Conceal
+      highlight Conceal ctermbg=none ctermfg=red
+      # Brackets
+      highlight MatchParen cterm=bold ctermbg=none ctermfg=magenta
+      
+      " Always show signcolumns
+      set signcolumn=yes
+      highlight clear SignColumn
       
       " Line numbers
       set number relativenumber
