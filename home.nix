@@ -159,6 +159,7 @@
       package = pkgs.arc-theme;
       name = "Arc-Dark";
     };
+    iconTheme.name = "Arc";
   };
 
   # Htop
@@ -354,6 +355,62 @@
       i3GapsSupport = true;
     };
     script = "polybar main &";
+    config = {
+      "colors" = {
+        background = "#1b1918";
+        background-alt = "#766e6b";
+        foreground = "#f1efee";
+        foreground-alt = "#a8a19f";
+        primary = "#f22c40";
+        secondary = "#f22c40";
+        alert = "#f22c40";
+      };
+      "settings" = {
+        screenchange-reload = true;
+      };
+      "global/wm" = {
+        margin-top = 0;
+        margin-bottom = 0;
+      };
+      "bar/main" = {
+        height = 25;
+        fixed-center = "true";
+        bottom = "true";
+        background = "\${colors.background}";
+        foreground = "\${colors.foreground}";
+        line-size = 2;
+        padding-right = 2;
+        module-margin-left = 2;
+        module-margin-right = 2;
+        font-0 = "fixed:pixelsize=12;1";
+        font-1 = "Font Awesome 5 Brands Regular:style=regular:pixelsize=12;1";
+        font-2 = "Font Awesome 5 Free Regular:style=regular:pixelsize=12;1";
+        font-3 = "Font Awesome 5 Free Solid :style=regular:pixelsize=12;1";
+        modules-left = "i3";
+        #modules-center = "spotify";
+        #modules-right = "pulseaudio xbacklight wlan eth battery date";
+      };
+      "module/i3" = {
+        type = "internal/i3";
+        strip-wsnumbers = "true";
+        enable-click = "false";
+        enable-scroll = "false";
+        label-focused = "%index% %name%";
+        label-focused-background = "\${colors.background}";
+        label-focused-underline= "\${colors.background}";
+        label-focused-padding = 2;
+        label-unfocused = "%index% %name%";
+        label-unfocused-foreground = "\${colors.foreground-alt}";
+        label-unfocused-padding = 2;
+        label-visible = "%index% %name%";
+        label-visible-background = "\${self.label-focused-background}";
+        label-visible-underline = "\${self.label-focused-underline}";
+        label-visible-padding = "\${self.label-focused-padding}";
+        label-urgent = "%index% %name%";
+        label-urgent-background = "\${colors.alert}";
+        label-urgent-padding = 2;
+      };
+    };
   };
 
   # Rofi
