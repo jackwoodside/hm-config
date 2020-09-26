@@ -1,6 +1,6 @@
 
 { config, pkgs, ... }:
-# todo: polybar, i3 fix mpv, fix rofi, nerdfonts
+# todo: polybar audio and startup i3, i3, fix mpv, fix rofi, nerdfonts
 # ranger, spicetify, .local/bin, .local/share, bwmenu
 {
   # Let Home Manager install and manage itself.
@@ -359,7 +359,7 @@
     enable = true;
     package = pkgs.polybar.override {
       i3GapsSupport = true;
-      alsaSupport = true;
+      pulseSupport = true;
     };
     script = "polybar main &";
     config = {
