@@ -261,12 +261,12 @@
       highlight GitGutterAdd ctermfg=green
       highlight GitGutterChange ctermfg=yellow
       highlight GitGutterDelete ctermfg=red
-      # CoC menu
+      " CoC menu
       highlight Pmenu ctermbg=darkgrey ctermfg=white
       highlight PmenuSel ctermbg=green ctermfg=white
-      # Vimtex Conceal
+      " Vimtex Conceal
       highlight Conceal ctermbg=none ctermfg=red
-      # Brackets
+      " Brackets
       highlight MatchParen cterm=bold ctermbg=none ctermfg=magenta
       
       " Always show signcolumns
