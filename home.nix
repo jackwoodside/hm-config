@@ -1,6 +1,6 @@
 
 { config, pkgs, ... }:
-# todo: polybar, i3 xsession stuff, fix mpv, fix rofi, nerdfonts
+# todo: polybar, i3 fix mpv, fix rofi, nerdfonts
 # ranger, spicetify, .local/bin, .local/share, bwmenu
 {
   # Let Home Manager install and manage itself.
@@ -253,7 +253,7 @@
       autocmd FileType tex setlocal spell
       set spelllang=en_gb
       inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
-      nnoremap <Leader>w :VimtexCountWords<CR>
+      nnoremap <Leader>lw :VimtexCountWords<CR>
       
       " Always show signcolumns
       set signcolumn=yes
@@ -263,6 +263,11 @@
       highlight GitGutterAdd ctermfg=green
       highlight GitGutterChange ctermfg=yellow
       highlight GitGutterDelete ctermfg=red
+
+      " Fugitive settings
+      nnoremap <silent> <Leader>ga :G add %<CR>
+      nnoremap <silent> <Leader>gc :G commit<CR>
+      nnoremap <silent> <Leader>gp :G push<CR>
       
       " Line numbers
       set number relativenumber
@@ -349,156 +354,6 @@
       i3GapsSupport = true;
     };
     script = "polybar main &";
-    # Change to config.
-    extraConfig = "
-[colors]
-background = #1b1918
-background-alt = #766e6b
-foreground = #f1efee
-foreground-alt = #a8a19f
-primary = #f22c40
-secondary = #f22c40
-alert = #f22c40
-  
-[bar/main]
-height = 25
-fixed-center = true
-bottom = true
-  
-background = #1b1918
-foreground = #f1efee
-  
-;underline size
-line-size = 2
-
-;right side padding
-padding-right = 2
-
-;module padding
-module-margin-left = 2
-module-margin-right = 2
-
-font-0 = RobotoMono:style=regular:pixelsize=10;1
-font-1 = Font Awesome 5 Brands Regular:style=regular:pixelsize=10;1
-font-2 = Font Awesome 5 Free Regular:style=regular:pixelsize=10;1
-font-3 = Font Awesome 5 Free Solid :style=regular:pixelsize=10;1
-
-modules-left = i3
-;modules-center = spotify
-modules-right = pulseaudio xbacklight wlan eth battery date
-
-[module/i3]
-type = internal/i3
-
-strip-wsnumbers = true
-
-enable-click = false
-enable-scroll = false
-
-; focused = Active workspace on focused monitor
-label-focused = %index% %name%
-label-focused-background = #1b1918
-label-focused-underline= #1b1918
-label-focused-padding = 2
-
-; unfocused = Inactive workspace on any monitor
-label-unfocused = %index% %name%
-label-unfocused-foreground = #a8a19f
-label-unfocused-padding = 2
-
-; visible = Active workspace on unfocused monitor
-label-visible = %index% %name%
-label-visible-background = #1b1918
-label-visible-underline = #1b1918
-label-visible-padding = 2
-
-; urgent = Workspace with urgency hint set
-label-urgent = %index% %name%
-label-urgent-background = #f22c40
-label-urgent-padding = 2
-
-[module/xbacklight]
-type = internal/xbacklight
-
-label =  %percentage%%
-
-[module/wlan]
-type = internal/network
-interface = wlo1
-interval = 3.0
-
-label-connected = 
-
-label-disconnected = 
-label-disconnected-foreground = #f22c40
-format-disconnected-underline = #1b1918
-
-[module/eth]
-type = internal/network
-interface = enp0s25
-interval = 3.0
-
-label-connected = 
-
-label-disconnected = 
-label-disconnected-foreground = #f22c40
-format-disconnected-underline = #1b1918
-
-[module/date]
-type = internal/date
-interval = 5
-
-date = %d-%m
-
-time = %H:%M
-
-label = %date% %time%
-
-[module/pulseaudio]
-type = internal/pulseaudio
-
-label-volume =   %percentage%%
-
-label-muted =   %percentage%%
-label-muted-foreground = #a8a19f
-
-[module/battery]
-type = internal/battery
-battery = BAT0
-adapter = AC
-full-at = 98
-poll-interval = 60
-
-time-format = %H:%M
-
-format-charging = <label-charging>
-label-charging =  %percentage%% (%time%)
-
-format-discharging = <ramp-capacity> <label-discharging>
-label-discharging = %percentage%% (%time%)
-
-format-full = <ramp-capacity> <label-full>
-label-full = %percentage%% (0:00)
-
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-0-underline = #f22c40
-
-;[module/spotify]
-;type = custom/script
-;interval = 1
-;format =  <label>
-;exec = python ~/.local/bin/spotify_status.py -f '{artist} - {song}' -t 100
-
-[settings]
-screenchange-reload = true
-
-[global/wm]
-margin-top = 0
-margin-bottom = 0
-    ";
   };
 
   # Rofi
@@ -585,6 +440,7 @@ margin-bottom = 0
 
         bars = [];
       };
+      # Fix 
       extraConfig = ''
         # media controls 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1% #increase sound volume
