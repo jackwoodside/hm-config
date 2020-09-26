@@ -159,7 +159,10 @@
       package = pkgs.arc-theme;
       name = "Arc-Dark";
     };
-    iconTheme.name = "Arc";
+    iconTheme = {
+      package = pkgs.arc-icon-theme;
+      name = "Arc";
+    };
   };
 
   # Htop
@@ -356,6 +359,7 @@
     enable = true;
     package = pkgs.polybar.override {
       i3GapsSupport = true;
+      alsaSupport = true;
     };
     script = "polybar main &";
     config = {
