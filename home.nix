@@ -1,6 +1,6 @@
 
 { config, pkgs, ... }:
-# todo: polybar audio and startup i3, i3, fix mpv, fix rofi, nerdfonts
+# todo: polybar restart in i3, i3, fix mpv, fix rofi
 # ranger, spicetify, .local/bin, .local/share, bwmenu
 {
   # Let Home Manager install and manage itself.
@@ -257,9 +257,10 @@
       nnoremap <Leader>lw :VimtexCountWords<CR>
 
       " Fugitive settings
-      nnoremap <silent> <Leader>ga :G add %<CR>
+      nnoremap <silent> <Leader>ga :G add <C-R>%<BS><BS><BS>*<CR>
       nnoremap <silent> <Leader>gc :G commit<CR>
       nnoremap <silent> <Leader>gp :G push<CR>
+      nnoremap <silent> <Leader>gs :G status<CR>
       
       " Colours
       " Gitgutter
