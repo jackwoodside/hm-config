@@ -20,7 +20,7 @@
     roboto-mono
     font-awesome
     (nerdfonts.override {
-      withFont = "RobotoMono";
+      fonts = [ "RobotoMono" ];
     })
 
     # Misc.
@@ -196,9 +196,11 @@
       coc-vimtex
       fzf-vim
       ultisnips
+      vim-commentary
       vim-fugitive
       vim-gitgutter
       vim-repeat
+      vim-sneak
       vimtex
       vim-nix
     ];
