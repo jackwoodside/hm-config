@@ -253,8 +253,35 @@
       " Word count
       nnoremap <Leader>lw :VimtexCountWords<CR>
 
-      " Statusline
+      " Statusline settings
+      " Always show
       set laststatus=2
+      " Disable spell language block
+      let g:airline_detect_spell=0
+      " Shortened mode indicator
+      let g:airline_mode_map = {
+        \ '__'     : '-',
+        \ 'c'      : 'COM',
+        \ 'i'      : 'INS',
+        \ 'ic'     : 'INS',
+        \ 'ix'     : 'INS',
+        \ 'n'      : 'NOR',
+        \ 'multi'  : 'MUL',
+        \ 'ni'     : 'NOR',
+        \ 'no'     : 'NOR',
+        \ 'R'      : 'R',
+        \ 'Rv'     : 'R',
+        \ 's'      : 'S',
+        \ 'S'      : 'S',
+        \ '^S'     : 'S',
+        \ 't'      : 'T',
+        \ 'v'      : 'VIS',
+        \ 'V'      : 'VIS',
+        \ '^V'     : 'VIS',
+        \ }
+      " Disable filetype/encoding info
+        let g:airline_section_x = ''\''
+        let g:airline_section_y = ''\''
 
       " Colours
       " Brackets
@@ -346,8 +373,8 @@
       cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
       " Automatically remove trailing whitespace and newlines.
-      autocmd BufWritePre * %s/\s\+$//e
-      autocmd BufWritepre * %s/\n\+\%$//e
+      autocmd BufWritePre * ks | silent %s/\s\+$//e | 's
+      autocmd BufWritepre * ks | silent %s/\n\+\%$//e | 's
 
       " Misc
       set nocompatible
