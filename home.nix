@@ -190,19 +190,20 @@
     vimAlias = true;
     withNodeJs = true;
     plugins = with pkgs.vimPlugins; [
+      vim-airline
       auto-pairs
       coc-nvim
       coc-python
       coc-vimtex
-      fzf-vim
-      ultisnips
       vim-commentary
       vim-fugitive
+      fzf-vim
       vim-gitgutter
+      vim-nix
       vim-repeat
       vim-sneak
+      ultisnips
       vimtex
-      vim-nix
     ];
     extraConfig = ''
       " CoC settings
@@ -252,6 +253,9 @@
       " Word count
       nnoremap <Leader>lw :VimtexCountWords<CR>
 
+      " Statusline
+      set laststatus=2
+
       " Colours
       " Brackets
       highlight MatchParen cterm=bold ctermbg=none ctermfg=red
@@ -294,7 +298,7 @@
       set softtabstop=4
 
       " Height below status bar
-      set cmdheight=2
+      set cmdheight=1
 
       " CursorHold timing
       set updatetime=300
@@ -349,7 +353,6 @@
       set nocompatible
       set encoding=utf-8
       set t_Co=256
-      set laststatus=2
     '';
   };
 
