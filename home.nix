@@ -227,7 +227,7 @@
 
       " Fugitive settings
       nnoremap <silent> <Leader>ga :G add %:r\.*<CR>
-      nnoremap <Leader>gc :G commit -m ""<Left>
+      nnoremap <Leader>gc :silent G commit -m ""<Left>
       nnoremap <silent> <Leader>gp :G push<CR>
       nnoremap <silent> <Leader>gs :G status<CR>
 
@@ -279,9 +279,8 @@
         \ 'V'      : 'VIS',
         \ '^V'     : 'VIS',
         \ }
-      " Disable filetype/encoding info
-        let g:airline_section_x = ''\''
-        let g:airline_section_y = ''\''
+      " Disable /encoding info
+      let g:airline_section_y = ''\''
 
       " Colours
       " Brackets
