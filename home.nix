@@ -117,19 +117,19 @@
         context = "ctrl+shift+period";
       };
       urgency_normal = {
-        background = "#1b1918";
-        foreground = "#f1efee";
+        background = "#181818";
+        foreground = "#b9b9b9";
         timeout = 5;
       };
       urgency_low = {
-        background = "#1b1918";
-        foreground = "#f1efee";
+        background = "#181818";
+        foreground = "#b9b9b9";
         timeout = 5;
       };
       urgency_critical = {
-        background = "#1b1918";
-        foreground = "#f1efee";
-        frame_color = "#f22c40";
+        background = "#181818";
+        foreground = "#b9b9b9";
+        frame_color = "#ed4a46";
         timeout = 0;
       };
     };
@@ -424,13 +424,13 @@
     script = "polybar main &";
     config = {
       "colors" = {
-        background = "#1b1918";
-        background-alt = "#766e6b";
-        foreground = "#f1efee";
-        foreground-alt = "#a8a19f";
-        primary = "#f22c40";
-        secondary = "#f22c40";
-        alert = "#f22c40";
+        background = "#181818";
+        background-alt = "#252525";
+        foreground = "#b9b9b9";
+        foreground-alt = "#777777";
+        primary = "#ed4a46";
+        secondary = "#ed4a46";
+        alert = "#ed4a46";
       };
       "settings" = {
         screenchange-reload = true;
@@ -480,7 +480,7 @@
       "module/pulseaudio" = {
         type = "internal/pulseaudio";
         label-volume = " %percentage%%";
-        label-muted = "  %percentage%%";
+        label-muted = " %percentage%%";
         label-muted-foreground = "\${colors.foreground-alt}";
       };
       "module/xbacklight" = {
@@ -580,39 +580,39 @@
 
         colors = {
           focused = {
-            background = "#f1efee";
-            border = "#f1efee";
-            childBorder = "#f1efee";
-            indicator = "#f1efee";
-            text = "#f1efee";
+            background = "#b9b9b9";
+            border = "#b9b9b9";
+            childBorder = "#b9b9b9";
+            indicator = "#b9b9b9";
+            text = "#b9b9b9";
           };
           focusedInactive = {
-            background = "#a8a19f";
-            border = "#a8a19f";
-            childBorder = "#a8a19f";
-            indicator = "#a8a19f";
-            text = "#a8a19f";
+            background = "#777777";
+            border = "#777777";
+            childBorder = "#777777";
+            indicator = "#777777";
+            text = "#777777";
           };
           placeholder = {
-            background = "#a8a19f";
-            border = "#a8a19f";
-            childBorder = "#a8a19f";
-            indicator = "#a8a19f";
-            text = "#a8a19f";
+            background = "#777777";
+            border = "#777777";
+            childBorder = "#777777";
+            indicator = "#777777";
+            text = "#777777";
           };
           unfocused = {
-            background = "#a8a19f";
-            border = "#a8a19f";
-            childBorder = "#a8a19f";
-            indicator = "#a8a19f";
-            text = "#a8a19f";
+            background = "#777777";
+            border = "#777777";
+            childBorder = "#777777";
+            indicator = "#777777";
+            text = "#777777";
           };
           urgent = {
-            background = "#a8a19f";
-            border = "#a8a19f";
-            childBorder = "#a8a19f";
-            indicator = "#a8a19f";
-            text = "#a8a19f";
+            background = "#777777";
+            border = "#777777";
+            childBorder = "#777777";
+            indicator = "#777777";
+            text = "#777777";
           };
         };
 
