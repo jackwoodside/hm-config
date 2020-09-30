@@ -1,8 +1,8 @@
 
 { config, pkgs, ... }:
-# TODO: polybar restart in i3, i3, fix mpv, fix rofi
+# TODO: polybar restart in i3, i3, fix mpv
 # ranger, spicetify, .local/bin, .local/share, bwmenu
-# nvim snippets and colourscheme
+# Datafiles for nvim snippets and colourscheme, rofi theme
 {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -544,7 +544,14 @@
     scrollbar = false;
     separator = "solid";
     width = 600;
-    # TODO: drun-match-fields, drun-display-format, disable history, eh, scroll method, display-drun, theming
+    theme = "~/.local/share/rofi.rasi";
+    extraConfig = ''
+      rofi.drun-match-fields: name
+      rofi.drun-display-format: {name}
+      rofi.disable-history: true
+      rofi.scroll-method: 1
+      rofi.display-drun: run
+    '';
   };
 
   # Unclutter
