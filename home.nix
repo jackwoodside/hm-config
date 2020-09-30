@@ -118,17 +118,17 @@
       };
       urgency_normal = {
         background = "#181818";
-        foreground = "#b9b9b9";
+        foreground = "#dedede";
         timeout = 5;
       };
       urgency_low = {
         background = "#181818";
-        foreground = "#b9b9b9";
+        foreground = "#dedede";
         timeout = 5;
       };
       urgency_critical = {
         background = "#181818";
-        foreground = "#b9b9b9";
+        foreground = "#dedede";
         frame_color = "#ed4a46";
         timeout = 0;
       };
@@ -266,6 +266,10 @@
             \              [ 'readonly', 'filename' ] ],
             \   'right': [ [ 'positioninfo' ],
             \              [ 'vimtexcount' ] ]
+            \ },
+            \ 'inactive': {
+            \   'left':  [ [ 'filename' ] ],
+            \   'right': [ [ 'positioninfo' ] ]
             \ },
             \ 'component_function': {
             \ 'gitinfo': 'LightlineGit',
@@ -426,7 +430,7 @@
       "colors" = {
         background = "#181818";
         background-alt = "#252525";
-        foreground = "#b9b9b9";
+        foreground = "#dedede";
         foreground-alt = "#777777";
         primary = "#ed4a46";
         secondary = "#ed4a46";
@@ -580,11 +584,11 @@
 
         colors = {
           focused = {
-            background = "#b9b9b9";
-            border = "#b9b9b9";
-            childBorder = "#b9b9b9";
-            indicator = "#b9b9b9";
-            text = "#b9b9b9";
+            background = "#dedede";
+            border = "#dedede";
+            childBorder = "#dedede";
+            indicator = "#dedede";
+            text = "#dedede";
           };
           focusedInactive = {
             background = "#777777";
