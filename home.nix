@@ -1,7 +1,8 @@
 
 { config, pkgs, ... }:
-# todo: polybar restart in i3, i3, fix mpv, fix rofi
+# TODO: polybar restart in i3, i3, fix mpv, fix rofi
 # ranger, spicetify, .local/bin, .local/share, bwmenu
+# nvim snippets and colourscheme
 {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -50,28 +51,28 @@
       };
       colors = {
         primary = {
-          background = "#1b1918";
-          foreground = "#a8a19f";
+          background = "#181818";
+          foreground = "#b9b9b9";
         };
         normal = {
-          black = "#1b1918";
-          red = "#f22c40";
-          green = "#5ab738";
-          yellow = "#d5911a";
-          blue = "#407ee7";
-          magenta = "#6666ea";
-          cyan = "#00ad9c";
-          white = "#a8a19f";
+          black = "#252525";
+          red = "#ed4a46";
+          green = "#70b433";
+          yellow = "#dbb32d";
+          blue = "#368aeb";
+          magenta = "#eb6eb7";
+          cyan = "#3fc5b7";
+          white = "#777777";
         };
         bright = {
-          black = "#1b1918";
-          red = "#f22c40";
-          green = "#5ab738";
-          yellow = "#d5911a";
-          blue = "#407ee7";
-          magenta = "#6666ea";
-          cyan = "#00ad9c";
-          white = "#a8a19f";
+          black = "#3b3b3b";
+          red = "#ff5e56";
+          green = "#83c746";
+          yellow = "#efc541";
+          blue = "#4f9cfe";
+          magenta = "#ff81ca";
+          cyan =  "#56d8c9";
+          white = "#dedede";
         };
       };
     };
