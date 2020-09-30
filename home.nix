@@ -191,7 +191,6 @@
     vimAlias = true;
     withNodeJs = true;
     plugins = with pkgs.vimPlugins; [
-      vim-airline
       auto-pairs
       coc-nvim
       coc-python
@@ -200,6 +199,7 @@
       vim-fugitive
       fzf-vim
       vim-gitgutter
+      lightline-vim
       vim-nix
       vim-repeat
       vim-sneak
@@ -228,7 +228,7 @@
 
       " Fugitive settings
       nnoremap <silent> <Leader>ga :G add %:r\.*<CR>
-      nnoremap <Leader>gc :silent G commit -m ""<Left>
+      nnoremap <silent> <Leader>gc :silent G commit<CR>
       nnoremap <silent> <Leader>gp :G push<CR>
       nnoremap <silent> <Leader>gs :G status<CR>
 
@@ -251,50 +251,72 @@
       autocmd FileType tex setlocal spell
       set spelllang=en_gb
       inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
-      " Word count
-      nnoremap <Leader>lw :VimtexCountWords<CR>
 
       " Statusline settings
       " Always show
       set laststatus=2
-      " Disable spell language block
-      let g:airline_detect_spell=0
-      " Shortened mode indicator
-      let g:airline_mode_map = {
-        \ '__'     : '-',
-        \ 'c'      : 'COM',
-        \ 'i'      : 'INS',
-        \ 'ic'     : 'INS',
-        \ 'ix'     : 'INS',
-        \ 'n'      : 'NOR',
-        \ 'multi'  : 'MUL',
-        \ 'ni'     : 'NOR',
-        \ 'no'     : 'NOR',
-        \ 'R'      : 'R',
-        \ 'Rv'     : 'R',
-        \ 's'      : 'S',
-        \ 'S'      : 'S',
-        \ '^S'     : 'S',
-        \ 't'      : 'T',
-        \ 'v'      : 'VIS',
-        \ 'V'      : 'VIS',
-        \ '^V'     : 'VIS',
-        \ }
-      " Disable /encoding info
-      let g:airline_section_y = ''\''
+      " Remove vim's and shorten lightline's mode indicator
+      set noshowmode
+      " General settings
+      let g:lightline = {
+            \ 'colorscheme': 'selenized_black',
+            \ 'active': {
+            \   'left':  [ [ 'mode' ],
+            \              [ 'gitinfo' ],
+            \              [ 'readonly', 'filename' ] ],
+            \   'right': [ [ 'positioninfo' ],
+            \              [ 'vimtexcount' ] ]
+            \ },
+            \ 'component_function': {
+            \ 'gitinfo': 'LightlineGit',
+            \ 'filename': 'LightlineFilename',
+            \ 'vimtexcount': 'LightlineTexWordcount',
+            \ 'positioninfo': 'LightlinePosition'
+            \ },
+            \ 'mode_map': {
+            \ 'n' : 'NOR',
+            \ 'i' : 'INS',
+            \ 'R' : 'REP',
+            \ 'v' : 'VIS',
+            \ 'V' : 'VLN',
+            \ "\<C-v>" : 'VBL',
+            \ 'c' : 'COM',
+            \ },
+            \ }
+      " TODO unpushed changes indicator
+      function! LightlineGit()
+              let branch = FugitiveHead()
+              let [a,m,r] = GitGutterGetHunkSummary()
+              return '+' . a . ' ~' . m . ' -' . r . '  ' . branch
+      endfunction
+      function! LightlineFilename()
+              let filename = expand('%:t') !=# ''\'' ? expand('%:t') : '[No Name]'
+              let modified = &modified ? ' [+]' : ''\''
+              return filename . modified
+      endfunction
+      function! LightlineTexWordcount()
+              let words = 8 "vimtex#misc#wordcount()
+              return words . 'W'
+      endfunction
+      function! LightlinePosition()
+              return (100 * line('.') / line('$')) . '%  ' . line('.') . '/' . line('$')
+      endfunction
 
-      " Colours
-      " Brackets
-      highlight MatchParen cterm=bold ctermbg=none ctermfg=red
+      " Theming
+      " Colourscheme
+      set termguicolors
+      set background=dark
+      colorscheme selenized_bw
       " CoC menu
-      highlight Pmenu ctermbg=darkgrey ctermfg=black
-      highlight PmenuSel ctermbg=green ctermfg=black
-      " Gitgutter
-      highlight GitGutterAdd ctermfg=green
-      highlight GitGutterChange ctermfg=yellow
-      highlight GitGutterDelete ctermfg=red
+      highlight Pmenu guibg=DarkGrey guifg=Black
+      highlight PmenuSel guibg='#70b433' guifg=Black
       " Vimtex Conceal
-      highlight Conceal ctermbg=none ctermfg=red
+      highlight Conceal guibg=None guifg=LightRed
+
+      " Jump between todo comments
+      " TODO fix these to jump back properly, and not display messages and highlighting for failed jumps
+      nmap <silent> ]t :set nowrapscan<CR> /TODO<CR> :nohlsearch<CR> :set wrapscan<CR>
+      nmap <silent> [t :set nowrapscan<CR> ?TODO<CR> :nohlsearch<CR> :set wrapscan<CR>
 
       " Always show signcolumns
       set signcolumn=yes
@@ -522,7 +544,7 @@
     scrollbar = false;
     separator = "solid";
     width = 600;
-    # todo: drun-match-fields, drun-display-format, disable history, eh, scroll method, display-drun, theming
+    # TODO: drun-match-fields, drun-display-format, disable history, eh, scroll method, display-drun, theming
   };
 
   # Unclutter
