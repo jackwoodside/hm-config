@@ -1,8 +1,7 @@
-
 { config, pkgs, ... }:
-# TODO: polybar restart in i3, i3, fix mpv
+# TODO
+# polybar restart in i3, i3, fix mpv
 # ranger, spicetify, .local/bin, .local/share, bwmenu
-# Datafiles for nvim snippets and colourscheme, rofi theme
 {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -312,8 +311,8 @@
       set background=dark
       colorscheme selenized_bw
       " CoC menu
-      highlight Pmenu guibg=DarkGrey guifg=Black
-      highlight PmenuSel guibg='#70b433' guifg=Black
+      autocmd ColorScheme * highlight Pmenu guibg=DarkGrey guifg=Black
+      autocmd ColorScheme * highlight PmenuSel guibg='#70b433' guifg=Black
       " Vimtex Conceal
       highlight Conceal guibg=None guifg=LightRed
 
@@ -399,8 +398,8 @@
       cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
       " Automatically remove trailing whitespace and newlines.
-      autocmd BufWritePre * ks | silent %s/\s\+$//e | 's
-      autocmd BufWritepre * ks | silent %s/\n\+\%$//e | 's
+      autocmd BufWritePre * silent %s/\s\+$//e | norm! ``
+      autocmd BufWritePre * silent %s/\n\+\%$//e | norm! ``
 
       " Misc
       set nocompatible
@@ -408,6 +407,8 @@
       set t_Co=256
     '';
   };
+  xdg.configFile."nvim/UltiSnips/tex.snippets".source = ./tex.snippets;
+  xdg.configFile."nvim/colors/selenized_bw.vim".source = ./selenized_bw.vim;
 
   # Picom
   services.picom = {
@@ -557,6 +558,7 @@
       rofi.display-drun: run
     '';
   };
+  xdg.dataFile."rofi.rasi".source = ./rofi.rasi;
 
   # Unclutter
   services.unclutter = {
@@ -668,6 +670,7 @@
   programs.zsh = {
     enable = true;
     enableAutosuggestions = true;
+    enableCompletion = true;
     autocd = true;
     dotDir = ".config/zsh";
     initExtra = ''
