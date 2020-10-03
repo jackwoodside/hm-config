@@ -1,5 +1,6 @@
 { config, pkgs, ... }:
 # TODO
+# laptop polybar backlight
 # polybar restart in i3, i3, fix mpv
 # ranger, spicetify, .local/bin, .local/share, bwmenu
 # Datafile (text in here) for networkmanager_dmenu config
@@ -44,6 +45,7 @@
     spotify
     steam
     sxiv
+    unzip
     xclip
   ];
 
