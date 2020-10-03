@@ -2,6 +2,11 @@
 # TODO
 # polybar restart in i3, i3, fix mpv
 # ranger, spicetify, .local/bin, .local/share, bwmenu
+# Datafile (text in here) for networkmanager_dmenu config
+# Different home-manager profiles for laptop and desktop (
+#    alacritty font size, networkmanager_dmenu
+#  )
+# Remove temporary programs
 {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -24,6 +29,7 @@
     })
 
     # Misc.
+    arandr # Temporary
     bitwarden-cli
     discord
     exa
@@ -31,6 +37,7 @@
     gimp
     libnotify
     maim
+    networkmanager_dmenu
     playerctl
     ranger
     ripgrep
@@ -45,7 +52,7 @@
     enable = true;
     settings = {
       font = {
-        size = 10.0;
+        size = 8.0;
         normal.family = "RobotoMono Nerd Font";
       };
       colors = {
@@ -409,6 +416,12 @@
   };
   xdg.configFile."nvim/UltiSnips/tex.snippets".source = ./tex.snippets;
   xdg.configFile."nvim/colors/selenized_bw.vim".source = ./selenized_bw.vim;
+
+  # Network Manager
+  xdg.configFile."networkmanager_dmenu/config.ini".text = ''
+    [dmenu]
+    dmenu_command = rofi
+  '';
 
   # Picom
   services.picom = {
