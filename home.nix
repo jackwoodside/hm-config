@@ -2,8 +2,7 @@
 # TODO
 # laptop polybar backlight
 # polybar restart in i3, i3, fix mpv
-# ranger, spicetify, .local/bin, .local/share, bwmenu
-# Datafile (text in here) for networkmanager_dmenu config
+# spicetify, .local/bin, .local/share, bwmenu
 # Different home-manager profiles for laptop and desktop (
 #    alacritty font size, networkmanager_dmenu
 #  )
@@ -38,8 +37,9 @@
     gimp
     libnotify
     maim
-    networkmanager_dmenu
+    # networkmanager_dmenu # Laptop
     playerctl
+    python
     ranger
     ripgrep
     spotify
@@ -54,7 +54,7 @@
     enable = true;
     settings = {
       font = {
-        size = 8.0;
+        size = 10.0; # 10d/8l
         normal.family = "RobotoMono Nerd Font";
       };
       colors = {
@@ -553,6 +553,9 @@
       };
     };
   };
+
+  # Ranger
+  xdg.configFile."ranger/commands.py".source = ./tex.snippets;
 
   # Rofi
   programs.rofi = {
