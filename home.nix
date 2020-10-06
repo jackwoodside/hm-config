@@ -38,8 +38,10 @@
     gimp
     libnotify
     maim
+    mathematica
     networkmanager_dmenu
     playerctl
+    pavucontrol # Temporary
     ranger
     ripgrep
     spotify
@@ -409,6 +411,9 @@
       " Automatically remove trailing whitespace and newlines.
       autocmd BufWritePre * silent %s/\s\+$//e | norm! ``
       autocmd BufWritePre * silent %s/\n\+\%$//e | norm! ``
+
+      " Automatically remove double spaces caused by UltiSnips
+      autocmd BufWritePre * silent %s/  \$/ \$/e | norm! ``
 
       " Misc
       set nocompatible
