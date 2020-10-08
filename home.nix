@@ -37,8 +37,8 @@
     gimp
     libnotify
     maim
-    mathematica
-    networkmanager_dmenu
+    mathematica # Laptop
+    networkmanager_dmenu # Laptop
     pavucontrol # Temporary
     playerctl
     python3Minimal
@@ -47,8 +47,10 @@
     spotify
     steam
     sxiv
+    # teams
     unzip
     xclip
+    zoom-us
   ];
 
   # Alacritty
@@ -56,7 +58,7 @@
     enable = true;
     settings = {
       font = {
-        size = 10.0; # 10d/8l
+        size = 8.0; # 10d/8l
         normal.family = "RobotoMono Nerd Font";
       };
       colors = {
