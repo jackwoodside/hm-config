@@ -674,6 +674,11 @@
         bindsym XF86AudioStop exec playerctl stop
         bindsym XF86AudioNext exec playerctl next
         bindsym XF86AudioPrev exec playerctl previous
+        # screenshot controls
+        bindsym Shift+Print exec maim -u -s ~/Pictures/$(date +%F-%s).png
+        bindsym --release Print exec maim -u -s | xclip -selection clipboard -t image/png
+        bindsym $mod+Print exec maim -u ~/Pictures/$(date +%F-%s).png
+        exec systemctl restart --user polybar.service
       '';
     };
   };
