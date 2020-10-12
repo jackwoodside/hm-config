@@ -730,6 +730,7 @@
       pd = "mpv --really-quiet $PWD & disown && exit";
       gs = "git status -uno";
       gsa = "git status";
+      mathematica = "USE_WOLFRAM_LD_LIBRARY_PATH=1 Mathematica & disown && exit";
     };
   };
 
