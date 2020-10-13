@@ -1,5 +1,6 @@
 { config, pkgs, ... }:
 # TODO
+# vim stuff
 # laptop polybar backlight
 # polybar restart in i3, i3, fix mpv
 # spicetify, .local/bin, .local/share, bwmenu
@@ -423,8 +424,10 @@
       set t_Co=256
     '';
   };
-  xdg.configFile."nvim/UltiSnips/tex.snippets".source = ./tex.snippets;
-  xdg.configFile."nvim/colors/selenized_bw.vim".source = ./selenized_bw.vim;
+  xdg.configFile = {
+    "nvim/UltiSnips/tex.snippets".source = ./tex.snippets;
+    "nvim/colors/selenized_bw.vim".source = ./selenized_bw.vim;
+  };
 
   # Network Manager
   xdg.configFile."networkmanager_dmenu/config.ini".text = ''
@@ -562,10 +565,12 @@
   };
 
   # Ranger
-  xdg.configFile."ranger/commands.py".source = ./ranger/commands.py;
-  xdg.configFile."ranger/rc.conf".source = ./ranger/rc.conf;
-  xdg.configFile."ranger/rifle.conf".source = ./ranger/rifle.conf;
-  xdg.configFile."ranger/scope.sh".source = ./ranger/scope.sh;
+  xdg.configFile = {
+    "ranger/commands.py".source = ./ranger/commands.py;
+    "ranger/rc.conf".source = ./ranger/rc.conf;
+    "ranger/rifle.conf".source = ./ranger/rifle.conf;
+    "ranger/scope.sh".source = ./ranger/scope.sh;
+  };
 
   # Rofi
   programs.rofi = {
@@ -599,7 +604,7 @@
   # X
   xdg = {
     enable = true;
-    dataFile."wallpaper.png".source = ./wallpaper.png
+    dataFile."wallpaper.png".source = ./wallpaper.png;
   };
   xsession = {
     enable = true;
