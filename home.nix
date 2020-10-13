@@ -37,7 +37,7 @@
     gimp
     libnotify
     maim
-    mathematica # Laptop
+    #mathematica # Laptop
     networkmanager_dmenu # Laptop
     pavucontrol # Temporary
     playerctl
@@ -58,7 +58,7 @@
     enable = true;
     settings = {
       font = {
-        size = 8.0; # 10d/8l
+        size = 10.0; # 10d/8l
         normal.family = "RobotoMono Nerd Font";
       };
       colors = {
@@ -597,7 +597,10 @@
   };
 
   # X
-  xdg.enable = true;
+  xdg = {
+    enable = true;
+    dataFile."wallpaper.png".source = ./wallpaper.png
+  };
   xsession = {
     enable = true;
     pointerCursor = {
@@ -605,6 +608,9 @@
       name = "Adwaita";
       size = 16;
     };
+    initExtra = ''
+      feh --no-fehbg --bg-tile '/home/jack/.local/share/wallpaper.png'
+    '';
     windowManager.i3 = {
       enable = true;
       config = {
