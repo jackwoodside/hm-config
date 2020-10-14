@@ -2,10 +2,10 @@
 # TODO
 # vim stuff
 # laptop polybar backlight
-# polybar restart in i3, i3, fix mpv
+# i3, fix mpv
 # spicetify, .local/bin, .local/share, bwmenu
 # Different home-manager profiles for laptop and desktop (
-#    alacritty font size, networkmanager_dmenu
+#    alacritty font size, networkmanager_dmenu, mathematica, zoom and teams
 #  )
 # Remove temporary programs
 {
@@ -38,7 +38,7 @@
     gimp
     libnotify
     maim
-    #mathematica # Laptop
+    mathematica # Laptop
     networkmanager_dmenu # Laptop
     pavucontrol # Temporary
     playerctl
@@ -48,7 +48,8 @@
     spotify
     steam
     sxiv
-    # teams
+    teams
+    ueberzug
     unzip
     xclip
     zoom-us
@@ -59,7 +60,7 @@
     enable = true;
     settings = {
       font = {
-        size = 10.0; # 10d/8l
+        size = 8.0; # 10d/8l
         normal.family = "RobotoMono Nerd Font";
       };
       colors = {
@@ -425,8 +426,8 @@
     '';
   };
   xdg.configFile = {
-    "nvim/UltiSnips/tex.snippets".source = ./tex.snippets;
-    "nvim/colors/selenized_bw.vim".source = ./selenized_bw.vim;
+    "nvim/UltiSnips/tex.snippets".source = ./nvim/tex.snippets;
+    "nvim/colors/selenized_bw.vim".source = ./nvim/selenized_bw.vim;
   };
 
   # Network Manager
@@ -591,7 +592,7 @@
       rofi.display-drun: run
     '';
   };
-  xdg.dataFile."rofi.rasi".source = ./rofi.rasi;
+  xdg.dataFile."rofi.rasi".source = ./rofi/rofi.rasi;
 
   # Unclutter
   services.unclutter = {
@@ -602,10 +603,9 @@
   };
 
   # X
-  xdg = {
-    enable = true;
-    dataFile."wallpaper.png".source = ./wallpaper.png;
-  };
+  xdg.enable = true;
+  xdg.dataFile."wallpaper.png".source = ./wallpaper.png;
+
   xsession = {
     enable = true;
     pointerCursor = {
@@ -688,8 +688,9 @@
         # screenshot controls
         bindsym Shift+Print exec maim -u -s ~/Pictures/$(date +%F-%s).png
         bindsym --release Print exec maim -u -s | xclip -selection clipboard -t image/png
-        bindsym $mod+Print exec maim -u ~/Pictures/$(date +%F-%s).png
+        bindsym Mod4+Print exec maim -u ~/Pictures/$(date +%F-%s).png
         exec systemctl restart --user polybar.service
+        bindsym Mod4+t exec alacritty -e ranger
       '';
     };
   };
