@@ -691,6 +691,9 @@
         bindsym Mod4+Print exec maim -u ~/Pictures/$(date +%F-%s).png
         exec systemctl restart --user polybar.service
         bindsym Mod4+t exec alacritty -e ranger
+        for_window [title="(?i)picture-in-picture"] sticky enable
+        for_window [title="(?i)picture-in-picture"] move scratchpad, scratchpad show
+        bindsym Mod4+p [title="(?i)picture-in-picture"] scratchpad show
       '';
     };
   };
