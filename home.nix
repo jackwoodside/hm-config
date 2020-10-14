@@ -5,7 +5,7 @@
 # i3, fix mpv
 # spicetify, .local/bin, .local/share, bwmenu
 # Different home-manager profiles for laptop and desktop (
-#    alacritty font size, networkmanager_dmenu, mathematica, zoom and teams
+#    alacritty font size, networkmanager_dmenu, mathematica, zoom and teams, backlight
 #  )
 # Remove temporary programs
 {
@@ -30,7 +30,8 @@
     })
 
     # Misc.
-    arandr # Temporary
+    acpilight # Laptop
+    arandr # Laptop, temporary
     bitwarden-cli
     discord
     exa
@@ -40,7 +41,7 @@
     maim
     mathematica # Laptop
     networkmanager_dmenu # Laptop
-    pavucontrol # Temporary
+    pavucontrol # Laptop, temporary
     playerctl
     python3Minimal
     ranger
@@ -48,11 +49,11 @@
     spotify
     steam
     sxiv
-    teams
+    teams # Laptop
     ueberzug
     unzip
     xclip
-    zoom-us
+    zoom-us # Laptop
   ];
 
   # Alacritty
@@ -426,8 +427,8 @@
     '';
   };
   xdg.configFile = {
-    "nvim/UltiSnips/tex.snippets".source = ./nvim/tex.snippets;
-    "nvim/colors/selenized_bw.vim".source = ./nvim/selenized_bw.vim;
+    "nvim/UltiSnips/tex.snippets".source = ./programs/nvim/tex.snippets;
+    "nvim/colors/selenized_bw.vim".source = ./programs/nvim/selenized_bw.vim;
   };
 
   # Network Manager
@@ -567,10 +568,10 @@
 
   # Ranger
   xdg.configFile = {
-    "ranger/commands.py".source = ./ranger/commands.py;
-    "ranger/rc.conf".source = ./ranger/rc.conf;
-    "ranger/rifle.conf".source = ./ranger/rifle.conf;
-    "ranger/scope.sh".source = ./ranger/scope.sh;
+    "ranger/commands.py".source = ./programs/ranger/commands.py;
+    "ranger/rc.conf".source = ./programs/ranger/rc.conf;
+    "ranger/rifle.conf".source = ./programs/ranger/rifle.conf;
+    "ranger/scope.sh".source = ./programs/ranger/scope.sh;
   };
 
   # Rofi
@@ -592,7 +593,7 @@
       rofi.display-drun: run
     '';
   };
-  xdg.dataFile."rofi.rasi".source = ./rofi/rofi.rasi;
+  xdg.dataFile."rofi.rasi".source = ./programs/rofi/rofi.rasi;
 
   # Unclutter
   services.unclutter = {
