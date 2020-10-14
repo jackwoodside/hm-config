@@ -17,43 +17,8 @@
   home.username = "jack";
   home.homeDirectory = "/home/jack";
 
-  # Enable font management.
-  fonts.fontconfig.enable = true;
-
-  # User packages.
-  home.packages = with pkgs; [
-    # Fonts
-    roboto-mono
-    font-awesome
-    (nerdfonts.override {
-      fonts = [ "RobotoMono" ];
-    })
-
-    # Misc.
-    acpilight # Laptop
-    arandr # Laptop, temporary
-    bitwarden-cli
-    discord
-    exa
-    fd
-    gimp
-    libnotify
-    maim
-    mathematica # Laptop
-    networkmanager_dmenu # Laptop
-    pavucontrol # Laptop, temporary
-    playerctl
-    python3Minimal
-    ranger
-    ripgrep
-    spotify
-    steam
-    sxiv
-    teams # Laptop
-    ueberzug
-    unzip
-    xclip
-    zoom-us # Laptop
+  imports = [
+    ./programs
   ];
 
   # Alacritty
@@ -61,7 +26,7 @@
     enable = true;
     settings = {
       font = {
-        size = 8.0; # 10d/8l
+        size = 10.0; # 10d/8l
         normal.family = "RobotoMono Nerd Font";
       };
       colors = {
@@ -710,8 +675,8 @@
       page-padding = 1;
       default-bg = "#1b1918";
       guioptions = "";
-      recolor-darkcolor = "#a8a19f";
-      recolor-lightcolor = "#1b1918";
+      recolor-darkcolor = "#b9b9b9";
+      recolor-lightcolor = "#181818";
     };
   };
 
