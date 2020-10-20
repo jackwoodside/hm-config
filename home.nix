@@ -17,8 +17,47 @@
   home.username = "jack";
   home.homeDirectory = "/home/jack";
 
-  imports = [
-    ./programs
+  #imports = [
+  #  ./programs
+  #];
+
+  # Enable font management.
+  fonts.fontconfig.enable = true;
+
+  # Misc packages.
+  home.packages = with pkgs; [
+    # Fonts
+    roboto-mono
+    font-awesome
+    (nerdfonts.override {
+      fonts = [ "RobotoMono" ];
+    })
+
+    # Programs
+    #acpilight # Laptop
+    #arandr # Laptop, temporary
+    bitwarden-cli
+    discord
+    exa
+    fd
+    gimp
+    libnotify
+    maim
+    #mathematica # Laptop
+    #networkmanager_dmenu # Laptop
+    #pavucontrol # Laptop, temporary
+    playerctl
+    python3Minimal
+    ranger
+    ripgrep
+    spotify
+    steam
+    sxiv
+    #teams # Laptop
+    ueberzug
+    unzip
+    xclip
+    #zoom-us # Laptop
   ];
 
   # Alacritty
@@ -673,7 +712,7 @@
       statusbar-h-padding = 0;
       statusbar-v-padding = 0;
       page-padding = 1;
-      default-bg = "#1b1918";
+      default-bg = "#181818";
       guioptions = "";
       recolor-darkcolor = "#b9b9b9";
       recolor-lightcolor = "#181818";
