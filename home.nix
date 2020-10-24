@@ -676,26 +676,6 @@
 
         bars = [];
       };
-      # Fix
-      extraConfig = ''
-        # media controls
-        bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1% #increase sound volume
-        bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -1% #decrease sound volume
-        bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
-        bindsym XF86AudioPlay exec playerctl play-pause
-        bindsym XF86AudioStop exec playerctl stop
-        bindsym XF86AudioNext exec playerctl next
-        bindsym XF86AudioPrev exec playerctl previous
-        # screenshot controls
-        bindsym Shift+Print exec maim -u -s ~/Pictures/$(date +%F-%s).png
-        bindsym --release Print exec maim -u -s | xclip -selection clipboard -t image/png
-        bindsym Mod4+Print exec maim -u ~/Pictures/$(date +%F-%s).png
-        exec systemctl restart --user polybar.service
-        bindsym Mod4+t exec alacritty -e ranger
-        for_window [title="(?i)picture-in-picture"] sticky enable
-        for_window [title="(?i)picture-in-picture"] move scratchpad, scratchpad show
-        bindsym Mod4+p [title="(?i)picture-in-picture"] scratchpad show
-      '';
     };
   };
 
