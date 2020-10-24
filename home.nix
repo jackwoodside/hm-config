@@ -17,10 +17,6 @@
   home.username = "jack";
   home.homeDirectory = "/home/jack";
 
-  #imports = [
-  #  ./programs
-  #];
-
   # Enable font management.
   fonts.fontconfig.enable = true;
 
