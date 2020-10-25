@@ -676,10 +676,10 @@
 
         bars = [];
 
-        keybindings = {
+        keybindings =
           let
             modifier = config.xsession.windowManager.i3.config.modifier;
-          in lib.mkOptionDefault = {
+          in lib.mkOptionDefault {
             # toggle split direction
             "${modifier}+t" = "split toggle";
             # toggle screen that current workspace is on
@@ -720,7 +720,6 @@
             # task manager
             "Control+Mod1+Delete" = "exec --no-startup-id alacritty --class taskmanager -e htop";
           };
-        };
 
         startup = [
           { command = "systemctl --user restart polybar"; always = true; notification = false; }
