@@ -30,8 +30,8 @@
     })
 
     # Programs
-    #acpilight # Laptop
-    #arandr # Laptop, temporary
+    acpilight # Laptop
+    arandr # Laptop, temporary
     bitwarden-cli
     discord
     exa
@@ -39,8 +39,8 @@
     gimp
     libnotify
     maim
-    #mathematica # Laptop
-    #networkmanager_dmenu # Laptop
+    mathematica # Laptop
+    networkmanager_dmenu # Laptop
     playerctl
     pulsemixer
     python3Minimal
@@ -49,11 +49,11 @@
     spotify
     steam
     sxiv
-    #teams # Laptop
+    teams # Laptop
     ueberzug
     unzip
     xclip
-    #zoom-us # Laptop
+    zoom-us # Laptop
   ];
 
   # Alacritty
@@ -61,7 +61,7 @@
     enable = true;
     settings = {
       font = {
-        size = 10.0; # 10d/8l
+        size = 8.0; # 10d/8l
         normal.family = "RobotoMono Nerd Font";
       };
       colors = {
@@ -727,6 +727,8 @@
       };
 
       extraConfig = ''
+        set $mod Mod4
+
         # dropdown terminal
         bindsym $mod+Delete [instance="dropdown"] scratchpad show; [instance="dropdown"] move position center
         for_window [instance="dropdown"] floating enable
