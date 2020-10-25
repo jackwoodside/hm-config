@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 # TODO
 # vim stuff
 # laptop polybar backlight
