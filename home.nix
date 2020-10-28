@@ -2,7 +2,7 @@
 # TODO
 # vim stuff
 # laptop polybar backlight
-# i3, fix mpv
+# fix mpv
 # spicetify, .local/bin, .local/share, bwmenu
 # Different home-manager profiles for laptop and desktop (
 #    alacritty font size, networkmanager_dmenu, mathematica, zoom and teams, backlight
@@ -605,7 +605,7 @@
 
   # X
   xdg.enable = true;
-  xdg.dataFile."wallpaper.png".source = ./wallpaper.png;
+  xdg.dataFile."wallpaper.png".source = ./images/wallpaper.png;
 
   xsession = {
     enable = true;
@@ -694,7 +694,7 @@
             "${modifier}+p" = "exec display-menu";
             # dropdown terminal
             "${modifier}+Delete" = "[instance=\"dropdown\"] scratchpad show; [instance=\"dropdown\"] move position center";
-            "${modifier}+Shift+Delete" = "exec --no-startup-id alacritty -class dropdown";
+            "${modifier}+Shift+Delete" = "exec --no-startup-id alacritty --class dropdown";
             # emoji menu
             "${modifier}+u" = "exec unicode-menu";
             # media controls

@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+ANS=$(echo -e " Lock\n Logout\n Reboot\n Shutdown" | rofi -dmenu -i -p 'System')
+if [ "$ANS" == " Lock" ] ; then
+	exec lock
+elif [ "$ANS" == " Logout" ] ; then
+	i3-msg exit
+elif [ "$ANS" == " Reboot" ] ; then
+	reboot
+elif [ "$ANS" == " Shutdown" ] ; then
+	poweroff
+else
+	:
+fi
