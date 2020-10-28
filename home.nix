@@ -3,11 +3,8 @@
 # vim stuff
 # laptop polybar backlight
 # fix mpv
-# spicetify, .local/bin, .local/share, bwmenu
-# Different home-manager profiles for laptop and desktop (
-#    alacritty font size, networkmanager_dmenu, mathematica, zoom and teams, backlight
-#  )
-# Remove temporary programs
+# spicetify, .local/bin, bwmenu
+
 {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -16,6 +13,9 @@
   # paths it should manage.
   home.username = "jack";
   home.homeDirectory = "/home/jack";
+
+  # Machine-specific profiles.
+  imports = [ ./profile.nix ];
 
   # Enable font management.
   fonts.fontconfig.enable = true;
@@ -30,8 +30,6 @@
     })
 
     # Programs
-    acpilight # Laptop
-    arandr # Laptop, temporary
     bitwarden-cli
     discord
     exa
@@ -39,8 +37,6 @@
     gimp
     libnotify
     maim
-    mathematica # Laptop
-    networkmanager_dmenu # Laptop
     playerctl
     pulsemixer
     python3Minimal
@@ -49,11 +45,9 @@
     spotify
     steam
     sxiv
-    teams # Laptop
     ueberzug
     unzip
     xclip
-    zoom-us # Laptop
   ];
 
   # Alacritty
@@ -486,7 +480,6 @@
         font-2 = "Font Awesome 5 Free Regular:style=regular:pixelsize=12;1";
         font-3 = "Font Awesome 5 Free Solid :style=regular:pixelsize=12;1";
         modules-left = "i3";
-        #modules-center = "spotify";
         modules-right = "pulseaudio xbacklight wlan eth battery date";
       };
       "module/i3" = {
