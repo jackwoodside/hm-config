@@ -4,7 +4,19 @@
   # Home Manager programs.
   imports = [
     ./alacritty.nix
+    ./direnv.nix
+    ./dunst.nix
+    ./git.nix
+    ./gtk.nix
+    ./htop.nix
+    ./mpv.nix
+    ./neovim
   ];
+  programs = {
+    firefox.enable = true;
+    feh.enable = true;
+    fzf.enable = true;
+  };
 
   # Enable font management.
   fonts.fontconfig.enable = true;
