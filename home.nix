@@ -16,7 +16,7 @@
 
   imports = [
     ./profile.nix # Machine-specific profile
-    ./programs/main.nix # Programs
+    ./programs # Programs
   ];
 
   # Direnv
