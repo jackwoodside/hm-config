@@ -6,86 +6,18 @@
 # spicetify, .local/bin, bwmenu
 
 {
-  # Let Home Manager install and manage itself.
+  # Let Home Manager install and manage itself
   programs.home-manager.enable = true;
 
   # Home Manager needs a bit of information about you and the
-  # paths it should manage.
+  # paths it should manage
   home.username = "jack";
   home.homeDirectory = "/home/jack";
 
-  # Machine-specific profiles.
-  imports = [ ./profile.nix ];
-
-  # Enable font management.
-  fonts.fontconfig.enable = true;
-
-  # Misc packages.
-  home.packages = with pkgs; [
-    # Fonts
-    roboto-mono
-    font-awesome
-    (nerdfonts.override {
-      fonts = [ "RobotoMono" ];
-    })
-
-    # Programs
-    bitwarden-cli
-    discord
-    exa
-    fd
-    gimp
-    libnotify
-    maim
-    playerctl
-    pulsemixer
-    python3Minimal
-    ranger
-    ripgrep
-    spotify
-    steam
-    sxiv
-    ueberzug
-    unzip
-    xclip
+  imports = [
+    ./profile.nix # Machine-specific profile
+    ./programs/main.nix # Programs
   ];
-
-  # Alacritty
-  programs.alacritty = {
-    enable = true;
-    settings = {
-      font = {
-        size = 8.0; # 10d/8l
-        normal.family = "RobotoMono Nerd Font";
-      };
-      colors = {
-        primary = {
-          background = "#181818";
-          foreground = "#b9b9b9";
-        };
-        normal = {
-          black = "#252525";
-          red = "#ed4a46";
-          green = "#70b433";
-          yellow = "#dbb32d";
-          blue = "#368aeb";
-          magenta = "#eb6eb7";
-          cyan = "#3fc5b7";
-          white = "#777777";
-        };
-        bright = {
-          black = "#3b3b3b";
-          red = "#ff5e56";
-          green = "#83c746";
-          yellow = "#efc541";
-          blue = "#4f9cfe";
-          magenta = "#ff81ca";
-          cyan =  "#56d8c9";
-          white = "#dedede";
-        };
-      };
-    };
-  };
 
   # Direnv
   programs.direnv = {
