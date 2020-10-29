@@ -38,7 +38,6 @@
     (nerdfonts.override {
       fonts = [ "RobotoMono" ];
     })
-
     # Programs
     bitwarden-cli
     discord
