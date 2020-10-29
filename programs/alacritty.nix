@@ -6,6 +6,7 @@
     settings = {
       font = {
         normal.family = "RobotoMono Nerd Font";
+        #size = ${alacrittyFontSize};
       };
       colors = {
         primary = {

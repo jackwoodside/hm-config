@@ -9,8 +9,17 @@
     ./git.nix
     ./gtk.nix
     ./htop.nix
+    ./i3.nix
     ./mpv.nix
     ./neovim
+    ./picom.nix
+    ./polybar.nix
+    ./ranger
+    ./rofi
+    ./unclutter.nix
+    ./x.nix
+    ./zathura.nix
+    ./zsh.nix
   ];
   programs = {
     firefox.enable = true;
