@@ -44,6 +44,7 @@
     exa
     fd
     gimp
+    imagemagick
     libnotify
     maim
     playerctl

@@ -40,6 +40,8 @@
       inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
       " Highlight symbol under cursor on CursorHold
       autocmd CursorHold * silent call CocActionAsync('highlight')
+      " Run python file in terminal
+      nnoremap <silent> <F5> :CocCommand python.execInTerminal<CR>
 
       " Fugitive settings
       nnoremap <silent> <Leader>ga :G add %:r\.*<CR>
@@ -127,7 +129,7 @@
       set background=dark
       colorscheme selenized_bw
       " CoC menu
-      autocmd ColorScheme * highlight Pmenu guibg=DarkGrey guifg=Black
+      autocmd ColorScheme * highlight Pmenu guifg=none
       autocmd ColorScheme * highlight PmenuSel guibg='#70b433' guifg=Black
       " Vimtex Conceal
       highlight Conceal guibg=None guifg=LightRed
