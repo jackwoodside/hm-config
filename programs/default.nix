@@ -40,6 +40,7 @@
     })
     # Programs
     bitwarden-cli
+    desmume
     discord
     exa
     fd
