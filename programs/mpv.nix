@@ -8,7 +8,7 @@
       osc = "no";
       profile = "gpu-hq";
       hwdec = "auto";
-      # no-sub-visibility = true;
+      sub = "no";
     };
   };
 }

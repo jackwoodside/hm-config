@@ -1,8 +1,6 @@
 { config, pkgs, lib, ... }:
 # TODO
-# vim stuff
 # laptop polybar backlight
-# fix mpv
 # spicetify, .local/bin, bwmenu
 
 {
