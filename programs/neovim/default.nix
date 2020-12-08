@@ -104,7 +104,6 @@
             \ 'c' : 'COM',
             \ },
             \ }
-      " TODO unpushed changes indicator
       function! LightlineGit()
               let branch = FugitiveHead()
               let [a,m,r] = GitGutterGetHunkSummary()
@@ -133,11 +132,6 @@
       autocmd ColorScheme * highlight PmenuSel guibg='#70b433' guifg=Black
       " Vimtex Conceal
       highlight Conceal guibg=None guifg=LightRed
-
-      " Jump between todo comments
-      " TODO fix these to jump back properly, and not display messages and highlighting for failed jumps
-      nmap <silent> ]t :set nowrapscan<CR> /TODO<CR> :nohlsearch<CR> :set wrapscan<CR>
-      nmap <silent> [t :set nowrapscan<CR> ?TODO<CR> :nohlsearch<CR> :set wrapscan<CR>
 
       " Always show signcolumns
       set signcolumn=yes
