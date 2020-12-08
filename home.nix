@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 # TODO
 # laptop polybar backlight
-# spicetify, .local/bin, bwmenu
+# .local/bin, bwmenu
 
 {
   # Let Home Manager install and manage itself
