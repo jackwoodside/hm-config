@@ -11,8 +11,11 @@
     zoom-us
   ];
 
-  # Alacritty font size.
-  programs.alacritty.settings.font.size = 8.0;
+  # Alacritty
+  programs.alacritty.settings.font = {
+    normal.family = "RobotoMono Nerd Font";
+    size = 8.0;
+  };
 
   # Network Manager
   xdg.configFile."networkmanager_dmenu/config.ini".text = ''
