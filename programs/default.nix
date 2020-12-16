@@ -16,6 +16,7 @@
     ./polybar.nix
     ./ranger
     ./rofi
+    ./scripts
     ./unclutter.nix
     ./x.nix
     ./zathura.nix

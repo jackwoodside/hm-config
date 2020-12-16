@@ -3,7 +3,6 @@
 {
   # Laptop-specific programs.
   home.packages = with pkgs; [
-    acpilight
     arandr
     mathematica
     networkmanager_dmenu
