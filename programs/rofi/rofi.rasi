@@ -25,7 +25,7 @@
     selected-normal-background:  rgba ( 59, 59, 59, 100 % );
     border-color:                @foreground;
     spacing:                     2;
-    separatorcolor:              rgba ( 112, 180, 51, 100 % );
+    separatorcolor:              @foreground;
     urgent-background:           rgba ( 24, 24, 24, 100 % );
     selected-urgent-background:  rgba ( 59, 59, 59, 100 % );
     alternate-urgent-foreground: @urgent-foreground;
@@ -36,7 +36,7 @@
 }
 #window {
     background-color: @background;
-    border:           1;
+    border:           2;
     padding:          5;
 }
 #mainbox {
@@ -56,12 +56,12 @@
     border:       2px dash 0px 0px ;
     border-color: @separatorcolor;
     spacing:      2px ;
-    scrollbar:    true;
+    scrollbar:    false;
     padding:      2px 0px 0px ;
 }
 #element {
     border:  0;
-    padding: 1px ;
+    padding: 0px ;
 }
 #element.normal.normal {
     background-color: @normal-background;
@@ -99,12 +99,6 @@
     background-color: @alternate-active-background;
     text-color:       @alternate-active-foreground;
 }
-#scrollbar {
-    width:        4px ;
-    border:       0;
-    handle-width: 8px ;
-    padding:      0;
-}
 #mode-switcher {
     border:       2px dash 0px 0px ;
     border-color: @separatorcolor;
@@ -135,7 +129,7 @@
 }
 #textbox-prompt-colon {
     expand:     false;
-    str:        ":";
+    str:        "";
     margin:     0px 0.3em 0em 0em ;
     text-color: @normal-foreground;
 }
