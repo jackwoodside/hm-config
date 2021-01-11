@@ -16,6 +16,7 @@
     ./polybar.nix
     ./ranger
     ./rofi
+    ./scripts
     ./unclutter.nix
     ./x.nix
     ./zathura.nix
@@ -40,7 +41,6 @@
     })
     # Programs
     bitwarden-cli
-    desmume
     discord
     exa
     fd

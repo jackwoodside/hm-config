@@ -1,6 +1,9 @@
 { pkgs, ... }:
 
 {
-  # Alacritty font size.
-  programs.alacritty.settings.font.size = 10.0;
+  # Alacritty
+  programs.alacritty.settings.font = {
+    normal.family = "RobotoMono Nerd Font";
+    size = 10.0;
+  };
 }
