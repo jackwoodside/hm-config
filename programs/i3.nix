@@ -72,8 +72,8 @@
             "${modifier}+a" = "exec --no-startup-id pactl set-card-profile 0 'output:analog-stereo'";
             "${modifier}+Shift+a" = "exec --no-startup-id pactl set-card-profile 0 'output:hdmi-stereo'";
             # backlight
-            "XF86MonBrightnessUp" = "exec xbacklight -inc 5";
-            "XF86MonBrightnessDown" = "exec xbacklight -dec 5";
+            "XF86MonBrightnessUp" = "exec brightnessctl s +5%";
+            "XF86MonBrightnessDown" = "exec brightnessctl s 5%-";
             # display manager
             "${modifier}+p" = "exec display-menu";
             # dropdown terminal

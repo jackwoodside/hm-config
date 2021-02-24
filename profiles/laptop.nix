@@ -4,6 +4,7 @@
   # Laptop-specific programs.
   home.packages = with pkgs; [
     arandr
+    brightnessctl
     mathematica
     networkmanager_dmenu
     teams

@@ -49,6 +49,7 @@
     libnotify
     maim
     playerctl
+    puddletag
     pulsemixer
     python3Minimal
     ranger
