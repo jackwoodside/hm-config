@@ -60,5 +60,6 @@
     ueberzug
     unzip
     xclip
+    zoom-us
   ];
 }

@@ -8,7 +8,6 @@
     mathematica
     networkmanager_dmenu
     teams
-    zoom-us
   ];
 
   # Alacritty
