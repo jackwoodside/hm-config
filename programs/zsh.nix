@@ -17,6 +17,7 @@
       export JUPYTER_CONFIG_DIR=$XDG_CONFIG_HOME/jupyter
       export LESSHISTFILE=-
       export EDITOR=nvim
+      export MANPAGER='nvim +Man!'
       export PATH=$PATH:/home/jack/.local/bin
     '';
     history.path = ".cache/zsh/history";
