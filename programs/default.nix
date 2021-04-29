@@ -52,6 +52,7 @@
     puddletag
     pulsemixer
     python3Minimal
+    qbittorrent
     ranger
     ripgrep
     spotify
@@ -60,6 +61,7 @@
     ueberzug
     unzip
     xclip
+    youtube-dl
     zoom-us
   ];
 }
