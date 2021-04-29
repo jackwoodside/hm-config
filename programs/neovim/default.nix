@@ -216,6 +216,9 @@
       " Automatically remove double spaces caused by UltiSnips
       autocmd BufWritePre * silent %s/  \$/ \$/e | norm! ``
 
+      " Automatically remove spaces at the start of align blocks that happen sometimes
+      autocmd BufWritePre * silent %s/^ \\/\\/e | norm! ``
+
       " Misc
       set nocompatible
       set encoding=utf-8
