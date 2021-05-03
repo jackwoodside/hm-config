@@ -28,6 +28,9 @@
     fzf.enable = true;
   };
 
+  # Mathematica desktop file
+  xdg.dataFile."applications/mathematica.desktop".source = ./mathematica.desktop;
+
   # Enable font management.
   fonts.fontconfig.enable = true;
 
@@ -46,8 +49,10 @@
     fd
     gimp
     imagemagick
+    inkscape
     libnotify
     maim
+    mathematica
     playerctl
     puddletag
     pulsemixer
@@ -62,6 +67,5 @@
     unzip
     xclip
     youtube-dl
-    zoom-us
   ];
 }

@@ -5,9 +5,9 @@
   home.packages = with pkgs; [
     arandr
     brightnessctl
-    mathematica
     networkmanager_dmenu
     teams
+    zoom-us
   ];
 
   # Alacritty
