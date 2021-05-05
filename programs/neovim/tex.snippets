@@ -116,7 +116,6 @@ snippet lr "left(right)" iA
 \left($1\right)$0
 endsnippet
 
-
 priority 100
 context "math()"
 snippet blr "left[right]" iA
@@ -131,8 +130,14 @@ endsnippet
 
 priority 100
 context "math()"
-snippet "([a-gi-zA-Z])bar" "bar" riA
+snippet "([a-zA-Z])bar" "bar" riA
 \overline{`!p snip.rv=match.group(1)`}
+endsnippet
+
+priority 1000
+context "math()"
+snippet "hbar" "hbar" iA
+\hbar
 endsnippet
 
 priority 10
