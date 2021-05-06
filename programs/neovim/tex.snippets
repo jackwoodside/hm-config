@@ -38,8 +38,12 @@ snippet sssec "subsubsection{}" bA
 \subsubsection*{$1}$0
 endsnippet
 
-snippet = "&=" bA
+snippet == "aligned equals" iA
 &=
+endsnippet
+
+snippet != "not equal" iA
+\neq
 endsnippet
 
 snippet mk "Math" wA
@@ -110,6 +114,10 @@ snippet => "implies" iA
 \implies
 endsnippet
 
+snippet iff "iff" iA
+\iff
+endsnippet
+
 priority 10
 context "math()"
 snippet lr "left(right)" iA
@@ -122,21 +130,8 @@ snippet blr "left[right]" iA
 \left[$1\right]$0
 endsnippet
 
-priority 10
 context "math()"
-snippet "bar" "bar" riA
-\overline{$1}$0
-endsnippet
-
-priority 100
-context "math()"
-snippet "([a-zA-Z])bar" "bar" riA
-\overline{`!p snip.rv=match.group(1)`}
-endsnippet
-
-priority 1000
-context "math()"
-snippet "hbar" "hbar" iA
+snippet hbar "hbar" iA
 \hbar
 endsnippet
 
@@ -164,12 +159,6 @@ snippet "([a-bd-zA-Z])dot" "dot" riA
 \dot{`!p snip.rv=match.group(1)`}
 endsnippet
 
-priority 1000
-context "math()"
-snippet \cdot "cdot" iA
-\cdot
-endsnippet
-
 snippet "\<(.*?)\|" "bra" riA
 \bra{`!p snip.rv = match.group(1).replace('q', f'\psi').replace('f', f'\phi')`}
 endsnippet
@@ -180,4 +169,95 @@ endsnippet
 
 snippet "(.*)\\bra{(.*?)}([^\|]*?)\>" "braket" riA
 `!p snip.rv = match.group(1)`\braket{`!p snip.rv = match.group(2)`}{`!p snip.rv = match.group(3).replace('q', f'\psi').replace('f', f'\phi')`}
+endsnippet
+
+snippet ... "line dots" iA
+\ldots
+endsnippet
+
+snippet h... "horizontal dots" iA
+\cdots
+endsnippet
+
+snippet v... "vertical dots" iA
+\vdots
+endsnippet
+
+snippet d... "diagonal dots" iA
+\ldots
+endsnippet
+
+context "math()"
+snippet // "Fraction" iA
+\\frac{$1}{$2}$0
+endsnippet
+
+snippet / "Fraction" i
+\\frac{${VISUAL}}{$1}$0
+endsnippet
+
+context "math()"
+snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "symbol frac" wrA
+\\frac{`!p snip.rv = match.group(1)`}{$1}$0
+endsnippet
+
+priority 1000
+context "math()"
+snippet '^.*\)/' "() frac" wrA
+`!p
+stripped = match.string[:-1]
+depth = 0
+i = len(stripped) - 1
+while True:
+	if stripped[i] == ')': depth += 1
+	if stripped[i] == '(': depth -= 1
+	if depth == 0: break;
+	i-=1
+snip.rv = stripped[0:i] + "\\frac{" + stripped[i+1:-1] + "}"
+`{$1}$0
+endsnippet
+
+context "math()"
+snippet xnn "xn" iA
+x_{n}
+endsnippet
+
+context "math()"
+snippet ynn "yn" iA
+y_{n}
+endsnippet
+
+context "math()"
+snippet cnn "cn" iA
+c_{n}
+endsnippet
+
+context "math()"
+snippet xii "xi" iA
+x_{i}
+endsnippet
+
+context "math()"
+snippet yii "yi" iA
+y_{i}
+endsnippet
+
+context "math()"
+snippet cii "ci" iA
+c_{i}
+endsnippet
+
+context "math()"
+snippet xjj "xj" iA
+x_{j}
+endsnippet
+
+context "math()"
+snippet yjj "yj" iA
+y_{j}
+endsnippet
+
+context "math()"
+snippet cjj "cj" iA
+c_{j}
 endsnippet
