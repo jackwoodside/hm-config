@@ -43,6 +43,9 @@
       " Run python file in terminal
       nnoremap <silent> <F5> :CocCommand python.execInTerminal<CR>
 
+      " Write file with root permission
+      nnoremap <silent> <F12> :w !sudo tee %
+
       " Fugitive settings
       nnoremap <silent> <Leader>ga :G add %:r\.*<CR>
       nnoremap <silent> <Leader>gc :silent G commit<CR>
