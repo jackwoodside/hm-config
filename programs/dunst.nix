@@ -18,7 +18,7 @@
         font = "RobotoMono 16";
         line_height = 0;
         markup = "full";
-        format = "%s\n%b";
+        format = "<b>%s</b>\n%b";
         alignment = "left";
         word_wrap = "yes";
         ignore_newline = "no";
