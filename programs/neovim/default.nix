@@ -60,6 +60,19 @@
       let g:vimtex_view_method='zathura'
       let g:vimtex_view_forward_search_on_start=0
       let g:vimtex_quickfix_mode=0
+      let g:vimtex_fold_enabled=1
+      let g:vimtex_fold_manual=1
+      let g:vimtex_fold_types = {
+      \ 'preamble' : {'enable' : 1},
+      \ 'envs' : {
+      \    'blacklist' : ['figure', 'table', 'align*'],
+      \ },
+      \}
+      let g:vimtex_toc_config = {
+      \ 'name' : 'Table of Contents',
+      \ 'show_help' : '0',
+      \}
+      let g:vimtex_toc_show_preamble=0
       set conceallevel=2
       let g:tex_conceal='abdmg'
       let g:UltiSnipsExpandTrigger='�'
