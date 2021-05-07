@@ -266,3 +266,23 @@ context "math()"
 snippet cjj "cj" iA
 c_{j}
 endsnippet
+
+context "math()"
+snippet lim "limit" wA
+\lim_{$1 \to $2}$0
+endsnippet
+
+context "math()"
+snippet '\w*(?<!(\\|s))sum' "sum" wrA
+\sum_{$1 = $2}^{$3}$0
+endsnippet
+
+context "math()"
+snippet prod "product" wA
+\prod_{$1 = $2}^{$3}$0
+endsnippet
+
+context "math()"
+snippet '\w*(?<!(\\|s))int' "Integral" wrA
+\int_{$1}^{$2}$0
+endsnippet
