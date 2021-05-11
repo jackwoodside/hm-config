@@ -176,18 +176,22 @@ snippet "(.*)\\bra{(.*?)}([^\|]*?)\>" "braket" riA
 `!p snip.rv = match.group(1)`\braket{`!p snip.rv = match.group(2)`}{`!p snip.rv = match.group(3).replace('q', f'\psi').replace('f', f'\phi')`}
 endsnippet
 
+priority 10
 snippet ... "line dots" iA
 \ldots
 endsnippet
 
+priority 100
 snippet h... "horizontal dots" iA
 \cdots
 endsnippet
 
+priority 100
 snippet v... "vertical dots" iA
 \vdots
 endsnippet
 
+priority 100
 snippet d... "diagonal dots" iA
 \ldots
 endsnippet
