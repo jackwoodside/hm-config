@@ -164,6 +164,12 @@ snippet "([a-bd-zA-Z])dot" "dot" riA
 \dot{`!p snip.rv=match.group(1)`}
 endsnippet
 
+priority 1000
+context "math()"
+snippet cdot "cdot" iA
+\cdot
+endsnippet
+
 snippet "\<(.*?)\|" "bra" riA
 \bra{`!p snip.rv = match.group(1).replace('q', f'\psi').replace('f', f'\phi')`}
 endsnippet
