@@ -66,6 +66,7 @@
     ueberzug
     unzip
     xclip
+    xdotool
     youtube-dl
   ];
 }
