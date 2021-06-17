@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  # Laptop-specific programs.
+  # Laptop-specific programs
   home.packages = with pkgs; [
     arandr
     brightnessctl
