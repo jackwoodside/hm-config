@@ -3,7 +3,6 @@
 {
   # Laptop-specific programs
   home.packages = with pkgs; [
-    arandr
     brightnessctl
     networkmanager_dmenu
     teams

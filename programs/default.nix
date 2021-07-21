@@ -44,6 +44,7 @@
       fonts = [ "RobotoMono" ];
     })
     # Programs
+    arandr
     bitwarden-cli
     discord
     exa
