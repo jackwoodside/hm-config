@@ -144,6 +144,9 @@
           for_window [instance="dropdown"] resize set 1200 700
           exec --no-startup-id alacritty --class dropdown
 
+        # screen layout (mainly for desktop)
+          exec ~/.config/nixpkgs/layout
+
         # picture-in-picture
           for_window [title="(?i)picture-in-picture"] sticky enable
           for_window [title="(?i)picture-in-picture"] move scratchpad, scratchpad show

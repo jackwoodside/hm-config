@@ -5,6 +5,7 @@
     "emoji".source = ./emoji;
     "screenlayouts/tv".source = ./screenlayouts/tv;
     "screenlayouts/laptop".source = ./screenlayouts/laptop;
+    "screenlayouts/desktop".source = ./screenlayouts/desktop;
   };
 
   home.file = {
