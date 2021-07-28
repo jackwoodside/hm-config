@@ -16,7 +16,7 @@
   };
 
   # Network Manager
-  xdg.configFile."networkmanager_dmenu/config.ini".text = ''
+  xdg.configFile."networkmanager-dmenu/config.ini".text = ''
     [dmenu]
     dmenu_command = rofi
   '';
