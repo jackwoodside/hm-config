@@ -26,7 +26,6 @@
     firefox.enable = true;
     feh.enable = true;
     fzf.enable = true;
-    obs-studio.enable = true;
   };
 
   # Mathematica desktop file
@@ -54,7 +53,7 @@
     inkscape
     libnotify
     maim
-    mathematica
+    #mathematica
     playerctl
     puddletag
     pulsemixer
