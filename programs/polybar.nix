@@ -3,10 +3,7 @@
 {
   services.polybar = {
     enable = true;
-    package = pkgs.polybar.override {
-      i3GapsSupport = true;
-      pulseSupport = true;
-    };
+    package = pkgs.polybarFull;
     script = "polybar main &";
     config = {
       "colors" = {
