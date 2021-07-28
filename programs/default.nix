@@ -53,7 +53,7 @@
     inkscape
     libnotify
     maim
-    #mathematica
+    mathematica
     playerctl
     puddletag
     pulsemixer
@@ -66,6 +66,7 @@
     sxiv
     ueberzug
     unzip
+    virt-manager
     xclip
     xdotool
     youtube-dl
