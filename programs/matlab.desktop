@@ -1,4 +1,4 @@
 [Desktop Entry]
 Type=Application
 Name=MATLAB VM
-Exec=virsh -c qemu:///system start MATLAB && virt-viewer -c qemu:///system MATLAB
+Exec=/bin/sh -c "virsh -c qemu:///system start MATLAB ; virt-viewer -c qemu:///system MATLAB"
