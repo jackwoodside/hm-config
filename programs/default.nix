@@ -67,6 +67,7 @@
     ueberzug
     unzip
     virt-manager
+    virt-viewer
     xclip
     xdotool
     youtube-dl
