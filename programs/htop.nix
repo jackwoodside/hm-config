@@ -3,20 +3,20 @@
 {
   programs.htop = {
     enable = true;
-    enableMouse = false;
-    fields = [
-      "PERCENT_CPU" "PERCENT_MEM" "STATE" "COMM"
-    ];
-    meters = {
-      left = [
+    settings = {
+      enable_mouse = false;
+      fields = [
+        "PERCENT_CPU" "PERCENT_MEM" "STATE" "COMM"
+      ];
+      left_meters = [
         "LeftCPUs" "Memory"
       ];
-      right = [
+      right_meters = [
         "RightCPUs" "Uptime"
       ];
+      show_program_path = false;
+      sort_key = "PERCENT_MEM";
+      tree_view = true;
     };
-    showProgramPath = false;
-    sortKey = "PERCENT_MEM";
-    treeView = true;
   };
 }
