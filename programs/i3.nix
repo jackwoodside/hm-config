@@ -51,7 +51,10 @@
         criteria = [ { instance = "taskmanager"; } { instance = "dropdown"; } ];
       };
 
-      fonts = [ "RobotoMono 10" ];
+      fonts = {
+        names = [ "RobotoMono" ];
+        size = 10.0;
+      };
 
       gaps = {
         inner = 10;
