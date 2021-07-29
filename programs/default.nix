@@ -28,8 +28,11 @@
     fzf.enable = true;
   };
 
-  # Mathematica desktop file
-  xdg.dataFile."applications/mathematica.desktop".source = ./mathematica.desktop;
+  # Desktop files
+  xdg.dataFile = {
+    "applications/mathematica.desktop".source = ./mathematica.desktop;
+    "applications/matlab.desktop".source = ./matlab.desktop;
+  };
 
   # Enable font management.
   fonts.fontconfig.enable = true;
