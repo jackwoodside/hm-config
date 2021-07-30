@@ -23,6 +23,7 @@
     ./zsh.nix
   ];
   programs = {
+    exa.enable = true;
     firefox.enable = true;
     feh.enable = true;
     fzf.enable = true;
@@ -50,11 +51,9 @@
     arandr
     bitwarden-cli
     discord
-    exa
     fd
     gimp
     imagemagick
-    inkscape
     libnotify
     maim
     mathematica
