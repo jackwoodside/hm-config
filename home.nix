@@ -1,6 +1,6 @@
 { config, pkgs, lib, ... }:
 # TODO
-# laptop polybar backlight
+# arandr -> autorandr
 # .local/bin, bwmenu
 {
   # Let Home Manager install and manage itself
