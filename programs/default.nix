@@ -26,6 +26,7 @@
     firefox.enable = true;
     feh.enable = true;
     fzf.enable = true;
+    obs-studio.enable = true;
   };
 
   # Desktop files
