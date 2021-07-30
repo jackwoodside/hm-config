@@ -173,10 +173,11 @@
 
           assign [class="(?i)firefox"] $workspace1
           assign [class="discord"] $workspace2
+          assign [class="(?i)zathura"] $workspace3
+          assign [class="(?i)mathematica"] $workspace4
+          assign [class="(?i)virt-viewer"] $workspace4
           assign [class="(?i)steam"] $workspace5
           assign [class="itch"] $workspace5
-          assign [class="(?i)zathura"] $workspace3
-          assign [class="(?i)mathematica"] $workspace3
           for_window [class="Spotify"] move to workspace $workspace10
         '';
   };
