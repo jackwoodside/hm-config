@@ -1,6 +1,10 @@
 { config, pkgs, lib, ... }:
 # TODO
 # arandr -> autorandr
+# nvim
+## plugins
+## new push/pull bindings for git
+##
 # .local/bin, bwmenu
 {
   # Let Home Manager install and manage itself
