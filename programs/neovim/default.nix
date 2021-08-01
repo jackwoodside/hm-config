@@ -8,16 +8,11 @@
     plugins = with pkgs.vimPlugins; [
       auto-pairs
       coc-nvim
-      coc-python
       coc-vimtex
-      vim-commentary
       vim-fugitive
-      fzf-vim
       vim-gitgutter
       lightline-vim
       vim-nix
-      vim-repeat
-      vim-sneak
       ultisnips
       vimtex
     ];
@@ -40,8 +35,6 @@
       inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
       " Highlight symbol under cursor on CursorHold
       autocmd CursorHold * silent call CocActionAsync('highlight')
-      " Run python file in terminal
-      nnoremap <silent> <F5> :CocCommand python.execInTerminal<CR>
 
       " Write file with root permission
       nnoremap <silent> <F12> :w !sudo tee %
@@ -185,7 +178,7 @@
 
       " Don't give |ins-completion-menu| messages
       set shortmess=F
-    set shortmess+=c
+      set shortmess+=c
 
       " Highlight matching brackets
       set showmatch
