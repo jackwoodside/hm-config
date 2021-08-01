@@ -42,7 +42,8 @@
       " Fugitive settings
       nnoremap <silent> <Leader>ga :G add %:r\.*<CR>
       nnoremap <silent> <Leader>gc :silent G commit<CR>
-      nnoremap <silent> <Leader>gp :G push<CR>
+      nnoremap <silent> <Leader>g[ :G pull<CR>
+      nnoremap <silent> <Leader>g] :G push<CR>
       nnoremap <silent> <Leader>gs :G status<CR>
 
       " Sneak settings
