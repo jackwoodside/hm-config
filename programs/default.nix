@@ -54,6 +54,7 @@
     fd
     gimp
     imagemagick
+    julia-stable-bin
     libnotify
     maim
     mathematica
