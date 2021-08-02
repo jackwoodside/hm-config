@@ -31,7 +31,7 @@
         margin-bottom = 0;
       };
       "bar/main" = {
-        monitor = ${env:MONITOR:};
+        monitor = "\${env:MONITOR:}";
         height = 25;
         fixed-center = "true";
         bottom = "true";
