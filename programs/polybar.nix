@@ -4,7 +4,15 @@
   services.polybar = {
     enable = true;
     package = pkgs.polybarFull;
-    script = "polybar main &";
+    script = "
+      if type \"xrandr\"; then
+        for m in $(xrandr --query | grep \" connected\" | cut -d\" \" -f1); do
+          MONITOR=$m polybar --reload main &
+        done
+      else
+        polybar --reload main &
+      fi
+    ";
     config = {
       "colors" = {
         background = "#181818";
@@ -23,6 +31,7 @@
         margin-bottom = 0;
       };
       "bar/main" = {
+        monitor = ${env:MONITOR:}
         height = 25;
         fixed-center = "true";
         bottom = "true";
@@ -37,7 +46,7 @@
         font-2 = "Font Awesome 5 Free Regular:style=regular:pixelsize=12;1";
         font-3 = "Font Awesome 5 Free Solid :style=regular:pixelsize=12;1";
         modules-left = "i3";
-        modules-right = "pulseaudio xbacklight wlan eth battery date";
+        modules-right = "pulseaudio wlan eth battery date";
       };
       "module/i3" = {
         type = "internal/i3";
@@ -64,10 +73,6 @@
         label-volume = " %percentage%%";
         label-muted = " %percentage%%";
         label-muted-foreground = "\${colors.foreground-alt}";
-      };
-      "module/xbacklight" = {
-        type = "internal/xbacklight";
-        label = "label =  %percentage%%";
       };
       "module/wlan" = {
         type = "internal/network";
