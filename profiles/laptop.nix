@@ -5,8 +5,6 @@
   home.packages = with pkgs; [
     brightnessctl
     networkmanager_dmenu
-    teams
-    zoom-us
   ];
 
   # Alacritty
