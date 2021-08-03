@@ -58,7 +58,7 @@
     libnotify
     maim
     mathematica
-    ms-teams
+    teams
     playerctl
     puddletag
     pulsemixer
