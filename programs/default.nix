@@ -12,6 +12,7 @@
     ./i3.nix
     ./mpv.nix
     ./neovim
+    ./networkmanager-dmenu.nix
     ./picom.nix
     ./polybar.nix
     ./ranger
@@ -58,6 +59,7 @@
     libnotify
     maim
     mathematica
+    networkmanager_dmenu
     playerctl
     puddletag
     pulsemixer

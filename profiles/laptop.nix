@@ -6,7 +6,7 @@
     brightnessctl
     networkmanager_dmenu
     teams
-    zoom-us
+    zoom
   ];
 
   # Alacritty
