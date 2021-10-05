@@ -55,6 +55,7 @@
     fd
     gimp
     imagemagick
+    inkscape
     julia-stable-bin
     libnotify
     maim
