@@ -106,9 +106,9 @@
             # system menu
             "${modifier}+BackSpace" = "exec system-menu";
             # screenshots
-            "Shift+Print" = "exec maim -u -s ~/Pictures/$(date +%F-%s).png";
-            "Print" = "exec maim -u -s | xclip -selection clipboard -t image/png";
-            "${modifier}+Print" = "exec maim -u ~/Pictures/$(date +%F-%s).png";
+            "Shift+Home" = "exec maim -u -s ~/Pictures/$(date +%F-%s).png";
+            "Home" = "exec maim -u -s | xclip -selection clipboard -t image/png";
+            "${modifier}+Home" = "exec maim -u ~/Pictures/$(date +%F-%s).png";
             # task manager
             "Control+Mod1+Delete" = "exec --no-startup-id alacritty --class taskmanager -e htop";
             # workspaces
