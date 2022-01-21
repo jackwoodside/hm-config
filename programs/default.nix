@@ -31,12 +31,6 @@
     obs-studio.enable = true;
   };
 
-  # Desktop files
-  xdg.dataFile = {
-    "applications/mathematica.desktop".source = ./mathematica.desktop;
-    "applications/matlab.desktop".source = ./matlab.desktop;
-  };
-
   # Enable font management.
   fonts.fontconfig.enable = true;
 
@@ -59,7 +53,6 @@
     julia-stable-bin
     libnotify
     maim
-    mathematica
     networkmanager_dmenu
     playerctl
     puddletag
