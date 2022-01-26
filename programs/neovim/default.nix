@@ -114,6 +114,7 @@
             \ 'c' : 'COM',
             \ },
             \ }
+      " TODO only show branch if actually exists?
       function! LightlineGit()
               let branch = FugitiveHead()
               let [a,m,r] = GitGutterGetHunkSummary()
@@ -124,9 +125,10 @@
               let modified = &modified ? ' [+]' : ''\''
               return filename . modified
       endfunction
+      " TODO only update on write, only load in tex files
       function! LightlineTexWordcount()
               let words = 8 "vimtex#misc#wordcount()
-              return words . 'W'
+              return words . ' words'
       endfunction
       function! LightlinePosition()
               return (100 * line('.') / line('$')) . '%  ' . line('.') . '/' . line('$')
