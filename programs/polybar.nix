@@ -27,6 +27,7 @@
       };
       "bar/primary" = {
         monitor = "HDMI-A-0";
+        monitor-fallback = "eDP-1";
         height = 25;
         fixed-center = "true";
         bottom = "true";
