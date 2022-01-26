@@ -5,13 +5,8 @@
     enable = true;
     package = pkgs.polybarFull;
     script = "
-      if type \"xrandr\"; then
-        for m in $(xrandr --query | grep \" connected\" | cut -d\" \" -f1); do
-          MONITOR=$m polybar --reload main &
-        done
-      else
-        polybar --reload main &
-      fi
+      polybar primary &
+      polybar secondary &
     ";
     config = {
       "colors" = {
@@ -30,8 +25,8 @@
         margin-top = 0;
         margin-bottom = 0;
       };
-      "bar/main" = {
-        monitor = "\${env:MONITOR:}";
+      "bar/primary" = {
+        monitor = "HDMI-A-0";
         height = 25;
         fixed-center = "true";
         bottom = "true";
@@ -48,8 +43,27 @@
         modules-left = "i3";
         modules-right = "pulseaudio wlan eth battery date";
       };
+      "bar/secondary" = {
+        monitor = "DisplayPort-2";
+        height = 25;
+        fixed-center = "true";
+        bottom = "true";
+        background = "\${colors.background}";
+        foreground = "\${colors.foreground}";
+        line-size = 2;
+        padding-right = 2;
+        module-margin-left = 1;
+        module-margin-right = 1;
+        font-0 = "RobotoMono:style=regular:pixelsize=12;1";
+        font-1 = "Font Awesome 5 Brands Regular:style=regular:pixelsize=12;1";
+        font-2 = "Font Awesome 5 Free Regular:style=regular:pixelsize=12;1";
+        font-3 = "Font Awesome 5 Free Solid :style=regular:pixelsize=12;1";
+        modules-left = "i3";
+        modules-right = "pulseaudio date";
+      };
       "module/i3" = {
         type = "internal/i3";
+        pin-workspaces = true;
         strip-wsnumbers = "true";
         enable-click = "false";
         enable-scroll = "false";
@@ -85,7 +99,7 @@
       };
       "module/eth" = {
         type = "internal/network";
-        interface = "enp0s25";
+        interface = "eno1";
         interval = 3;
         label-connected = "";
         label-disconnected = "";

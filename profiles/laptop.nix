@@ -4,7 +4,8 @@
   # Laptop-specific programs
   home.packages = with pkgs; [
     brightnessctl
-    networkmanager_dmenu
+    teams
+    zoom
   ];
 
   # Alacritty

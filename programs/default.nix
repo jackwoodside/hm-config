@@ -12,6 +12,7 @@
     ./i3.nix
     ./mpv.nix
     ./neovim
+    ./networkmanager-dmenu.nix
     ./picom.nix
     ./polybar.nix
     ./ranger
@@ -28,12 +29,6 @@
     feh.enable = true;
     fzf.enable = true;
     obs-studio.enable = true;
-  };
-
-  # Desktop files
-  xdg.dataFile = {
-    "applications/mathematica.desktop".source = ./mathematica.desktop;
-    "applications/matlab.desktop".source = ./matlab.desktop;
   };
 
   # Enable font management.
@@ -58,8 +53,7 @@
     julia-stable-bin
     libnotify
     maim
-    mathematica
-    teams
+    networkmanager_dmenu
     playerctl
     puddletag
     pulsemixer
