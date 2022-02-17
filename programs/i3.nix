@@ -78,12 +78,12 @@
             "XF86MonBrightnessUp" = "exec brightnessctl s +5%";
             "XF86MonBrightnessDown" = "exec brightnessctl s 5%-";
             # display manager
-            "${modifier}+p" = "exec display-menu";
+            "${modifier}+p" = "exec ~/.local/bin/display-menu";
             # dropdown terminal
             "${modifier}+Delete" = "[instance=\"dropdown\"] scratchpad show; [instance=\"dropdown\"] move position center";
             "${modifier}+Shift+Delete" = "exec --no-startup-id alacritty --class dropdown";
             # emoji menu
-            "${modifier}+u" = "exec unicode-menu";
+            "${modifier}+u" = "exec ~/.local/bin/unicode-menu";
             # media controls
             "XF86AudioRaiseVolume" = "exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1%";
             "XF86AudioLowerVolume" = "exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -1%";
@@ -93,8 +93,8 @@
             "XF86AudioNext" = "exec playerctl next ";
             "XF86AudioPrev" = "exec playerctl previous";
             # mounting
-            "${modifier}+m" = "exec --no-startup-id mount-menu";
-            "${modifier}+Shift+m" = "exec --no-startup-id umount-menu";
+            "${modifier}+m" = "exec --no-startup-id ~/.local/bin/mount-menu";
+            "${modifier}+Shift+m" = "exec --no-startup-id ~/.local/bin/umount-menu";
             # network manager
             "${modifier}+n" = "exec networkmanager_dmenu";
             # auto-clicker
@@ -104,7 +104,7 @@
             # ranger
             "${modifier}+w" = "exec alacritty -e ranger";
             # system menu
-            "${modifier}+BackSpace" = "exec system-menu";
+            "${modifier}+BackSpace" = "exec ~/.local/bin/system-menu";
             # screenshots
             "Shift+Home" = "exec maim -u -s ~/Pictures/$(date +%F-%s).png";
             "Home" = "exec maim -u -s | xclip -selection clipboard -t image/png";
