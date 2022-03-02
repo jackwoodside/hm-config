@@ -83,7 +83,7 @@
             "${modifier}+Delete" = "[instance=\"dropdown\"] scratchpad show; [instance=\"dropdown\"] move position center";
             "${modifier}+Shift+Delete" = "exec --no-startup-id alacritty --class dropdown";
             # emoji menu
-            "${modifier}+u" = "exec ~/.local/bin/unicode-menu";
+            "${modifier}+u" = "exec ~/.local/bin/rofi-emoji";
             # media controls
             "XF86AudioRaiseVolume" = "exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1%";
             "XF86AudioLowerVolume" = "exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -1%";
@@ -93,8 +93,8 @@
             "XF86AudioNext" = "exec playerctl next ";
             "XF86AudioPrev" = "exec playerctl previous";
             # mounting
-            "${modifier}+m" = "exec --no-startup-id ~/.local/bin/mount-menu";
-            "${modifier}+Shift+m" = "exec --no-startup-id ~/.local/bin/umount-menu";
+            "${modifier}+m" = "exec --no-startup-id ~/.local/bin/rofi-mount";
+            "${modifier}+Shift+m" = "exec --no-startup-id ~/.local/bin/rofi-umount";
             # network manager
             "${modifier}+n" = "exec networkmanager_dmenu";
             # picture-in-picture
@@ -102,7 +102,7 @@
             # ranger
             "${modifier}+w" = "exec alacritty -e ranger";
             # system menu
-            "${modifier}+BackSpace" = "exec ~/.local/bin/system-menu";
+            "${modifier}+BackSpace" = "exec ~/.local/bin/rofi-system";
             # screenshots
             "Shift+Home" = "exec maim -u -s ~/Pictures/$(date +%F-%s).png";
             "Home" = "exec maim -u -s | xclip -selection clipboard -t image/png";
