@@ -97,8 +97,6 @@
             "${modifier}+Shift+m" = "exec --no-startup-id ~/.local/bin/umount-menu";
             # network manager
             "${modifier}+n" = "exec networkmanager_dmenu";
-            # auto-clicker
-            "${modifier}+z" = "exec xdotool mousemove 250 500 click --repeat 200 --delay 142 1";
             # picture-in-picture
             "${modifier}+v" = "[title=\"(?i)picture-in-picture\"] scratchpad show";
             # ranger
