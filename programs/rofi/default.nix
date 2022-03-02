@@ -3,15 +3,15 @@
 {
   programs.rofi = {
     enable = true;
+    cycle = true;
     font = "RobotoMono 20";
-    theme = "~/.local/share/rofi.rasi";
     extraConfig = {
+      show-icons = false;
+      disable-history = true;
+      display-drun = "Programs";
       drun-match-fields = "name";
       drun-display-format = "{name}";
-      disable-history = true;
-      scroll-method = 1;
-      display-drun = "";
     };
   };
-  xdg.dataFile."rofi.rasi".source = ./rofi.rasi;
+  #xdg.dataFile."rofi.rasi".source = ./rofi.rasi;
 }
