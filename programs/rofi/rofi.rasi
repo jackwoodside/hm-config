@@ -1,0 +1,80 @@
+* {
+    // Black
+    black:       #252525;
+    lightblack:  #3b3b3b;
+    //
+    // Red
+    red:         #ed4a46;
+    lightred:    #ff5e56;
+    //
+    // Green
+    green:       #70b433;
+    lightgreen:  #83c746;
+    //
+    // Yellow
+    yellow:      #dbb32d;
+    lightyellow:     #efc541;
+    //
+    // Blue
+    blue:      #368aeb;
+    lightblue:     #4f9cfe;
+    //
+    // Magenta
+    magenta:      #eb6eb7;
+    lightmagenta:     #ff81ca;
+    //
+    // Cyan
+    cyan:      #3fc5b7;
+    lightcyan:     #56d8c9;
+    //
+    // White
+    white:      #777777;
+    lightwhite:     #dedede;
+    //
+    // Bold, Italic, Underline
+    highlight:     underline #ffffff;
+    //
+    normal-fg: #dedede;
+    normal-bg: #181818;
+    text-color:  #dedede;
+    background-color: #181818;
+    dark: #252525;
+}
+element {
+        padding: 2px;
+        spacing: 5px;
+        border: 0;
+}
+element normal.normal {
+        background-color: var(normal-bg);
+        text-color: var(normal-fg);
+}
+element selected.normal {
+        background-color: var(normal-fg);
+}
+listview {
+        padding: 2px 0px 0px;
+        spacing: 2px;
+        columns: 2;
+}
+inputbar {
+        padding: 1px;
+        spacing: 0px;
+        text-color: var(normal-fg);
+        children: [ "prompt", "textbox-prompt-colon", "entry" ];
+}
+prompt {
+        spacing: 0;
+        text-color: var(normal-fg);
+}
+textbox-prompt-colon {
+        margin: 0px 0.3em 0em 0em;
+        expand: false;
+        str: ":";
+        text-color: inherit;
+}
+entry {
+        text-color: var(normal-fg);
+        cursoe: text;
+        spacing: 0;
+}

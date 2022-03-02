@@ -5,13 +5,14 @@
     enable = true;
     cycle = true;
     font = "RobotoMono 20";
+    theme = ~/.local/share/rofi.rasi;
     extraConfig = {
       show-icons = false;
       disable-history = true;
-      display-drun = "Programs";
       drun-match-fields = "name";
       drun-display-format = "{name}";
+      display-drun = "Programs";
     };
   };
-  #xdg.dataFile."rofi.rasi".source = ./rofi.rasi;
+  xdg.dataFile."rofi.rasi".source = ./rofi.rasi;
 }
