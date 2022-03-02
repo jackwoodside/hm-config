@@ -45,8 +45,11 @@
     # Programs
     arandr
     bitwarden-cli
+    citra
+    desmume
     discord
     fd
+    ffmpeg
     gimp
     imagemagick
     inkscape
@@ -66,8 +69,6 @@
     sxiv
     ueberzug
     unzip
-    virt-manager
-    virt-viewer
     xclip
     xdotool
     youtube-dl
