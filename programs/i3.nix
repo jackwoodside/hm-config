@@ -101,8 +101,8 @@
             "${modifier}+v" = "[title=\"(?i)picture-in-picture\"] scratchpad show";
             # ranger
             "${modifier}+w" = "exec alacritty -e ranger";
-            # system menu
-            "${modifier}+BackSpace" = "exec ~/.local/bin/rofi-system";
+            # power menu
+            "${modifier}+BackSpace" = "exec ~/.local/bin/rofi-power";
             # screenshots
             "Shift+Home" = "exec maim -u -s ~/Pictures/$(date +%F-%s).png";
             "Home" = "exec maim -u -s | xclip -selection clipboard -t image/png";

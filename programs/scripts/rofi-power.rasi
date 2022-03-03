@@ -20,10 +20,9 @@
     normal-foreground:           var(foreground);
 }
 element {
-    padding: 10px;
+    padding: 0px 93.5px;
     cursor:  pointer;
-    spacing: 5px;
-    border:  5px;
+    border:  50px;
     border-color: var(background);
 }
 element normal.normal {
@@ -59,14 +58,15 @@ element-icon {
     text-color:       inherit;
 }
 window {
-    padding:          20%;
+    padding:          0;
     background-color: var(background);
     border:           0;
     fullscreen: true;
 }
 mainbox {
-    padding: 0;
+    padding: 250px 99px;
     border:  0;
+    children: [listview];
 }
 message {
     padding:      1px;
@@ -82,12 +82,7 @@ listview {
     border-color: var(separatorcolor);
     spacing:      2px;
     fixed-height: 0;
-    border:       2px solid 0px 0px;
-    columns: 2;
-}
-sidebar {
-    border-color: var(separatorcolor);
-    border:       2px dash 0px 0px;
+    layout: horizontal;
 }
 button {
     cursor:     pointer;
@@ -97,25 +92,4 @@ button {
 button selected {
     background-color: var(selected-normal-background);
     text-color:       var(selected-normal-foreground);
-}
-inputbar {
-    padding:    1px;
-    spacing:    0px;
-    text-color: var(normal-foreground);
-    children:   [ "prompt","textbox-prompt-colon","entry" ];
-}
-entry {
-    text-color:        var(normal-foreground);
-    cursor:            text;
-    spacing:           20;
-}
-prompt {
-    spacing:    0;
-    text-color: var(normal-foreground);
-}
-textbox-prompt-colon {
-    margin:     0px 0.3000em 0.0000em 0.0000em;
-    expand:     false;
-    str:        ":";
-    text-color: inherit;
 }
