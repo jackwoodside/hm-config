@@ -6,7 +6,7 @@ path="$folder/$name"
 
 ANS=$(echo -e "\n\n" | rofi -theme ~/.local/share/rofi-buttons.rasi -font "RobotoMono 300" -dmenu -i)
 if [ "$ANS" == "" ] ; then
-        args="--delay=0.5 --select --highlight --color=0.85,0.87,0.91,0.2"
+        args="--delay=0.5 --select"
 elif [ "$ANS" == "" ] ; then
         args="--delay=1 --window=$(xdotool getactivewindow)"
 elif [ "$ANS" == "" ] ; then
