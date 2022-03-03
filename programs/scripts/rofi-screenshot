@@ -14,7 +14,7 @@ else
         exit 1
 fi
 maim --hidecursor --quiet --quality=3 --format='png' $args "$path" && {
-        notify-send "Screenshot saved as $path"
+        notify-send "Saved as $path"
 
         xclip -selection clipboard -target 'image/png' -in "$path"
 }
