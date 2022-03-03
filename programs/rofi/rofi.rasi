@@ -1,80 +1,125 @@
+/**
+ * rofi -dump-theme output.
+ * Rofi version: 1.7.3
+ **/
 * {
-    // Black
-    black:       #252525;
-    lightblack:  #3b3b3b;
-    //
-    // Red
-    red:         #ed4a46;
-    lightred:    #ff5e56;
-    //
-    // Green
-    green:       #70b433;
-    lightgreen:  #83c746;
-    //
-    // Yellow
-    yellow:      #dbb32d;
-    lightyellow:     #efc541;
-    //
-    // Blue
-    blue:      #368aeb;
-    lightblue:     #4f9cfe;
-    //
-    // Magenta
-    magenta:      #eb6eb7;
-    lightmagenta:     #ff81ca;
-    //
-    // Cyan
-    cyan:      #3fc5b7;
-    lightcyan:     #56d8c9;
-    //
-    // White
-    white:      #777777;
-    lightwhite:     #dedede;
-    //
-    // Bold, Italic, Underline
-    highlight:     underline #ffffff;
-    //
-    normal-fg: #dedede;
-    normal-bg: #181818;
-    text-color:  #dedede;
-    background-color: #181818;
-    dark: #252525;
+    red:                         #ed4a46;
+    selected-active-foreground:  var(background);
+    lightfg:                     #dedede;
+    separatorcolor:              var(foreground);
+    urgent-foreground:           var(red);
+    lightbg:                     #181818;
+    background-color:            transparent;
+    border-color:                var(foreground);
+    normal-background:           #77777733;
+    selected-urgent-background:  var(red);
+    spacing:                     2;
+    urgent-background:           var(background);
+    selected-normal-foreground:  var(lightbg);
+    background:                  #181818;
+    active-background:           var(background);
+    selected-normal-background:  var(lightfg);
+    foreground:                  #dedede;
+    selected-urgent-foreground:  var(background);
+    normal-foreground:           var(foreground);
 }
 element {
-        padding: 2px;
-        spacing: 5px;
-        border: 0;
+    padding: 5px;
+    cursor:  pointer;
+    spacing: 5px;
+    border:  5px;
+    border-color: var(background);
 }
 element normal.normal {
-        background-color: var(normal-bg);
-        text-color: var(normal-fg);
+    background-color: var(normal-background);
+    text-color:       var(normal-foreground);
+}
+element normal.urgent {
+    background-color: var(urgent-background);
+    text-color:       var(urgent-foreground);
 }
 element selected.normal {
-        background-color: var(normal-fg);
+    background-color: var(selected-normal-background);
+    text-color:       var(selected-normal-foreground);
+}
+element selected.urgent {
+    background-color: var(selected-urgent-background);
+    text-color:       var(selected-urgent-foreground);
+}
+element alternate.normal {
+    text-color:       var(normal-foreground);
+    background-color: var(normal-background);
+}
+element-text {
+    background-color: transparent;
+    cursor:           inherit;
+    highlight:        inherit;
+    text-color:       inherit;
+}
+element-icon {
+    background-color: transparent;
+    size:             1.0000em;
+    cursor:           inherit;
+    text-color:       inherit;
+}
+window {
+    padding:          20%;
+    background-color: var(background);
+    border:           0;
+    fullscreen: true;
+}
+mainbox {
+    padding: 0;
+    border:  0;
+}
+message {
+    padding:      1px;
+    border-color: var(separatorcolor);
+    border:       2px dash 0px 0px;
+}
+textbox {
+    text-color: var(foreground);
 }
 listview {
-        padding: 2px 0px 0px;
-        spacing: 2px;
-        columns: 2;
+    padding:      5px 5px 5px;
+    scrollbar:    false;
+    border-color: var(separatorcolor);
+    spacing:      2px;
+    fixed-height: 0;
+    border:       2px solid 0px 0px;
+    columns: 2;
+}
+sidebar {
+    border-color: var(separatorcolor);
+    border:       2px dash 0px 0px;
+}
+button {
+    cursor:     pointer;
+    spacing:    0;
+    text-color: var(normal-foreground);
+}
+button selected {
+    background-color: var(selected-normal-background);
+    text-color:       var(selected-normal-foreground);
 }
 inputbar {
-        padding: 1px;
-        spacing: 0px;
-        text-color: var(normal-fg);
-        children: [ "prompt", "textbox-prompt-colon", "entry" ];
-}
-prompt {
-        spacing: 0;
-        text-color: var(normal-fg);
-}
-textbox-prompt-colon {
-        margin: 0px 0.3em 0em 0em;
-        expand: false;
-        str: ":";
-        text-color: inherit;
+    padding:    1px;
+    spacing:    0px;
+    text-color: var(normal-foreground);
+    children:   [ "prompt","textbox-prompt-colon","entry" ];
 }
 entry {
-        text-color: var(normal-fg);
-        cursoe: text;
-        spacing: 0;
+    text-color:        var(normal-foreground);
+    cursor:            text;
+    spacing:           20;
+}
+prompt {
+    spacing:    0;
+    text-color: var(normal-foreground);
+}
+textbox-prompt-colon {
+    margin:     0px 0.3000em 0.0000em 0.0000em;
+    expand:     false;
+    str:        ":";
+    text-color: inherit;
 }
