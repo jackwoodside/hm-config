@@ -1,0 +1,10 @@
+#!/bin/sh
+LOCK=/home/jack/.local/share/lock.png
+TMP=/tmp/original.png
+BG=/tmp/locked.png
+RES=1920x1080
+
+sleep 0.15
+ffmpeg -f x11grab -video_size $RES -y -i $DISPLAY -vframes 1 $TMP
+ffmpeg -y -i $TMP -i $LOCK -filter_complex "boxblur=5:1,overlay=(main_w-overlay_w)/2:(main_h-overlay_h)/2" -vframes 1 $BG
+i3lock -u -e -i $BG

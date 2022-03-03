@@ -1,11 +1,8 @@
 { config, pkgs, lib, ... }:
 # TODO
-# arandr -> autorandr
 # nvim
 ## plugins
-## new push/pull bindings for git
 ## vimtex wordcount
-# .local/bin, bwmenu
 {
   # Let Home Manager install and manage itself
   programs.home-manager.enable = true;

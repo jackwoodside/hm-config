@@ -104,8 +104,7 @@
             # power menu
             "${modifier}+BackSpace" = "exec ~/.local/bin/rofi-power";
             # screenshots
-            "Shift+Home" = "exec maim -u -s ~/Pictures/$(date +%F-%s).png";
-            "Home" = "exec maim -u -s | xclip -selection clipboard -t image/png";
+            "Home" = "exec --no-startup-id ~/.local/bin/rofi-screenshot";
             "${modifier}+Home" = "exec maim -u ~/Pictures/$(date +%F-%s).png";
             # task manager
             "Control+Mod1+Delete" = "exec --no-startup-id alacritty --class taskmanager -e htop";
