@@ -3,6 +3,9 @@
 # nvim
 ## plugins
 ## vimtex wordcount
+#
+# htop
+## top bars
 {
   # Let Home Manager install and manage itself
   programs.home-manager.enable = true;
