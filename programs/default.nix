@@ -4,6 +4,7 @@
   # Home Manager programs.
   imports = [
     ./alacritty.nix
+    ./bspwm.nix
     ./direnv.nix
     ./dunst.nix
     ./git.nix
@@ -18,6 +19,7 @@
     ./ranger
     ./rofi
     ./scripts
+    ./sxhkd.nix
     ./unclutter.nix
     ./x.nix
     ./zathura.nix
@@ -45,6 +47,7 @@
     # Programs
     arandr
     bitwarden-cli
+    bsp-layout
     citra
     desmume
     discord
@@ -59,6 +62,7 @@
     networkmanager_dmenu
     playerctl
     puddletag
+    pulseaudio
     pulsemixer
     python3Minimal
     qbittorrent
