@@ -56,7 +56,7 @@
     gimp
     imagemagick
     inkscape
-    julia-stable-bin
+    julia-bin
     libnotify
     maim
     networkmanager_dmenu
