@@ -127,7 +127,7 @@
       endfunction
       " TODO only update on write, only load in tex files
       function! LightlineTexWordcount()
-              let words = 8 "vimtex#misc#wordcount()
+              let words = 0 "vimtex#misc#wordcount()
               return words . ' words'
       endfunction
       function! LightlinePosition()
