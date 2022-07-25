@@ -42,7 +42,7 @@
         font-2 = "Font Awesome 5 Free Regular:style=regular:pixelsize=12;1";
         font-3 = "Font Awesome 5 Free Solid :style=regular:pixelsize=12;1";
         modules-left = "i3";
-        modules-right = "pulseaudio wlan eth battery date";
+        modules-right = "pulseaudio wifi ethernet backlight battery date";
       };
       "bar/secondary" = {
         monitor = "DisplayPort-2";
@@ -89,7 +89,7 @@
         label-muted = " %percentage%%";
         label-muted-foreground = "\${colors.foreground-alt}";
       };
-      "module/wlan" = {
+      "module/wifi" = {
         type = "internal/network";
         interface = "wlo1";
         interval = 3;
@@ -98,7 +98,7 @@
         label-disconnected-foreground = "\${colors.alert}";
         format-disconnected-underline = "\${colors.background}";
       };
-      "module/eth" = {
+      "module/ethernet" = {
         type = "internal/network";
         interface = "eno1";
         interval = 3;
@@ -106,6 +106,12 @@
         label-disconnected = "";
         label-disconnected-foreground = "\${colors.alert}";
         format-disconnected-underline = "\${colors.background}";
+      };
+      "module/backlight" = {
+        type = "internal/backlight";
+        card = "intel_backlight";
+        format = "<label>";
+        label = " %percentage%%";
       };
       "module/battery" = {
         type = "internal/battery";
