@@ -27,7 +27,6 @@
   ];
   programs = {
     exa.enable = true;
-    firefox.enable = true;
     feh.enable = true;
     fzf.enable = true;
     obs-studio.enable = true;
@@ -47,21 +46,19 @@
     # Programs
     arandr
     bitwarden-cli
-    bsp-layout
-    citra
-    desmume
     discord
     fd
     ffmpeg
+    firefox
     gimp
     imagemagick
     inkscape
     julia-bin
+    kdenlive
     libnotify
     maim
     networkmanager_dmenu
     playerctl
-    puddletag
     pulseaudio
     pulsemixer
     python3Minimal
