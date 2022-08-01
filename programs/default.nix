@@ -57,6 +57,7 @@
     kdenlive
     libnotify
     maim
+    mathematica
     networkmanager_dmenu
     playerctl
     pulseaudio
