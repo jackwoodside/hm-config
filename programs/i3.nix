@@ -71,6 +71,7 @@
             "${modifier}+t" = "split toggle";
             # toggle screen that current workspace is on
             "${modifier}+x" = "move workspace to output right";
+            "${modifier}+Shift+x" = "move workspace to output up";
             # audio profile
             "${modifier}+a" = "exec --no-startup-id pactl set-card-profile 0 'output:analog-stereo'";
             "${modifier}+Shift+a" = "exec --no-startup-id pactl set-card-profile 0 'output:hdmi-stereo'";
