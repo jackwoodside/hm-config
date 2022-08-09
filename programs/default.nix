@@ -53,6 +53,7 @@
     gimp
     imagemagick
     inkscape
+    jabref
     julia-bin
     kdenlive
     libnotify

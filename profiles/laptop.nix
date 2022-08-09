@@ -4,7 +4,6 @@
   # Laptop-specific programs
   home.packages = with pkgs; [
     brightnessctl
-    jabref
     zoom-us
   ];
 
