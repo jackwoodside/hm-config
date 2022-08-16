@@ -32,6 +32,11 @@
     obs-studio.enable = true;
   };
 
+  # Desktop files.
+  xdg.dataFile = {
+    "applications/uni.desktop".source = ./uni.desktop;
+  };
+
   # Enable font management.
   fonts.fontconfig.enable = true;
 
@@ -72,6 +77,8 @@
     sxiv
     ueberzug
     unzip
+    virt-manager
+    virt-viewer
     xclip
     xdotool
     youtube-dl
