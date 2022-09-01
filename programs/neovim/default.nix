@@ -6,14 +6,14 @@
     vimAlias = true;
     withNodeJs = true;
     plugins = with pkgs.vimPlugins; [
-      auto-pairs
+      coc-pairs
       coc-nvim
       coc-vimtex
+      lightline-vim
+      ultisnips
       vim-fugitive
       vim-gitgutter
-      lightline-vim
       vim-nix
-      ultisnips
       vimtex
     ];
     extraConfig = ''
@@ -24,6 +24,9 @@
         \ <SID>check_back_space() ? "\<TAB>" :
         \ coc#refresh()
       inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+      nnoremap <silent><nowait><expr> <PageDown> coc#float#has_scroll() ? coc#float#scroll(1) : "\<PageDown>"
+  nnoremap <silent><nowait><expr> <PageUp> coc#float#has_scroll() ? coc#float#scroll(0) : "\<PageUp>"
 
       function! s:check_back_space() abort
         let col = col('.') - 1
@@ -51,7 +54,7 @@
 
       " Vimtex / UltiSnips settings
       let g:tex_flavor='latex'
-      let g:vimtex_view_method='zathura'
+      let g:vimtex_view_method='sioyek'
       let g:vimtex_view_forward_search_on_start=0
       let g:vimtex_quickfix_mode=0
       let g:vimtex_fold_enabled=1
@@ -139,9 +142,6 @@
       set termguicolors
       set background=dark
       colorscheme selenized_bw
-      " CoC menu
-      autocmd ColorScheme * highlight Pmenu guifg=none
-      autocmd ColorScheme * highlight PmenuSel guibg='#70b433' guifg=Black
       " Vimtex Conceal
       highlight Conceal guibg=None guifg=LightRed
 

@@ -19,10 +19,10 @@
     ./ranger
     ./rofi
     ./scripts
+    ./sioyek.nix
     ./sxhkd.nix
     ./unclutter.nix
     ./x.nix
-    ./zathura.nix
     ./zsh.nix
   ];
   programs = {
@@ -72,6 +72,7 @@
     qbittorrent
     ranger
     ripgrep
+    sioyek
     spotify
     steam
     sxiv
