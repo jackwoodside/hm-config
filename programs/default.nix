@@ -72,7 +72,6 @@
     qbittorrent
     ranger
     ripgrep
-    sioyek
     spotify
     steam
     sxiv
