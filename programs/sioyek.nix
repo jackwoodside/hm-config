@@ -15,7 +15,7 @@
       "background_color" = "0.09 0.09 0.09";
       "touchpad_sensitivity" = "0.4";
       "page_separator_width" = "1";
-      "page_separator_color" = "0.09 0.09 0.09"
+      "page_separator_color" = "0.09 0.09 0.09";
     };
   };
 }
