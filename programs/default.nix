@@ -75,6 +75,7 @@
     spotify
     steam
     sxiv
+    texlive.combined.scheme-full
     ueberzug
     unzip
     virt-manager
