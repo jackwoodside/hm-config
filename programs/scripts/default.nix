@@ -3,6 +3,7 @@
 {
   xdg.dataFile = {
     "emoji".source = ./emoji;
+    "formula.tex".soyrce = ./formula.tex
     "lock.png".source = ../../images/lock.png;
     "rofi-buttons.rasi".source = ./rofi-buttons.rasi;
   };
@@ -12,6 +13,7 @@
     ".local/bin/lock".source = ./lock;
     ".local/bin/tex-clear".source = ./tex-clear;
     ".local/bin/rofi-emoji".source = ./rofi-emoji;
+    ".local/bin/rofi-latex".source = ./rofi-latex;
     ".local/bin/rofi-mount".source = ./rofi-mount;
     ".local/bin/rofi-umount".source = ./rofi-umount;
     ".local/bin/rofi-power".source = ./rofi-power;

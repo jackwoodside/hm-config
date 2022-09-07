@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# Check for xclip
+xclip -h >/dev/null || exit
+
+formula=$(rofi -dmenu -i -p 'LaTeX')
+[ "$formula" != "" ] || exit
+
+pdflatex -aux-directory=/tmp -output-directory=/tmp "\def\formula{$formula}\input{~/.local/share/formula.tex}"
+convert -density 300 /tmp/formula.pdf /tmp/formula.png
+xclip -selection clipboard -target 'image/png' -in /tmp/formula.png
+notify-send "LaTeX copied to clipboard" &
