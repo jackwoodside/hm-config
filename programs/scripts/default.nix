@@ -3,7 +3,7 @@
 {
   xdg.dataFile = {
     "emoji".source = ./emoji;
-    "formula.tex".soyrce = ./formula.tex
+    "formula.tex".source = ./formula.tex;
     "lock.png".source = ../../images/lock.png;
     "rofi-buttons.rasi".source = ./rofi-buttons.rasi;
   };
