@@ -14,11 +14,12 @@
     config = {
       "background_color" = "0.09 0.09 0.09";
       "touchpad_sensitivity" = "0.4";
-      "page_separator_width" = "1";
+      "page_separator_width" = "2";
       "page_separator_color" = "0.09 0.09 0.09";
-
       "search_url_g" = "https://www.google.com/search?q=";
-      "should_launch_new_instance" = "1";
+      "should_launch_new_window" = "1";
+      "should_use_multiple_monitors" = "0";
+      "startup_commands" = "toggle_horizontal_scroll_lock";
     };
   };
 }
