@@ -4,6 +4,7 @@
   # Laptop-specific programs
   home.packages = with pkgs; [
     brightnessctl
+    zoom-us
   ];
 
   # Alacritty

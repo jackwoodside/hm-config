@@ -1,0 +1,7 @@
+#!/bin/sh
+expression=$(rofi -dmenu -i -p 'LaTeX')
+[ "$expression" != "" ] || exit
+pdflatex -aux-directory=/tmp -output-directory=/tmp "\def\expression{$expression}\input{~/.local/share/expression.tex}"
+convert -density 300 /tmp/expression.pdf /tmp/expression.png
+xclip -selection clipboard -target 'image/png' -in /tmp/expression.png
+notify-send "LaTeX image copied to clipboard" &

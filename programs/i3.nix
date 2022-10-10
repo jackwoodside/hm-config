@@ -71,6 +71,7 @@
             "${modifier}+t" = "split toggle";
             # toggle screen that current workspace is on
             "${modifier}+x" = "move workspace to output right";
+            "${modifier}+Shift+x" = "move workspace to output up";
             # audio profile
             "${modifier}+a" = "exec --no-startup-id pactl set-card-profile 0 'output:analog-stereo'";
             "${modifier}+Shift+a" = "exec --no-startup-id pactl set-card-profile 0 'output:hdmi-stereo'";
@@ -84,6 +85,8 @@
             "${modifier}+Shift+Delete" = "exec --no-startup-id alacritty --class dropdown";
             # emoji menu
             "${modifier}+u" = "exec ~/.local/bin/rofi-emoji";
+            # latex to image
+            "${modifier}+l" = "exec ~/.local/bin/rofi-latex";
             # media controls
             "XF86AudioRaiseVolume" = "exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +2%";
             "XF86AudioLowerVolume" = "exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -2%";
@@ -170,7 +173,7 @@
 
           assign [class="(?i)firefox"] $workspace1
           assign [class="discord"] $workspace2
-          assign [class="(?i)zathura"] $workspace3
+          assign [class="(?i)sioyek"] $workspace3
           assign [class="(?i)mathematica"] $workspace4
           assign [class="(?i)virt-viewer"] $workspace4
           assign [class="(?i)steam"] $workspace5

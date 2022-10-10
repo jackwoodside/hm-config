@@ -6,14 +6,14 @@
     vimAlias = true;
     withNodeJs = true;
     plugins = with pkgs.vimPlugins; [
-      auto-pairs
+      coc-pairs
       coc-nvim
       coc-vimtex
+      lightline-vim
+      ultisnips
       vim-fugitive
       vim-gitgutter
-      lightline-vim
       vim-nix
-      ultisnips
       vimtex
     ];
     extraConfig = ''
@@ -26,6 +26,8 @@
           \ CheckBackspace() ? "\<TAB>" :
           \ coc#refresh()
       inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+      nnoremap <silent><nowait><expr> <PageDown> coc#float#has_scroll() ? coc#float#scroll(1) : "\<PageDown>"
+      nnoremap <silent><nowait><expr> <PageUp> coc#float#has_scroll() ? coc#float#scroll(0) : "\<PageUp>"
 
       " Accept completion
       inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
@@ -69,7 +71,7 @@
 
       " Vimtex / UltiSnips settings
       let g:tex_flavor='latex'
-      let g:vimtex_view_method='zathura'
+      let g:vimtex_view_method='sioyek'
       let g:vimtex_view_forward_search_on_start=0
       let g:vimtex_quickfix_mode=0
       let g:vimtex_fold_enabled=1

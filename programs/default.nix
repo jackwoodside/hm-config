@@ -19,10 +19,10 @@
     ./ranger
     ./rofi
     ./scripts
+    ./sioyek.nix
     ./sxhkd.nix
     ./unclutter.nix
     ./x.nix
-    ./zathura.nix
     ./zsh.nix
   ];
   programs = {
@@ -30,6 +30,11 @@
     feh.enable = true;
     fzf.enable = true;
     obs-studio.enable = true;
+  };
+
+  # Desktop files.
+  xdg.dataFile = {
+    "applications/uni.desktop".source = ./uni.desktop;
   };
 
   # Enable font management.
@@ -53,10 +58,12 @@
     gimp
     imagemagick
     inkscape
+    jabref
     julia-bin
     kdenlive
     libnotify
     maim
+    mathematica
     networkmanager_dmenu
     playerctl
     pulseaudio
@@ -68,8 +75,11 @@
     spotify
     steam
     sxiv
+    texlive.combined.scheme-full
     ueberzug
     unzip
+    virt-manager
+    virt-viewer
     xclip
     xdotool
     youtube-dl
