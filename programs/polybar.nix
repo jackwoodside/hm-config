@@ -45,7 +45,7 @@
         modules-right = "pulseaudio wifi ethernet backlight battery date";
       };
       "bar/secondary" = {
-        monitor = "DisplayPort-2";
+        monitor = "DP-1";
         height = 25;
         fixed-center = "true";
         bottom = "true";
