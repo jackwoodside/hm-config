@@ -56,9 +56,9 @@
         module-margin-left = 1;
         module-margin-right = 1;
         font-0 = "RobotoMono:style=regular:pixelsize=12;1";
-        font-1 = "Font Awesome 5 Brands Regular:style=regular:pixelsize=12;1";
-        font-2 = "Font Awesome 5 Free Regular:style=regular:pixelsize=12;1";
-        font-3 = "Font Awesome 5 Free Solid :style=regular:pixelsize=12;1";
+        font-1 = "Font Awesome 6 Brands Regular:style=regular:pixelsize=12;1";
+        font-2 = "Font Awesome 6 Free Regular:style=regular:pixelsize=12;1";
+        font-3 = "Font Awesome 6 Free Solid :style=regular:pixelsize=12;1";
         modules-left = "i3";
         modules-right = "pulseaudio date";
       };
