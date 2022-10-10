@@ -18,23 +18,41 @@
     ];
     extraConfig = ''
       " CoC settings
+      set updatetime=300
+
       " Cycle completion options
       inoremap <silent><expr> <TAB>
-        \ pumvisible() ? "\<C-n>" :
-        \ <SID>check_back_space() ? "\<TAB>" :
-        \ coc#refresh()
-      inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+          \ coc#pum#visible() ? coc#pum#next(1):
+          \ CheckBackspace() ? "\<TAB>" :
+          \ coc#refresh()
+      inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
-      function! s:check_back_space() abort
+      " Accept completion
+      inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+      function! CheckBackspace() abort
         let col = col('.') - 1
         return !col || getline('.')[col - 1]  =~# '\s'
       endfunction
-      " Open completion menu
-      inoremap <silent><expr> <c-space> coc#refresh()
-      " Accept completion option
-      inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-      " Highlight symbol under cursor on CursorHold
+
+      " Trigger completion
+      if has('nvim')
+        inoremap <silent><expr> <c-space> coc#refresh()
+      else
+        inoremap <silent><expr> <c-@> coc#refresh
+      endif
+
+      " Highlight symbol and its references when holding the cursor
       autocmd CursorHold * silent call CocActionAsync('highlight')
+
+      " Scroll coc floating window
+      nnoremap <silent><nowait><expr> <PageDown> coc#float#has_scroll() ? coc#float#scroll(1) : "\<PageDown>"
+      nnoremap <silent><nowait><expr> <PageUp> coc#float#has_scroll() ? coc#float#scroll(0) : "\<PageUp>"
+      inoremap <silent><nowait><expr> <PageDown> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+      inoremap <silent><nowait><expr> <PageUp> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+      vnoremap <silent><nowait><expr> <PageDown> coc#float#has_scroll() ? coc#float#scroll(1) : "\<PageDown>"
+      vnoremap <silent><nowait><expr> <PageUp> coc#float#has_scroll() ? coc#float#scroll(0) : "\<PageUp>"
 
       " Write file with root permission
       nnoremap <silent> <F12> :w !sudo tee %
@@ -139,9 +157,6 @@
       set termguicolors
       set background=dark
       colorscheme selenized_bw
-      " CoC menu
-      autocmd ColorScheme * highlight Pmenu guifg=none
-      autocmd ColorScheme * highlight PmenuSel guibg='#70b433' guifg=Black
       " Vimtex Conceal
       highlight Conceal guibg=None guifg=LightRed
 
@@ -175,9 +190,6 @@
 
       " Height below status bar
       set cmdheight=1
-
-      " CursorHold timing
-      set updatetime=300
 
       " Don't give |ins-completion-menu| messages
       set shortmess=F
