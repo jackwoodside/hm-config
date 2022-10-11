@@ -9,7 +9,7 @@
       "move_left" = "h";
       "move_right" = "l";
       "fit_to_page_width" = "f";
-      "quit" = "q";
+      "close_window" = "q";
     };
     config = {
       "background_color" = "0.09 0.09 0.09";
