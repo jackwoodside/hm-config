@@ -4,7 +4,7 @@
   # Laptop-specific programs
   home.packages = with pkgs; [
     brightnessctl
-    mathematica
+    #mathematica
     zoom-us
   ];
 
