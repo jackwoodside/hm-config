@@ -46,6 +46,7 @@
       };
       "bar/secondary" = {
         monitor = "DP-1";
+        monitor-fallback = "HDMI-1";
         height = 25;
         fixed-center = "true";
         bottom = "true";
