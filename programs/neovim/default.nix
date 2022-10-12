@@ -13,6 +13,7 @@
       ultisnips
       vim-fugitive
       vim-gitgutter
+      vim-grammarous
       vim-nix
       vimtex
     ];
@@ -94,10 +95,18 @@
       let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
       " Clear extra files
       autocmd VimLeave *.tex !tex-clear %
-      " Spell checker/corrector
+
+      " Spell checker
       autocmd FileType tex setlocal spell
       set spelllang=en_au
       inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
+      " Grammar checker
+      nnoremap <silent> <Leader>rc :GrammarousCheck<CR>
+      nnoremap <silent> <Leader>rd :GrammarousReset<CR>
+      nnoremap <silent> <Leader>rf <Plug>(grammarous-fixit)
+      nnoremap <silent> <Leader>rr <Plug>(grammarous-remove-error)
+      nnoremap <silent> <Leader>rn <Plug>(grammarous-move-to-next-error)
+      nnoremap <silent> <Leader>rp <Plug>(grammarous-move-to-previous-error)
 
       " Statusline settings
       " Always show
