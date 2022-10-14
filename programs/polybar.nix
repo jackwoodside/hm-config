@@ -101,7 +101,7 @@
       };
       "module/ethernet" = {
         type = "internal/network";
-        interface = "eno1";
+        interface = "wlp6s0";
         interval = 3;
         label-connected = "";
         label-disconnected = "";

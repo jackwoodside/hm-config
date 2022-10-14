@@ -1,11 +1,9 @@
 { config, pkgs, lib, ... }:
-# TODO
-# nvim
-## plugins
-## vimtex wordcount
-#
-# htop
-## top bars
+
+##### TODO
+### nvim
+# vimtex wordcount
+# git branch always on
 {
   # Let Home Manager install and manage itself
   programs.home-manager.enable = true;
