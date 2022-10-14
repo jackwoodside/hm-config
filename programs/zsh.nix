@@ -32,6 +32,9 @@
       pd = "mpv --really-quiet $PWD & disown && exit";
       gs = "git status -uno";
       gsa = "git status";
+      server = "ssh -Y jaw103@nucl03";
+      servervnc = "ssh -Y -L 5901:127.0.0.1:5962 jaw103@nucl03";
+      vnc = "vncviewer :1";
     };
   };
 }

@@ -75,6 +75,7 @@
     steam
     sxiv
     texlive.combined.scheme-full
+    tigervnc
     ueberzug
     unzip
     virt-manager
