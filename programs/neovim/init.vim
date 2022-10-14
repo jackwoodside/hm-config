@@ -136,6 +136,10 @@ function! LightlinePosition()
         return (100 * line('.') / line('$')) . '%  ' . line('.') . '/' . line('$')
 endfunction
 
+""" Sneak
+let g:sneak#s_next = 1 " tap s/S to move through results
+let g:sneak#use_ic_scs = 1 " match vim's case sensitivity
+
 """ Theming
 " Colourscheme
 set termguicolors

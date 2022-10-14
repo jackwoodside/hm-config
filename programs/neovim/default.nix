@@ -23,6 +23,7 @@
       vim-grammarous
       vimtex
       # misc
+      vim-sneak
       vim-nix
     ];
   };
