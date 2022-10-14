@@ -72,6 +72,7 @@
     ranger
     ripgrep
     spotify
+    sshfs
     steam
     sxiv
     texlive.combined.scheme-full
