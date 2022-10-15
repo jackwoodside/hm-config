@@ -34,7 +34,7 @@
       gsa = "git status";
       server = "ssh -Y -L 5901:127.0.0.1:5962 jaw103@nucl03";
       vnc = "vncviewer :1";
-      mountserver = "sshfs -o reconnect,ServerAliveInterval=20 idmap=user jaw103@nucl03:/scratch3/labr ~/Documents/server";
+      mountserver = "sshfs -o reconnect,ServerAliveInterval=20,idmap=user jaw103@nucl03:/scratch3/labr ~/Documents/server";
     };
   };
 }
