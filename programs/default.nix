@@ -52,6 +52,7 @@
     arandr
     bitwarden-cli
     clang
+    clang-tools
     discord
     fd
     ffmpeg
