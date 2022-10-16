@@ -30,10 +30,11 @@
       c = "clear";
       cdc = "cd && clear";
       pd = "mpv --really-quiet $PWD & disown && exit";
-      gs = "git status";
-      gp = "git push";
-      go = "git pull";
+      gc = "git commit";
       gd = "git diff";
+      go = "git pull";
+      gp = "git push";
+      gs = "git status";
       server = "ssh -Y -L 5901:127.0.0.1:5962 jaw103@nucl03";
       vnc = "vncviewer :1";
       mountserver = "sshfs -o reconnect,ServerAliveInterval=20,idmap=user jaw103@nucl03:/scratch3/labr ~/Documents/server";
