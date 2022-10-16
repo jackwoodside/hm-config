@@ -73,6 +73,7 @@
     qbittorrent
     ranger
     ripgrep
+    root
     spotify
     sshfs
     steam
