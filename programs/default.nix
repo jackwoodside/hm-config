@@ -73,6 +73,7 @@
     python3Minimal
     qbittorrent
     ranger
+    remmina
     ripgrep
     root
     spotify
@@ -80,7 +81,6 @@
     steam
     sxiv
     texlive.combined.scheme-full
-    tigervnc
     ueberzug
     unzip
     virt-manager
