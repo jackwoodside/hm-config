@@ -17,6 +17,7 @@
       vim-gitgutter
       # coc
       coc-clangd
+      coc-lua
       coc-pairs
       coc-vimtex
       # latex
