@@ -57,6 +57,7 @@
     fd
     ffmpeg
     firefox
+    gfortran
     gimp
     imagemagick
     inkscape
