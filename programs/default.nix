@@ -51,13 +51,13 @@
     # Programs
     arandr
     bitwarden-cli
+    brightnessctl
     clang
     clang-tools
     discord
     fd
     ffmpeg
     firefox
-    gfortran
     gimp
     imagemagick
     inkscape

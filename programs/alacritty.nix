@@ -4,6 +4,10 @@
   programs.alacritty = {
     enable = true;
     settings = {
+      font = {
+        normal.family = "RobotoMono Nerd Font";
+        size = 10.0;
+      };
       colors = {
         primary = {
           background = "#181818";
