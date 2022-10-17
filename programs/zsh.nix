@@ -5,6 +5,7 @@
     enable = true;
     enableAutosuggestions = true;
     enableCompletion = true;
+    enableSyntaxHighlighting = true;
     autocd = true;
     dotDir = ".config/zsh";
     initExtra = ''
@@ -20,7 +21,6 @@
       export MANPAGER='nvim +Man!'
       export PATH=$PATH:/home/jack/.local/bin
     '';
-    history.path = ".cache/zsh/history";
     shellAliases = {
       ls = "exa --icons -T -L=1";
       ls2 = "exa --icons -T -L=2";
@@ -36,7 +36,6 @@
       gp = "git push";
       gs = "git status";
       server = "ssh -Y -L 5901:127.0.0.1:5962 jaw103@nucl03";
-      vnc = "vncviewer :1";
       mountserver = "sshfs -o reconnect,ServerAliveInterval=20,idmap=user jaw103@nucl03:/scratch3/labr ~/Documents/server";
     };
   };
