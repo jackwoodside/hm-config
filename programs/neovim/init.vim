@@ -150,13 +150,13 @@ colorscheme selenized_bw
 highlight Conceal guibg=None guifg=LightRed
 
 " Always show signcolumns
-set signcolumn=yes
 highlight clear SignColumn
 
 """ Neovim settings
 set nocompatible
 set encoding=utf-8
 set t_Co=256
+set signcolumn=yes
 
 " Line numbers
 set number relativenumber
@@ -218,11 +218,11 @@ syntax on
 " Clipboard
 set clipboard=unnamedplus
 
-" No auto-comment on newline
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
 " Sensible split directions
 set splitbelow splitright
+
+" No auto-comment on newline
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Automatically remove trailing whitespace and newlines.
 autocmd BufWritePre * silent %s/\s\+$//e | norm! ``
