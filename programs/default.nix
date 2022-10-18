@@ -4,7 +4,6 @@
   # Home Manager programs.
   imports = [
     ./alacritty.nix
-    ./bspwm.nix
     ./direnv.nix
     ./dunst.nix
     ./git.nix
