@@ -1,4 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Uni VM
-Exec=/bin/sh -c "virsh -c qemu:///system start Uni ; virt-viewer -f -c qemu:///system Uni"
