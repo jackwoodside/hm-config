@@ -29,6 +29,7 @@
       c = "clear";
       cdc = "cd && clear";
       pd = "mpv --really-quiet $PWD & disown && exit";
+      ga = "git add";
       gc = "git commit";
       gd = "git diff";
       go = "git pull";
