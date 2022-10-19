@@ -24,12 +24,6 @@
     ./x.nix
     ./zsh.nix
   ];
-  programs = {
-    exa.enable = true;
-    feh.enable = true;
-    fzf.enable = true;
-    obs-studio.enable = true;
-  };
 
   # Enable font management.
   fonts.fontconfig.enable = true;
@@ -46,10 +40,13 @@
     arandr
     bitwarden-cli
     brightnessctl
-    clang
-    clang-tools
+    #clang
+    #clang-tools
     discord
+    exa
     fd
+    feh
+    fzf
     ffmpeg
     firefox
     gimp
@@ -69,7 +66,6 @@
     ranger
     remmina
     ripgrep
-    root
     spotify
     sshfs
     steam
@@ -77,8 +73,6 @@
     texlive.combined.scheme-full
     ueberzug
     unzip
-    virt-manager
-    virt-viewer
     xclip
     xdotool
     youtube-dl

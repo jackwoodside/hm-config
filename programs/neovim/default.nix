@@ -16,7 +16,7 @@
       vim-fugitive
       vim-gitgutter
       # coc
-      coc-clangd
+      #coc-clangd
       coc-lua
       coc-pairs
       coc-vimtex
