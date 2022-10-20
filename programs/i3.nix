@@ -103,7 +103,7 @@
             # picture-in-picture
             "${modifier}+v" = "[title=\"(?i)picture-in-picture\"] scratchpad show";
             # file manager
-            "${modifier}+w" = "exec alacritty -e nnn";
+            "${modifier}+w" = "exec alacritty -e lf";
             # power menu
             "${modifier}+BackSpace" = "exec ~/.local/bin/rofi-power";
             # screenshots

@@ -10,6 +10,7 @@
     ./gtk.nix
     ./htop.nix
     ./i3.nix
+    ./lf.nix
     ./mpv.nix
     ./neovim
     ./networkmanager-dmenu.nix
@@ -67,6 +68,7 @@
     steam
     sxiv
     texlive.combined.scheme-full
+    trash-cli
     unzip
     xclip
     xdotool
