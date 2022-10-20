@@ -39,8 +39,7 @@
     arandr
     bitwarden-cli
     brightnessctl
-    #clang
-    #clang-tools
+    clang-tools
     discord
     exa
     fd
