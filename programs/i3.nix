@@ -102,8 +102,8 @@
             "${modifier}+n" = "exec networkmanager_dmenu";
             # picture-in-picture
             "${modifier}+v" = "[title=\"(?i)picture-in-picture\"] scratchpad show";
-            # ranger
-            "${modifier}+w" = "exec alacritty -e ranger";
+            # file manager
+            "${modifier}+w" = "exec alacritty -e nnn";
             # power menu
             "${modifier}+BackSpace" = "exec ~/.local/bin/rofi-power";
             # screenshots
@@ -137,6 +137,7 @@
 
           startup = [
             { command = "systemctl --user restart polybar"; always = true; notification = false; }
+#            { command = "xrandr --output HDMI-0 --primary --mode 1920x1080 --pos 0x0 --output DP-1 --mode 1920x1080 --pos 1920x0"; always = true; notification = false; }
           ];
         };
 
@@ -146,9 +147,6 @@
           for_window [instance="dropdown"] move scratchpad
           for_window [instance="dropdown"] resize set 1200 700
           exec --no-startup-id alacritty --class dropdown
-
-        # screen layout (mainly for desktop)
-          exec ~/.config/nixpkgs/layout
 
         # picture-in-picture
           for_window [title="(?i)picture-in-picture"] sticky enable
