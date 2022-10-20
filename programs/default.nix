@@ -15,7 +15,6 @@
     ./networkmanager-dmenu.nix
     ./picom.nix
     ./polybar.nix
-    ./ranger
     ./rofi
     ./scripts
     ./sioyek.nix
@@ -61,9 +60,7 @@
     playerctl
     pulseaudio
     pulsemixer
-    python3Minimal
     qbittorrent
-    ranger
     remmina
     ripgrep
     spotify
@@ -71,7 +68,6 @@
     steam
     sxiv
     texlive.combined.scheme-full
-    ueberzug
     unzip
     xclip
     xdotool
