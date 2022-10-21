@@ -47,6 +47,7 @@
     feh
     fzf
     ffmpeg
+    ffmpegthumbnailer
     firefox
     gimp
     imagemagick
@@ -58,6 +59,7 @@
     maim
     networkmanager_dmenu
     playerctl
+    poppler_utils
     pulseaudio
     pulsemixer
     qbittorrent
@@ -69,6 +71,7 @@
     sxiv
     texlive.combined.scheme-full
     trash-cli
+    ueberzug
     unzip
     xclip
     xdotool
