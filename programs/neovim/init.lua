@@ -1,11 +1,12 @@
--- Neovim settings
-require('modules/options.lua')
-require('modules/theming.lua')
+-- Neovim settings, bindings and autocmds
+require('settings')
+require('keybinds')
+require('autocmds')
+-- Plugin settings and bindings
+require('plugins')
 
--- Plugin settings
-require('modules/coc.lua')
-require('modules/english.lua')
-require('modules/git.lua')
-require('modules/latex.lua')
-require('modules/sneak.lua')
-require('modules/statusline.lua')
+--Pretty print lua table
+function _G.dump(...)
+    local objects = vim.tbl_map(vim.inspect, { ... })
+    print(unpack(objects))
+end
