@@ -6,6 +6,7 @@
     ./alacritty.nix
     ./direnv.nix
     ./dunst.nix
+    ./fzf.nix
     ./git.nix
     ./gtk.nix
     ./htop.nix
@@ -45,7 +46,6 @@
     exa
     fd
     feh
-    fzf
     ffmpeg
     ffmpegthumbnailer
     firefox
