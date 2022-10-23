@@ -5,10 +5,13 @@
     enable = true;
     settings = {
       global = {
+        frame_color = "#cdd6f4";
+        background = "#1e1e2e";
+        foreground = "#cdd6f4";
+        separator_color = "frame";
         offset = "10x10";
         transparency = "20";
         frame_width = "2";
-        separator_color = "frame";
         font = "RobotoMono 16";
         idle_threshold = 120;
         line_height = 0;
@@ -19,21 +22,13 @@
         mouse_right_click = "none";
       };
       urgency_normal = {
-        background = "#181818";
-        foreground = "#dedede";
-        frame_color = "#dedede";
         timeout = 5;
       };
       urgency_low = {
-        background = "#181818";
-        foreground = "#dedede";
-        frame_color = "#dedede";
         timeout = 5;
       };
       urgency_critical = {
-        background = "#181818";
-        foreground = "#dedede";
-        frame_color = "#ed4a46";
+        frame_color = "#f38ba8";
         timeout = 0;
       };
     };
