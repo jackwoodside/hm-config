@@ -16,7 +16,7 @@ ac(
 
 -- Clear extra latex files
 ac(
-    'FileType',
+    'VimLeave',
     { pattern = { 'tex' }, command = [[ !tex-clear % ]]}
 )
 
