@@ -50,3 +50,6 @@ o.jumpoptions = 'view'
 
 -- Spelling language
 o.spelllang = 'en_au'
+
+-- Conceal level
+o.conceallevel = 2

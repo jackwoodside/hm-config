@@ -17,7 +17,6 @@ require('gitsigns').setup({
         -- Actions
         map({ 'n', 'v' }, '<leader>hr', gs.reset_hunk, { buffer = buf })
         map({ 'n', 'v' }, '<leader>hs', gs.stage_hunk)
-        map('n', '<leader>hS', gs.stage_buffer, { buffer = buf })
         map('n', '<leader>hp', gs.preview_hunk, { buffer = buf })
     end,
 })

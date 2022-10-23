@@ -8,7 +8,7 @@ require('lualine').setup({
     },
     sections = {
         lualine_a = {
-            { 'mode', color = { gui = 'bold' } },
+            { 'mode', fmt = function(m) return m:sub(1,3) end, color = { gui = 'bold' } },
         },
         lualine_b = {
             { 'diff', colored = false },
@@ -18,11 +18,7 @@ require('lualine').setup({
             { 'filename', file_status = true },
             { 'diagnostics' },
         },
-        lualine_x = {
-            'filetype',
-            'encoding',
-            'fileformat',
-        },
+        lualine_x = {},
         lualine_y = { 'progress' },
         lualine_z = {
             { 'location', color = { gui = 'bold' } },
@@ -33,12 +29,10 @@ require('lualine').setup({
             {
                 'buffers',
                 buffers_color = { active = 'lualine_b_normal' },
-            },
-        },
-        lualine_z = {
-            {
-                'tabs',
-                tabs_color = { active = 'lualine_b_normal' },
+                symbols = {
+                    modified = ' [+]',
+                    alternate_file = '',
+                },
             },
         },
     },

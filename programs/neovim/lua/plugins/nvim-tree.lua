@@ -7,7 +7,7 @@ require('nvim-tree').setup({
     },
     view = {
         width = 35,
-        side = 'left',
+        side = 'right',
     },
     filters = {
         custom = { '.git$' },
@@ -17,6 +17,7 @@ require('nvim-tree').setup({
     },
     actions = {
         open_file = {
+            quit_on_open = true,
             window_picker = {
                 enable = false,
             },
@@ -48,7 +49,7 @@ require('nvim-tree').setup({
     },
 })
 
-vim.keymap.set('n', '<C-t>', '<CMD>NvimTreeToggle<CR>')
+vim.keymap.set('n', '<leader>t', '<CMD>NvimTreeToggle<CR>')
 
 vim.api.nvim_create_autocmd('FileType', {
     group = vim.api.nvim_create_augroup('NVIM_TREE', { clear = true }),

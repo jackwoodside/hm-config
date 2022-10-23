@@ -1,8 +1,8 @@
--- Automatically compile plugins whenever this file is updated
+-- Automatically compile packer plugins whenever this file is updated
 vim.api.nvim_create_autocmd('BufWritePost', {
-        group = vim.api.nvim_crate_augroup('PACKER', { clear = true}),
-        pattern = 'plugins.lua'
-        command = 'source <afile> | PackerCompile'
+        group = vim.api.nvim_create_augroup('PACKER', { clear = true}),
+        pattern = 'plugins.lua',
+        command = 'source <afile> | PackerCompile',
 })
 
 return require('packer').startup({
@@ -17,7 +17,7 @@ return require('packer').startup({
                 use({
                         'kyazdani42/nvim-web-devicons',
                         config = function()
-                                require('nvim.web-devicons').setup()
+                                require('nvim-web-devicons').setup()
                         end,
                 })
 
@@ -49,7 +49,7 @@ return require('packer').startup({
                 })
 
                 use({
-                        'luka-reineke/indent-blankline.nvim',
+                        'lukas-reineke/indent-blankline.nvim',
                         event = 'BufRead',
                         config = function()
                                 require('plugins.indentline')
@@ -72,6 +72,27 @@ return require('packer').startup({
                         end,
                 })
 
+                use({
+                        'tpope/vim-fugitive',
+                        config = function()
+                                require('plugins.fugitive')
+                        end,
+                })
+
+                use({
+                        'rhysd/vim-grammarous',
+                        config = function()
+                                require('plugins.grammarous')
+                        end,
+                })
+
+                use({
+                        'lervag/vimtex',
+                        config = function()
+                                require('plugins.vimtex')
+                        end,
+                })
+
                 -- Syntax highlighting
                 use({
                 {
@@ -84,7 +105,7 @@ return require('packer').startup({
                 },
                 { 'nvim-treesitter/playground', after = 'nvim-treesitter' },
                 { 'nvim-treesitter/nvim-treesitter-textobjects', after = 'nvim-treesitter' },
-                { 'nvim-treesitter/nvim-treesitter/refactor', after = 'nvim-treesitter' },
+                { 'nvim-treesitter/nvim-treesitter-refactor', after = 'nvim-treesitter' },
                 { 'windwp/nvim-ts-autotag', after = 'nvim-treesitter' },
                 { 'JoosepAlviste/nvim-ts-context-commentstring', after = 'nvim-treesitter'},
                 })
@@ -106,14 +127,14 @@ return require('packer').startup({
                                 require('plugins.telescope')
                         end,
                 },
-                {
-                        'nvim-telescope/telescope-fzf-native.nvim',
-                        after = 'telescope.nvim',
-                        run = 'make',
-                        config = function()
-                                require('telescope').load_extension('fzf')
-                        end,
-                },
+--                {
+--                        'nvim-telescope/telescope-fzf-native.nvim',
+--                        after = 'telescope.nvim',
+--                        run = 'make',
+--                        config = function()
+--                                require('telescope').load_extension('fzf')
+--                        end,
+--                },
                 {
                         'nvim-telescope/telescope-symbols.nvim',
                         after = 'telescope.nvim',

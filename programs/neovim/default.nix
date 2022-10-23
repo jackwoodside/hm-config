@@ -5,35 +5,25 @@
     enable = true;
     vimAlias = true;
     withNodeJs = true;
-#    coc.enable = true;
-#    coc.settings = {
-#      "suggest.noselect" = true;
-#    };
-#    plugins = with pkgs.vimPlugins; [
-#      # statusline
-#      lightline-vim
-#      # git
-#      vim-fugitive
-#      vim-gitgutter
-#      # coc
-#      coc-clangd
-#      coc-lua
-#      coc-pairs
-#      coc-vimtex
-#      # latex
-#      ultisnips
-#      vim-grammarous
-#      vimtex
-#      # misc
-#      vim-sneak
-#      vim-nix
-#    ];
+    plugins = with pkgs.vimPlugins; [ packer-nvim ];
   };
 
   xdg.configFile = {
     "nvim/init.lua".source = ./init.lua;
-#    "nvim/colors/selenized_bw.vim".source = ./selenized_bw.vim;
-#    "nvim/init-home-manager.vim".source = ./init.vim;
-#    "nvim/UltiSnips/tex.snippets".source = ./tex.snippets;
+    "nvim/lua/autocmds.lua".source = ./lua/autocmds.lua;
+    "nvim/lua/keybinds.lua".source = ./lua/keybinds.lua;
+    "nvim/lua/plugins.lua".source = ./lua/plugins.lua;
+    "nvim/lua/settings.lua".source = ./lua/settings.lua;
+
+    "nvim/lua/plugins/fugitive.lua".source = ./lua/plugins/fugitive.lua;
+    "nvim/lua/plugins/gitsigns.lua".source = ./lua/plugins/gitsigns.lua;
+    "nvim/lua/plugins/grammarous.lua".source = ./lua/plugins/grammarous.lua;
+    "nvim/lua/plugins/indentline.lua".source = ./lua/plugins/indentline.lua;
+    "nvim/lua/plugins/lualine.lua".source = ./lua/plugins/lualine.lua;
+    "nvim/lua/plugins/navigator.lua".source = ./lua/plugins/navigator.lua;
+    "nvim/lua/plugins/nvim-tree.lua".source = ./lua/plugins/nvim-tree.lua;
+    "nvim/lua/plugins/telescope.lua".source = ./lua/plugins/telescope.lua;
+    "nvim/lua/plugins/treesitter.lua".source = ./lua/plugins/treesitter.lua;
+    "nvim/lua/plugins/vimtex.lua".source = ./lua/plugins/vimtex.lua;
   };
 }
