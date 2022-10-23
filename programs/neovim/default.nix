@@ -15,6 +15,7 @@
     "nvim/lua/plugins.lua".source = ./lua/plugins.lua;
     "nvim/lua/settings.lua".source = ./lua/settings.lua;
 
+    "nvim/lua/plugins/fterm.lua".source = ./lua/plugins/fterm.lua;
     "nvim/lua/plugins/fugitive.lua".source = ./lua/plugins/fugitive.lua;
     "nvim/lua/plugins/gitsigns.lua".source = ./lua/plugins/gitsigns.lua;
     "nvim/lua/plugins/grammarous.lua".source = ./lua/plugins/grammarous.lua;

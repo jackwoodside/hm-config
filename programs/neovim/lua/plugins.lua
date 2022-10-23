@@ -93,6 +93,14 @@ return require('packer').startup({
             end,
         })
 
+        use({
+            'numToStr/FTerm.nvim',
+            event = 'CursorHold',
+            config = function()
+                require('plugins.fterm')
+            end,
+        })
+
         -- Syntax highlighting
         use({
         {
@@ -127,14 +135,14 @@ return require('packer').startup({
                 require('plugins.telescope')
             end,
         },
---        {
---            'nvim-telescope/telescope-fzf-native.nvim',
---            after = 'telescope.nvim',
---            run = 'make',
---            config = function()
---                require('telescope').load_extension('fzf')
---            end,
---        },
+        {
+            'nvim-telescope/telescope-fzf-native.nvim',
+            after = 'telescope.nvim',
+            run = 'make',
+            config = function()
+                require('telescope').load_extension('fzf')
+            end,
+        },
         {
             'nvim-telescope/telescope-symbols.nvim',
             after = 'telescope.nvim',

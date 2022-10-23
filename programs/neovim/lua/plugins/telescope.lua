@@ -41,8 +41,12 @@ local Telescope = setmetatable({}, {
 
 -- Leader-f = fuzzy finder
 vim.keymap.set('n', '<leader>f', function()
-    local ok = pcall(Telescope.git_files)
-    if not ok then Telescope.find_files() end
+    local ok = os.execute('git') == 0
+    if ok then
+        Telescope.git_files()
+    else
+        Telescope.find_files()
+    end
 end)
 
 -- Leader-H = help pages
