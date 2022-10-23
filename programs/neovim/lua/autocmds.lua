@@ -25,3 +25,18 @@ ac(
     'FileType',
     { pattern = { 'gitcommit', 'gitrebase' }, command = [[startinsert | 1]]}
 )
+
+-- Run telescope on empty buffers
+--ac(
+--    'FileType',
+--    {
+--        pattern = { '[No Name]' },
+--        command = function()
+--            local ok = vim.loop.fs_stat(vim.loop.cwd() .. '/.git')
+--            if ok then
+--                require("telescope.builtin").git_files()
+--            else
+--                require("telescope.builtin").find_files()
+--        end
+--    }
+--)

@@ -4,12 +4,12 @@
   gtk = {
     enable = true;
     theme = {
-      package = pkgs.arc-theme;
-      name = "Arc-Dark";
+      package = pkgs.catppuccin-gtk;
+      name = "Catppuccin-Dark";
     };
     iconTheme = {
-      package = pkgs.arc-icon-theme;
-      name = "Arc";
+      package = pkgs.catppuccin-gtk;
+      name = "Catppuccin-Dark";
     };
   };
 }
