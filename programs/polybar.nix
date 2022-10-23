@@ -10,13 +10,10 @@
     ";
     config = {
       "colors" = {
-        background = "#181818";
-        background-alt = "#252525";
-        foreground = "#dedede";
-        foreground-alt = "#777777";
-        primary = "#ed4a46";
-        secondary = "#ed4a46";
-        alert = "#ed4a46";
+        background = "#1e1e2e";
+        foreground = "#cdd6f4";
+        foreground-alt = "#a6adc8";
+        alert = "#f38ba8";
       };
       "settings" = {
         screenchange-reload = true;
