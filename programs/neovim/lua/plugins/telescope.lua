@@ -41,7 +41,7 @@ local Telescope = setmetatable({}, {
 
 -- Leader-f = fuzzy finder
 vim.keymap.set('n', '<leader>f', function()
-    local ok = os.execute('git') == 0
+    local ok = vim.loop.fs_stat(vim.loop.cwd() .. '/.git')
     if ok then
         Telescope.git_files()
     else
