@@ -10,28 +10,66 @@
       };
       colors = {
         primary = {
-          background = "#181818";
-          foreground = "#b9b9b9";
+          background = "#1e1e2e";
+          foreground = "#cdd6f4";
+          dim_foreground = "#cdd6f4";
+          bright_foreground = "#cdd6f4";
         };
+
+        cursor = {
+            text = "#1e1e2e";
+            cursor = "#f5e0dc";
+        };
+        vi_mode_cursor = {
+            text = "#1e1e2e";
+            cursor = "#b4befe";
+        };
+
+        hints = {
+            start = {
+                foreground = "#1e1e2e";
+                background = "#f9e2af";
+            };
+            end = {
+                foreground = "#1e1e2e";
+                background = "#a6adc8";
+            };
+        };
+
+        selection = {
+            text = "#1e1e2e";
+            background = "#f5e0dc";
+        };
+
         normal = {
-          black = "#252525";
-          red = "#ed4a46";
-          green = "#70b433";
-          yellow = "#dbb32d";
-          blue = "#368aeb";
-          magenta = "#eb6eb7";
-          cyan = "#3fc5b7";
-          white = "#777777";
+          black = "#45475a";
+          red = "#f38ba8";
+          green = "#a6e3a1";
+          yellow = "#f9e2af";
+          blue = "#89b4fa";
+          magenta = "#f5c2e7";
+          cyan = "#94e2d5";
+          white = "#bac2de";
         };
         bright = {
-          black = "#3b3b3b";
-          red = "#ff5e56";
-          green = "#83c746";
-          yellow = "#efc541";
-          blue = "#4f9cfe";
-          magenta = "#ff81ca";
-          cyan =  "#56d8c9";
-          white = "#dedede";
+          black = "#585b70";
+          red = "#f38ba8";
+          green = "#a6e3a1";
+          yellow = "#f9e2af";
+          blue = "#89b4fa";
+          magenta = "#f5c2e7";
+          cyan = "#94e2d5";
+          white = "#a6adc8";
+        };
+        dim = {
+          black = "#45475a";
+          red = "#f38ba8";
+          green = "#a6e3a1";
+          yellow = "#f9e2af";
+          blue = "#89b4fa";
+          magenta = "#f5c2e7";
+          cyan = "#94e2d5";
+          white = "#a6adc8";
         };
       };
     };
