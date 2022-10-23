@@ -29,6 +29,7 @@ require('lualine').setup({
             {
                 'buffers',
                 buffers_color = { active = 'lualine_b_normal' },
+                max_length = vim.o.columns,
                 symbols = {
                     modified = ' [+]',
                     alternate_file = '',

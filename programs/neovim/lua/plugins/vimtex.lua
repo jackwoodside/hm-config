@@ -10,4 +10,4 @@ g.vimtex_quickfix_mode = 0
 g.tex_conceal = 'abdmg'
 g.vimtex_fold_enabled = 1
 g.vimtex_fold_manual = 1
-g.vimtex_fold_types = "{ 'preamble' : {'enable' : 1}, 'envs' : { 'blacklist' : ['figure', 'table', 'align*']}}"
+g.vimtex_fold_types = [[ { 'preamble' : {'enable' : 1}, 'envs' : { 'blacklist' : ['figure', 'table', 'align*']}} ]]

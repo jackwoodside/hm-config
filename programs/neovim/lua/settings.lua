@@ -1,4 +1,3 @@
-local g = vim.g
 local o = vim.o
 
 o.termguicolors = true
@@ -53,3 +52,6 @@ o.spelllang = 'en_au'
 
 -- Conceal level
 o.conceallevel = 2
+
+-- Whole line find and replace by default
+o.gdefault = true

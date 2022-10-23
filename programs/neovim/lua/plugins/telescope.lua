@@ -49,7 +49,7 @@ end)
 vim.keymap.set('n', '<leader>H', Telescope.help_tags)
 
 -- Leader-b = fuzzy find buffers
-vim.keymap.set('n', "<leader>b", Telescope.buffers)
+vim.keymap.set('n', '<leader>b', Telescope.buffers)
 
 -- Leader-/ = live grep
-vim.keymap.set('n', "<leader>/", Telescope.live_grep)
+vim.keymap.set('n', '<leader>/', Telescope.live_grep)
