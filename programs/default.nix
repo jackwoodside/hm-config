@@ -20,7 +20,8 @@
     ./rofi
     ./scripts
     ./sioyek.nix
-    ./sxhkd.nix
+    ./spicetify.nix
+    ./spicetify.nix
     ./unclutter.nix
     ./x.nix
     ./zsh.nix
@@ -67,7 +68,6 @@
     qbittorrent
     remmina
     ripgrep
-    spicetify-cli
     spotify
     sshfs
     steam
