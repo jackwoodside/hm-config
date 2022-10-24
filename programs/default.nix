@@ -20,6 +20,7 @@
     ./rofi
     ./scripts
     ./sioyek.nix
+    ./starship.nix
     ./unclutter.nix
     ./x.nix
     ./zsh.nix

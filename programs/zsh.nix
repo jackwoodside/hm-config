@@ -8,8 +8,7 @@
     autocd = true;
     dotDir = ".config/zsh";
     initExtra = ''
-      prompt off
-      PS1='%B%F{red}%m%f%F{cyan} %1~ $%f%b '
+        eval "$(starship init zsh)"
     '';
     envExtra = ''
       export GNUPGHOME=$XDG_DATA_HOME/gnupg
