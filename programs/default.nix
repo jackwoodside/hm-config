@@ -78,5 +78,6 @@
     xclip
     xdotool
     youtube-dl
+    zoxide
   ];
 }

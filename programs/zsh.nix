@@ -8,6 +8,7 @@
     autocd = true;
     dotDir = ".config/zsh";
     initExtra = ''
+        eval "$(zoxide init zsh)"
         eval "$(starship init zsh)"
     '';
     envExtra = ''
@@ -24,13 +25,13 @@
       --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
     '';
     shellAliases = {
+      cd = "z";
       ls = "exa --icons -T -L=1";
       ls2 = "exa --icons -T -L=2";
       ls3 = "exa --icons -T -L=3";
       grep = "rg";
       find = "fd";
       c = "clear";
-      cdc = "cd && clear";
       pd = "mpv --really-quiet $PWD & disown && exit";
       ga = "git add";
       gc = "git commit";
