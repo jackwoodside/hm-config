@@ -67,6 +67,7 @@
     qbittorrent
     remmina
     ripgrep
+    spicetify-cli
     spotify
     sshfs
     steam
