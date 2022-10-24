@@ -20,8 +20,6 @@
     ./rofi
     ./scripts
     ./sioyek.nix
-    ./spicetify.nix
-    ./spicetify.nix
     ./unclutter.nix
     ./x.nix
     ./zsh.nix
