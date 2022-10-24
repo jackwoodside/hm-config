@@ -21,3 +21,7 @@
 # spicetify
 # gtk cursors
 # grub
+### neovim
+# catppuccin colours for notify, noice
+# lualine vim wordcount function
+# LSP

@@ -12,8 +12,11 @@ return require('packer').startup({
 
         -- Dependencies
         use('nvim-lua/plenary.nvim')
+        use('MunifTanjim/nui.nvim')
 
         -- UI
+        use('rcarriga/nvim-notify')
+
         use({
             'kyazdani42/nvim-web-devicons',
             config = function()
@@ -25,8 +28,18 @@ return require('packer').startup({
             'catppuccin/nvim',
             as = 'catppuccin',
             config = function()
-                vim.g.catppuccin_flavour = 'mocha'
-                require('catppuccin').setup()
+                require('catppuccin').setup {
+                    flavour = 'mocha',
+                    integrations = {
+                        gitsigns = true,
+                        noice = true,
+                        notify = true,
+                        nvimtree = true,
+                        treesitter = true,
+                        treesitter_context = true,
+                        telescope = true,
+                    },
+                }
                 vim.api.nvim_command 'colorscheme catppuccin'
             end,
         })
@@ -98,6 +111,14 @@ return require('packer').startup({
             event = 'CursorHold',
             config = function()
                 require('plugins.fterm')
+            end,
+        })
+
+        use({
+            'folke/noice.nvim', after = 'nui.nvim',
+            event = 'VimEnter',
+            config = function()
+                require('noice').setup()
             end,
         })
 

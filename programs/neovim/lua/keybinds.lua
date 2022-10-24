@@ -10,4 +10,4 @@ vim.g.maplocalleader = ','
 map('n', '<esc>', '<CMD>nohlsearch<CR>')
 
 -- Correct spelling
-map('i', '<C-l>', '<c-g>u<Esc>[s1z=`]a<c-g>u')
+map('i', '<C-s>', '<c-g>u<Esc>[s1z=`]a<c-g>u')
