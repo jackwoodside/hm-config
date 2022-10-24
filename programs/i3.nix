@@ -10,39 +10,39 @@
 
       colors = {
         focused = {
-          background = "#dedede";
-          border = "#dedede";
-          childBorder = "#dedede";
-          indicator = "#dedede";
-          text = "#dedede";
+          background = "#cdd6f4";
+          border = "#cdd6f4";
+          childBorder = "#cdd6f4";
+          indicator = "#cdd6f4";
+          text = "#cdd6f4";
         };
         focusedInactive = {
-          background = "#777777";
-          border = "#777777";
-          childBorder = "#777777";
-          indicator = "#777777";
-          text = "#777777";
+          background = "#585b70";
+          border = "#585b70";
+          childBorder = "#585b70";
+          indicator = "#585b70";
+          text = "#585b70";
         };
         placeholder = {
-          background = "#777777";
-          border = "#777777";
-          childBorder = "#777777";
-          indicator = "#777777";
-          text = "#777777";
+          background = "#585b70";
+          border = "#585b70";
+          childBorder = "#585b70";
+          indicator = "#585b70";
+          text = "#585b70";
         };
         unfocused = {
-          background = "#777777";
-          border = "#777777";
-          childBorder = "#777777";
-          indicator = "#777777";
-          text = "#777777";
+          background = "#585b70";
+          border = "#585b70";
+          childBorder = "#585b70";
+          indicator = "#585b70";
+          text = "#585b70";
         };
         urgent = {
-          background = "#777777";
-          border = "#777777";
-          childBorder = "#777777";
-          indicator = "#777777";
-          text = "#777777";
+          background = "#585b70";
+          border = "#585b70";
+          childBorder = "#585b70";
+          indicator = "#585b70";
+          text = "#585b70";
         };
       };
 
@@ -137,7 +137,7 @@
 
           startup = [
             { command = "systemctl --user restart polybar"; always = true; notification = false; }
-#            { command = "xrandr --output HDMI-0 --primary --mode 1920x1080 --pos 0x0 --output DP-1 --mode 1920x1080 --pos 1920x0"; always = true; notification = false; }
+            { command = "xrandr --output HDMI-0 --primary --mode 1920x1080 --pos 0x0 --output DP-1 --mode 1920x1080 --pos 1920x0"; always = true; notification = false; }
           ];
         };
 

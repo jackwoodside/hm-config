@@ -15,3 +15,9 @@
   # Home Manager release
   home.stateVersion = "20.09";
 }
+
+##### TODO
+### catppuccin
+# spicetify
+# gtk cursors
+# grub
