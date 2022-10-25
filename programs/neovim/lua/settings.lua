@@ -55,3 +55,6 @@ o.conceallevel = 2
 
 -- Whole line find and replace by default
 o.gdefault = true
+
+-- Use bash to execute commands
+o.shell = '/run/current-system/sw/bin/bash'
