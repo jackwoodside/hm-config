@@ -22,6 +22,7 @@
     "nvim/lua/plugins/indentline.lua".source = ./lua/plugins/indentline.lua;
     "nvim/lua/plugins/lualine.lua".source = ./lua/plugins/lualine.lua;
     "nvim/lua/plugins/navigator.lua".source = ./lua/plugins/navigator.lua;
+    "nvim/lua/plugins/notify.lua".source = ./lua/plugins/notify.lua;
     "nvim/lua/plugins/nvim-tree.lua".source = ./lua/plugins/nvim-tree.lua;
     "nvim/lua/plugins/telescope.lua".source = ./lua/plugins/telescope.lua;
     "nvim/lua/plugins/treesitter.lua".source = ./lua/plugins/treesitter.lua;

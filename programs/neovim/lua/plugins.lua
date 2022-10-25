@@ -15,7 +15,13 @@ return require('packer').startup({
         use('MunifTanjim/nui.nvim')
 
         -- UI
-        use('rcarriga/nvim-notify')
+        use({
+            'rcarriga/nvim-notify',
+            after = 'catppuccin',
+            config = function()
+                require('plugins.notify')
+            end,
+        })
 
         use({
             'kyazdani42/nvim-web-devicons',
@@ -28,7 +34,7 @@ return require('packer').startup({
             'catppuccin/nvim',
             as = 'catppuccin',
             config = function()
-                require('catppuccin').setup {
+                require('catppuccin').setup({
                     flavour = 'mocha',
                     integrations = {
                         gitsigns = true,
@@ -39,7 +45,7 @@ return require('packer').startup({
                         treesitter_context = true,
                         telescope = true,
                     },
-                }
+                })
                 vim.api.nvim_command 'colorscheme catppuccin'
             end,
         })
@@ -79,6 +85,7 @@ return require('packer').startup({
 
         use({
             'lewis6991/gitsigns.nvim',
+            after = 'catppuccin',
             event = 'BufRead',
             config = function()
                 require('plugins.gitsigns')
@@ -115,7 +122,7 @@ return require('packer').startup({
         })
 
         use({
-            'folke/noice.nvim', after = 'nui.nvim',
+            'folke/noice.nvim', after = { 'nui.nvim', 'catppuccin', },
             event = 'VimEnter',
             config = function()
                 require('noice').setup()
@@ -126,6 +133,7 @@ return require('packer').startup({
         use({
         {
             'nvim-treesitter/nvim-treesitter',
+            after = 'catppuccin',
             event = 'CursorHold',
             run = ':TSUpdate',
             config = function()
@@ -142,6 +150,7 @@ return require('packer').startup({
         -- Navigation
         use({
             'kyazdani42/nvim-tree.lua',
+            after = 'catppuccin',
             event = 'CursorHold',
             config = function()
                 require('plugins.nvim-tree')
@@ -151,6 +160,7 @@ return require('packer').startup({
         use({
         {
             'nvim-telescope/telescope.nvim',
+            after = 'catppuccin',
             event = 'CursorHold',
             config = function()
                 require('plugins.telescope')
