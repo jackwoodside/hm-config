@@ -41,7 +41,6 @@
     arandr
     bitwarden-cli
     brightnessctl
-    clang-tools
     discord
     exa
     fd
@@ -49,9 +48,7 @@
     ffmpeg
     ffmpegthumbnailer
     firefox
-    gcc
     gimp
-    gnumake
     imagemagick
     inkscape
     jabref

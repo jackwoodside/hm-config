@@ -7,13 +7,12 @@ o.timeoutlen = 500
 o.updatetime = 200
 
 -- Keep cursor off edge
-o.scrolloff = 6
-o.sidescrolloff = 6
+o.scrolloff = 8
 
 -- Line numbers / markings
 o.number = true
 o.relativenumber = true
-o.signcolumn = 'yes:2'
+o.signcolumn = "yes:2"
 o.cursorline = true
 
 -- Tabs and indents
@@ -25,7 +24,7 @@ o.softtabstop = -1
 o.shiftwidth = 0
 
 -- Clipboard
-o.clipboard = 'unnamedplus'
+o.clipboard = "unnamedplus"
 
 -- Search case
 o.ignorecase = true
@@ -45,10 +44,10 @@ o.splitright = true
 o.splitbelow = true
 
 -- Preserve view while jumping
-o.jumpoptions = 'view'
+o.jumpoptions = "view"
 
 -- Spelling language
-o.spelllang = 'en_au'
+o.spelllang = "en_au"
 
 -- Conceal level
 o.conceallevel = 2
@@ -57,4 +56,4 @@ o.conceallevel = 2
 o.gdefault = true
 
 -- Use bash to execute commands
-o.shell = '/run/current-system/sw/bin/bash'
+o.shell = "/run/current-system/sw/bin/bash"

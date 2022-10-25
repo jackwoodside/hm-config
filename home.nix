@@ -24,4 +24,4 @@
 ### neovim
 # catppuccin colours for noice
 # lualine vim wordcount function
-# LSP
+# empty startupscreen with telescope
