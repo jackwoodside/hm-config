@@ -19,7 +19,7 @@ return require("packer").startup({
 			"rcarriga/nvim-notify",
 			after = "catppuccin",
 			config = function()
-				require("config.notify")
+				require("plugins.notify")
 			end,
 		})
 
@@ -55,7 +55,7 @@ return require("packer").startup({
 				"nvim-lualine/lualine.nvim",
 				event = "BufEnter",
 				config = function()
-					require("config.lualine")
+					require("plugins.lualine")
 				end,
 			},
 			{
@@ -71,7 +71,7 @@ return require("packer").startup({
 			"lukas-reineke/indent-blankline.nvim",
 			event = "BufRead",
 			config = function()
-				require("config.indentline")
+				require("plugins.indentline")
 			end,
 		})
 
@@ -88,28 +88,21 @@ return require("packer").startup({
 			after = "catppuccin",
 			event = "BufRead",
 			config = function()
-				require("config.gitsigns")
+				require("plugins.gitsigns")
 			end,
 		})
 
 		use({
 			"tpope/vim-fugitive",
 			config = function()
-				require("config.fugitive")
+				require("plugins.fugitive")
 			end,
 		})
 
 		use({
 			"rhysd/vim-grammarous",
 			config = function()
-				require("config.grammarous")
-			end,
-		})
-
-		use({
-			"lervag/vimtex",
-			config = function()
-				require("config.vimtex")
+				require("plugins.grammarous")
 			end,
 		})
 
@@ -117,7 +110,7 @@ return require("packer").startup({
 			"numToStr/FTerm.nvim",
 			event = "CursorHold",
 			config = function()
-				require("config.fterm")
+				require("plugins.fterm")
 			end,
 		})
 
@@ -138,7 +131,7 @@ return require("packer").startup({
 				event = "CursorHold",
 				run = ":TSUpdate",
 				config = function()
-					require("config.treesitter")
+					require("plugins.treesitter")
 				end,
 			},
 			{ "nvim-treesitter/playground", after = "nvim-treesitter" },
@@ -154,7 +147,7 @@ return require("packer").startup({
 			after = "catppuccin",
 			event = "CursorHold",
 			config = function()
-				require("config.nvim-tree")
+				require("plugins.nvim-tree")
 			end,
 		})
 
@@ -164,7 +157,7 @@ return require("packer").startup({
 				after = "catppuccin",
 				event = "CursorHold",
 				config = function()
-					require("config.telescope")
+					require("plugins.telescope")
 				end,
 			},
 			{
@@ -185,7 +178,7 @@ return require("packer").startup({
 			"numToStr/Navigator.nvim",
 			event = "CursorHold",
 			config = function()
-				require("config.navigator")
+				require("plugins.navigator")
 			end,
 		})
 
@@ -194,7 +187,7 @@ return require("packer").startup({
 			"neovim/nvim-lspconfig",
 			event = "BufRead",
 			config = function()
-				require("config.lsp.servers")
+				require("plugins.lsp.servers")
 			end,
 			requires = {
 				{ "hrsh7th/cmp-nvim-lsp" },
@@ -205,7 +198,7 @@ return require("packer").startup({
 			"jose-elias-alvarez/null-ls.nvim",
 			event = "BufRead",
 			config = function()
-				require("config.lsp.null-ls")
+				require("plugins.lsp.null-ls")
 			end,
 		})
 
@@ -214,14 +207,14 @@ return require("packer").startup({
 				"hrsh7th/nvim-cmp",
 				event = "InsertEnter",
 				config = function()
-					require("config.lsp.nvim-cmp")
+					require("plugins.lsp.nvim-cmp")
 				end,
 				requires = {
 					{
 						"L3MON4D3/LuaSnip",
 						event = "InsertEnter",
 						config = function()
-							require("config.lsp.luasnip")
+							require("plugins.lsp.luasnip")
 						end,
 					},
 				},
@@ -236,7 +229,7 @@ return require("packer").startup({
 			event = "InsertCharPre",
 			after = "nvim-cmp",
 			config = function()
-				require("config.pairs")
+				require("plugins.pairs")
 			end,
 		})
 	end,

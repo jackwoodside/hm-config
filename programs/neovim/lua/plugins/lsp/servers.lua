@@ -1,5 +1,5 @@
 local lsp = require("lspconfig")
-local U = require("config.lsp.utils")
+local U = require("plugins.lsp.utils")
 
 ---Common perf related flags for all the LSP servers
 local flags = {
@@ -33,6 +33,17 @@ vim.diagnostic.config({
 -- ltex
 lsp.ltex.setup({
 	filetypes = { "markdown", "plaintex", "tex" },
+	settings = {
+		ltex = {
+			language = "en-AU",
+			dictionary = {
+				["en-AU"] = {
+					"Bolotin",
+					"Stuchbery",
+				},
+			},
+		},
+	},
 })
 
 -- Lua

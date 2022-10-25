@@ -9,5 +9,5 @@ vim.g.maplocalleader = ","
 -- Clear search highlighting
 map("n", "<esc>", "<CMD>nohlsearch<CR>")
 
--- Correct spelling
-map("i", "<C-s>", "<c-g>u<Esc>[s1z=`]a<c-g>u")
+-- Split paragraphs into sentences
+map("n", "<C-s>", "<CMD>:s/\\. /.\\r<CR><CMD>nohlsearch<CR>")
