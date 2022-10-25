@@ -7,6 +7,7 @@
         gnumake
         ltex-ls
         luajitPackages.luacheck
+        shellcheck
         stylua
         sumneko-lua-language-server
     ];
