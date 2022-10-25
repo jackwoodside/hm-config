@@ -10,6 +10,7 @@
         shellcheck
         stylua
         sumneko-lua-language-server
+        texlab
     ];
     programs.neovim = {
         enable = true;
@@ -43,5 +44,6 @@
         "nvim/lua/plugins/lsp/nvim-cmp.lua".source = ./lua/plugins/lsp/nvim-cmp.lua;
         "nvim/lua/plugins/lsp/servers.lua".source = ./lua/plugins/lsp/servers.lua;
         "nvim/lua/plugins/lsp/utils.lua".source = ./lua/plugins/lsp/utils.lua;
+        "nvim/lua/plugins/lsp/words.txt".source = ./lua/plugins/lsp/words.txt;
     };
 }

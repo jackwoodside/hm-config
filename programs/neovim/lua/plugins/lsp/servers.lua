@@ -30,17 +30,45 @@ vim.diagnostic.config({
 })
 
 -- Configured servers
--- ltex
+-- LaTeX
+local words = {}
+local path = "/home/jack/.config/nvim/lua/plugins/lsp/words.txt"
+for word in io.open(path, "r"):lines() do
+	table.insert(words, word)
+end
+
 lsp.ltex.setup({
+	flags = flags,
+	capabilities = capabilities,
+	on_attach = on_attach,
 	filetypes = { "markdown", "plaintex", "tex" },
 	settings = {
 		ltex = {
 			language = "en-AU",
 			dictionary = {
-				["en-AU"] = {
-					"Bolotin",
-					"Stuchbery",
-				},
+				["en-AU"] = words,
+			},
+		},
+	},
+})
+lsp.texlab.setup({
+	flags = flags,
+	capabilities = capabilities,
+	on_attach = on_attach,
+	settings = {
+		texlab = {
+			build = {
+				onSave = true,
+				forwardSearchAfter = true,
+			},
+			chktex = {
+				onOpenAndSave = true,
+			},
+			diagnostics = {
+				ignoredPatterns = { "Underfull" },
+			},
+			forwardSearch = {
+				executable = "sioyek",
 			},
 		},
 	},
@@ -79,7 +107,6 @@ local servers = {
 	"fortls", -- fortran
 	"julials", -- julia
 	"jedi_language_server", -- python
-	"texlab", -- latex
 }
 
 for _, server in ipairs(servers) do

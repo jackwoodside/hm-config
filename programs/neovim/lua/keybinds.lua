@@ -10,4 +10,4 @@ vim.g.maplocalleader = ","
 map("n", "<esc>", "<CMD>nohlsearch<CR>")
 
 -- Split paragraphs into sentences
-map("n", "<C-s>", "<CMD>:s/\\. /.\\r<CR><CMD>nohlsearch<CR>")
+map("n", "<C-s>", "<CMD>:s/\\. /.\\r/e<CR><CMD>nohlsearch<CR>")
