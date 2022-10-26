@@ -71,6 +71,7 @@
     sxiv
     texlive.combined.scheme-full
     trash-cli
+    tree
     ueberzug
     unzip
     xclip
