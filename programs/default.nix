@@ -57,6 +57,7 @@
     libnotify
     maim
     networkmanager_dmenu
+    obs-studio
     playerctl
     poppler_utils
     pulseaudio
