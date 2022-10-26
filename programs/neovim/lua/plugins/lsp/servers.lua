@@ -57,18 +57,11 @@ lsp.texlab.setup({
 	on_attach = on_attach,
 	settings = {
 		texlab = {
-			build = {
-				onSave = true,
-				forwardSearchAfter = true,
-			},
 			chktex = {
 				onOpenAndSave = true,
 			},
 			diagnostics = {
-				ignoredPatterns = { "Underfull" },
-			},
-			forwardSearch = {
-				executable = "sioyek",
+				ignoredPatterns = { "Underfull", "Overfull", "Wrong length of dash" },
 			},
 		},
 	},
