@@ -22,6 +22,6 @@
 # gtk cursors
 # grub
 ### neovim
-# catppuccin colours for noice
+# texlab / sioyek integration, build every time
 # lualine vim wordcount function
 # empty startupscreen with telescope

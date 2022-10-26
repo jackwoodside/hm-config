@@ -1,3 +1,15 @@
+local function wordcount()
+	if vim.fn.expand("%:e") == "tex" then
+		local output = io.popen("texcount %:t | awk 'FNR==3 {print $NF}'")
+		---@diagnostic disable-next-line: need-check-nil
+		local words = output:read("*a")
+		---@diagnostic disable-next-line: need-check-nil
+		output:close()
+		return words
+	else
+		return ""
+	end
+end
 require("lualine").setup({
 	options = {
 		theme = "catppuccin",
@@ -24,7 +36,7 @@ require("lualine").setup({
 			{ "filename", file_status = true },
 			{ "diagnostics" },
 		},
-		lualine_x = {},
+		lualine_x = { wordcount },
 		lualine_y = { "progress" },
 		lualine_z = {
 			{ "location", color = { gui = "bold" } },

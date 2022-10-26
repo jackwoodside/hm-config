@@ -165,6 +165,7 @@ return require("packer").startup({
 				after = "telescope.nvim",
 				run = "make",
 				config = function()
+					---@diagnostic disable-next-line: different-requires
 					require("telescope").load_extension("fzf")
 				end,
 			},
