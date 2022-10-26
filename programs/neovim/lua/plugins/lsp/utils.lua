@@ -2,7 +2,7 @@ local map = vim.keymap.set
 local U = {}
 local fmt_group = vim.api.nvim_create_augroup("FORMATTING", { clear = true })
 
--- Common format-on-ave
+-- Common format-on-save
 function U.fmt_on_save(client, buf)
 	if client.supports_method("textDocument/formatting") then
 		vim.api.nvim_create_autocmd("BufWritePre", {
