@@ -51,20 +51,11 @@ return require("packer").startup({
 		})
 
 		use({
-			{
-				"nvim-lualine/lualine.nvim",
-				event = "BufEnter",
-				config = function()
-					require("plugins.lualine")
-				end,
-			},
-			{
-				"j-hui/fidget.nvim",
-				after = "lualine.nvim",
-				config = function()
-					require("fidget").setup()
-				end,
-			},
+			"nvim-lualine/lualine.nvim",
+			event = "BufEnter",
+			config = function()
+				require("plugins.lualine")
+			end,
 		})
 
 		use({
