@@ -99,6 +99,7 @@ local servers = {
 	"clangd", -- c++
 	"fortls", -- fortran
 	"julials", -- julia
+	"rnix", -- nix
 	"jedi_language_server", -- python
 }
 

@@ -1,23 +1,25 @@
 { pkgs, ... }:
 
 {
-    home.packages = with pkgs; [
-        clang-tools
-        gcc
-        gnumake
-        ltex-ls
-        luajitPackages.luacheck
-        shellcheck
-        stylua
-        sumneko-lua-language-server
-        texlab
-    ];
     programs.neovim = {
         enable = true;
         vimAlias = true;
         withNodeJs = true;
         plugins = with pkgs.vimPlugins; [ packer-nvim ];
     };
+
+    home.packages = with pkgs; [
+        clang-tools
+        gcc
+        gnumake
+        ltex-ls
+        luajitPackages.luacheck
+        rnix-lsp
+        shellcheck
+        stylua
+        sumneko-lua-language-server
+        texlab
+    ];
 
     xdg.configFile = {
         "nvim/init.lua".source = ./init.lua;
@@ -45,5 +47,10 @@
         "nvim/lua/plugins/lsp/servers.lua".source = ./lua/plugins/lsp/servers.lua;
         "nvim/lua/plugins/lsp/utils.lua".source = ./lua/plugins/lsp/utils.lua;
         "nvim/lua/plugins/lsp/words.txt".source = ./lua/plugins/lsp/words.txt;
+
+        "clangd/config.yaml".text = ''
+            CompileFlags:
+              Add: [-ferror-limit=0, -std=c++17]
+        '';
     };
 }
