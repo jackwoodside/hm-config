@@ -16,6 +16,7 @@
         luajitPackages.luacheck
         rnix-lsp
         shellcheck
+        shfmt
         stylua
         sumneko-lua-language-server
         texlab
