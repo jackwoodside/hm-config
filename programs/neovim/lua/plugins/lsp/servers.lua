@@ -94,6 +94,31 @@ lsp.sumneko_lua.setup({
 	},
 })
 
+-- Rust
+lsp.rust_analyzer.setup({
+	flags = flags,
+	capabilities = capabilities,
+	on_attach = on_attach,
+	settings = {
+		["rust-analyzer"] = {
+			cargo = {
+				allFeatures = true,
+			},
+			checkOnSave = {
+				allFeatures = true,
+				command = "clippy",
+			},
+			procMacro = {
+				ignored = {
+					["async-trait"] = { "async_trait" },
+					["napi-derive"] = { "napi" },
+					["async-recursion"] = { "async_recursion" },
+				},
+			},
+		},
+	},
+})
+
 -- Unconfigured servers
 local servers = {
 	"clangd", -- c++
