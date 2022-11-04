@@ -30,6 +30,14 @@ vim.diagnostic.config({
 })
 
 -- Configured servers
+-- C++
+lsp.clangd.setup({
+	flags = flags,
+	capabilities = capabilities,
+	on_attach = on_attach,
+	cmd = { "clangd", "--clang-tidy" },
+})
+
 -- LaTeX
 local words = {}
 local path = "/home/jack/.config/nvim/lua/plugins/lsp/words.txt"
@@ -124,7 +132,6 @@ lsp.rust_analyzer.setup({
 
 -- Unconfigured servers
 local servers = {
-	"clangd", -- c++
 	"fortls", -- fortran
 	"julials", -- julia
 	"rnix", -- nix
