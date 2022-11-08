@@ -1,4 +1,10 @@
 Bolotin
+Krane
+octupole
+Glasmacher
+multipolarities
+Weisskopf
+Kotila
 DSAM
 Fe
 LeVine

@@ -62,6 +62,7 @@
     poppler_utils
     pulseaudio
     pulsemixer
+    pympress
     qbittorrent
     remmina
     ripgrep
