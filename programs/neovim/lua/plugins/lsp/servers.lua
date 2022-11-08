@@ -72,7 +72,13 @@ lsp.texlab.setup({
 				onOpenAndSave = true,
 			},
 			diagnostics = {
-				ignoredPatterns = { "Underfull", "Overfull", "Wrong length of dash" },
+				ignoredPatterns = {
+					"Underfull",
+					"Overfull",
+					"Wrong length of dash",
+					"terminated with space",
+					"Fira fonts",
+				},
 			},
 		},
 	},
