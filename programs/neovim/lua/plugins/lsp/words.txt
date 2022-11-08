@@ -15,6 +15,7 @@ Woodside
 keV
 multipolarities
 oblate
+observables
 octupole
 orbitals
 prolate
