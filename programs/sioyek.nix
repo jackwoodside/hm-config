@@ -19,7 +19,6 @@
       "search_url_g" = "https://www.google.com/search?q=";
       "should_launch_new_window" = "1";
       "should_use_multiple_monitors" = "0";
-      "startup_commands" = "toggle_horizontal_scroll_lock";
     };
   };
 }
