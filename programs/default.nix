@@ -66,6 +66,7 @@
     qbittorrent
     remmina
     ripgrep
+    root
     spotify
     sshfs
     steam
