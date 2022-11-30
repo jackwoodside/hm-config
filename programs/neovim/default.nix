@@ -33,7 +33,6 @@
         "nvim/lua/plugins/fterm.lua".source = ./lua/plugins/fterm.lua;
         "nvim/lua/plugins/fugitive.lua".source = ./lua/plugins/fugitive.lua;
         "nvim/lua/plugins/gitsigns.lua".source = ./lua/plugins/gitsigns.lua;
-        "nvim/lua/plugins/grammarous.lua".source = ./lua/plugins/grammarous.lua;
         "nvim/lua/plugins/indentline.lua".source = ./lua/plugins/indentline.lua;
         "nvim/lua/plugins/lualine.lua".source = ./lua/plugins/lualine.lua;
         "nvim/lua/plugins/navigator.lua".source = ./lua/plugins/navigator.lua;

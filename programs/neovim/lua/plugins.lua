@@ -91,13 +91,6 @@ return require("packer").startup({
 		})
 
 		use({
-			"rhysd/vim-grammarous",
-			config = function()
-				require("plugins.grammarous")
-			end,
-		})
-
-		use({
 			"numToStr/FTerm.nvim",
 			event = "CursorHold",
 			config = function()
