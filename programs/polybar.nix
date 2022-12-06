@@ -119,11 +119,11 @@
         poll-interval = 60;
         time-format = "%H:%M";
         format-charging = "<label-charging>";
-        label-charging = " %percentage%% (%time%)";
+        label-charging = " %percentage%%";
         format-discharging = "<ramp-capacity> <label-discharging>";
-        label-discharging = "%percentage%% (%time%)";
+        label-discharging = "%percentage%%";
         format-full = "<ramp-capacity> <label-full>";
-        label-full = "%percentage%% (0:00)";
+        label-full = "%percentage%%";
         ramp-capacity-0 = "";
         ramp-capacity-1 = "";
         ramp-capacity-2 = "";
