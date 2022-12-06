@@ -16,6 +16,7 @@
         luajitPackages.luacheck
         rnix-lsp
         rust-analyzer
+        rustfmt
         shellcheck
         shfmt
         stylua
