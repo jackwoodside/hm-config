@@ -52,7 +52,7 @@
 
         "clangd/config.yaml".text = ''
             CompileFlags:
-              Add: [-ferror-limit=0, -std=c++17]
-        '';
+            Add: [-ferror-limit=0, -std=c++17]
+     '';
     };
 }

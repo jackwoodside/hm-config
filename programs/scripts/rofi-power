@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
 ANS=$(echo -e "\n\n" | rofi -theme ~/.local/share/rofi-buttons.rasi -font "RobotoMono 300" -dmenu -i)
-if [ "$ANS" == "" ] ; then
-        poweroff
-elif [ "$ANS" == "" ] ; then
-        reboot
-elif [ "$ANS" == "" ] ; then
-        exec ~/.local/bin/lock
+if [ "$ANS" == "" ]; then
+    poweroff
+elif [ "$ANS" == "" ]; then
+    reboot
+elif [ "$ANS" == "" ]; then
+    exec ~/.local/bin/lock
 else
-        :
+    :
 fi

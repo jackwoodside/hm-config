@@ -1,6 +1,6 @@
 {
-  allowUnfree = true;
-  permittedInsecurePackages = [
-     "openjdk-18+36"
-  ];
+    allowUnfree = true;
+    permittedInsecurePackages = [
+        "openjdk-18+36"
+    ];
 }

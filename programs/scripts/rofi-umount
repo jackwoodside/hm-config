@@ -4,17 +4,17 @@
 # Drives mounted at /, /boot and /home will not be options to unmount.
 
 unmountusb() {
-	chosen=$(echo "$drives" | rofi -dmenu -i -p "Unmount which drive" | awk '{print $1}')
-	[ -z "$chosen" ] && exit
-        unmount="$(udisksctl unmount -b $chosen)"
-        notify-send "$unmount"
-	}
+    chosen=$(echo "$drives" | rofi -dmenu -i -p "Unmount which drive" | awk '{print $1}')
+    [ -z "$chosen" ] && exit
+    unmount="$(udisksctl unmount -b "$chosen")"
+    notify-send "$unmount"
+}
 
 drives=$(lsblk -nrpo "name,type,size,mountpoint" | grep -v .steamgames | awk '$2=="part"&&$4!~/\/boot|\/home$|SWAP/&&length($4)>1{printf "%s %s (%s)\n",$1,$4,$3}')
 
 if [ -z "$drives" ]; then
-	echo "No drives to unmount." && notify-send "No drives to unmount" && exit
+    echo "No drives to unmount." && notify-send "No drives to unmount" && exit
 else
-        echo "Unmountable USB drive detected."
-        unmountusb
+    echo "Unmountable USB drive detected."
+    unmountusb
 fi
