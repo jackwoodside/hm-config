@@ -19,7 +19,6 @@
 ##### TODO
 ### catppuccin
 # spicetify
-# gtk cursors
 # grub
 ### neovim
 # texlab / sioyek integration, build every time
