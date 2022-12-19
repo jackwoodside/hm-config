@@ -4,27 +4,27 @@
 # Home Manager programs.
     imports = [
         ./alacritty.nix
-            ./direnv.nix
-            ./dunst.nix
-            ./fzf.nix
-            ./git.nix
-            ./gtk.nix
-            ./htop.nix
-            ./i3.nix
-            ./lf.nix
-            ./mpv.nix
-            ./neovim
-            ./networkmanager-dmenu.nix
-            ./picom.nix
-            ./polybar.nix
-            ./rofi
-            ./scripts
-            ./sioyek.nix
-            ./starship.nix
-            ./unclutter.nix
-            ./x.nix
-            ./zsh.nix
-            ];
+        ./direnv.nix
+        ./dunst.nix
+        ./fzf.nix
+        ./git.nix
+        ./gtk.nix
+        ./htop.nix
+        ./i3.nix
+        ./lf.nix
+        ./mpv.nix
+        ./neovim
+        ./networkmanager-dmenu.nix
+        ./picom.nix
+        ./polybar.nix
+        ./rofi
+        ./scripts
+        ./sioyek.nix
+        ./starship.nix
+        ./unclutter.nix
+        ./x.nix
+        ./zsh.nix
+    ];
 
 # Enable font management.
     fonts.fontconfig.enable = true;
@@ -32,10 +32,10 @@
 # Misc programs.
     home.packages = with pkgs; [
         roboto-mono
-            font-awesome
-            (nerdfonts.override {
-             fonts = [ "RobotoMono" ];
-             })
+        font-awesome
+        (nerdfonts.override {
+            fonts = [ "RobotoMono" ];
+        })
         arandr
         bitwarden-cli
         brightnessctl
@@ -69,7 +69,7 @@
         sshfs
         steam
         sxiv
-        texlive.combined.scheme-full
+        #texlive.combined.scheme-full
         tree
         ueberzug
         unzip
@@ -77,5 +77,5 @@
         xdotool
         youtube-dl
         zoxide
-        ];
+    ];
 }

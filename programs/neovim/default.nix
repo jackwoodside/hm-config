@@ -51,8 +51,8 @@
         "nvim/lua/plugins/lsp/words.txt".source = ./lua/plugins/lsp/words.txt;
 
         "clangd/config.yaml".text = ''
-            CompileFlags:
-            Add: [-ferror-limit=0, -std=c++17]
-     '';
+           CompileFlags:
+           Add: [-ferror-limit=0, -std=c++17]
+        '';
     };
 }
