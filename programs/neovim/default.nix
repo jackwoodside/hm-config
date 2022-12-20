@@ -14,6 +14,7 @@
         gnumake
         ltex-ls
         luajitPackages.luacheck
+        nixpkgs-fmt
         rnix-lsp
         rust-analyzer
         rustfmt
