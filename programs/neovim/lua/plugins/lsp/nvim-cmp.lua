@@ -70,6 +70,7 @@ cmp.setup({
 	}),
 	snippet = {
 		expand = function(args)
+			---@diagnostic disable-next-line: different-requires
 			require("luasnip").lsp_expand(args.body)
 		end,
 	},

@@ -199,6 +199,7 @@ return require("packer").startup({
 						"L3MON4D3/LuaSnip",
 						event = "InsertEnter",
 						config = function()
+							---@diagnostic disable-next-line: different-requires
 							require("plugins.lsp.luasnip")
 						end,
 					},
