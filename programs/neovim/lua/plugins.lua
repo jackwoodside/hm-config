@@ -9,6 +9,13 @@ return require("packer").startup({
 
 		-- UI
 		use({
+			"echasnovski/mini.starter",
+			config = function()
+				require("plugins.starter")
+			end,
+		})
+
+		use({
 			"rcarriga/nvim-notify",
 			after = "catppuccin",
 			config = function()

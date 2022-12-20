@@ -41,6 +41,7 @@
         "nvim/lua/plugins/notify.lua".source = ./lua/plugins/notify.lua;
         "nvim/lua/plugins/nvim-tree.lua".source = ./lua/plugins/nvim-tree.lua;
         "nvim/lua/plugins/pairs.lua".source = ./lua/plugins/pairs.lua;
+        "nvim/lua/plugins/starter.lua".source = ./lua/plugins/starter.lua;
         "nvim/lua/plugins/telescope.lua".source = ./lua/plugins/telescope.lua;
         "nvim/lua/plugins/treesitter.lua".source = ./lua/plugins/treesitter.lua;
 
