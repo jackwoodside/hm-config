@@ -3,6 +3,7 @@ require("nvim-treesitter.configs").setup({
 	ensure_installed = {
 		"regex",
 		"lua",
+		"query",
 		"vim",
 	},
 	highlight = {
