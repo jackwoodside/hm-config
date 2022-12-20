@@ -1,4 +1,6 @@
 require("nvim-tree").setup({
+	disable_netrw = true,
+	hijack_netrw = true,
 	diagnostics = {
 		enable = true,
 	},
@@ -16,6 +18,7 @@ require("nvim-tree").setup({
 	},
 	filters = {
 		custom = { ".git$" },
+		dotfiles = false,
 	},
 	git = {
 		ignore = false,
