@@ -34,18 +34,7 @@ return require("packer").startup({
 			"catppuccin/nvim",
 			as = "catppuccin",
 			config = function()
-				require("catppuccin").setup({
-					flavour = "mocha",
-					integrations = {
-						gitsigns = true,
-						noice = true,
-						notify = true,
-						nvimtree = true,
-						treesitter = true,
-						treesitter_context = true,
-						telescope = true,
-					},
-				})
+				require("plugins.catppuccin")
 				vim.api.nvim_command("colorscheme catppuccin")
 			end,
 		})
@@ -104,6 +93,14 @@ return require("packer").startup({
 			event = "VimEnter",
 			config = function()
 				require("noice").setup()
+			end,
+		})
+
+		use({
+			"folke/todo-comments.nvim",
+			requires = "nvim-lua/plenary.nvim",
+			config = function()
+				require("todo-comments").setup()
 			end,
 		})
 
