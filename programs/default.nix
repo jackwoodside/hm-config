@@ -21,6 +21,7 @@
         ./scripts
         ./sioyek.nix
         ./starship.nix
+        ./udiskie.nix
         ./unclutter.nix
         ./x.nix
         ./zsh.nix
