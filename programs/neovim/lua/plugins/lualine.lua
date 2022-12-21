@@ -1,10 +1,17 @@
--- FIX: should only run texcount when the buffer is written
 -- word count section for tex files
+local va = vim.api
 local vf = vim.fn
+va.nvim_create_autocmd("BufWritePost", {
+	pattern = { "*.tex" },
+	callback = function()
+		local words = vf.system("texcount " .. vf.expand("%:t") .. " | awk 'FNR==3 {printf $NF}'")
+		va.nvim_buf_set_var(0, "words", words)
+	end,
+})
+
 local function wordcount()
 	if vf.expand("%:e") == "tex" then
-		local words = vf.system("texcount " .. vf.expand("%:t") .. " | awk 'FNR==3 {printf $NF}'")
-		return words
+		return va.nvim_buf_get_var(0, "words")
 	else
 		return ""
 	end
@@ -40,9 +47,7 @@ require("lualine").setup({
 		},
 		lualine_x = {},
 		lualine_y = {
-			{
-				wordcount,
-			},
+			{ wordcount },
 		},
 		lualine_z = {
 			{ "location", color = { gui = "bold" } },
