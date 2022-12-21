@@ -16,11 +16,7 @@
     home.stateVersion = "20.09";
 }
 
-##### TODO
-### catppuccin
+
+# TODO: catppuccin theming
 # spicetify
 # grub
-### neovim
-# texlab / sioyek integration, build every time
-# lualine vim wordcount function
-# empty startupscreen with telescope
