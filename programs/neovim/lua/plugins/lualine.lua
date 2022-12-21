@@ -1,16 +1,15 @@
 -- FIX: should only run texcount when the buffer is written
+-- word count section for tex files
+local vf = vim.fn
 local function wordcount()
-	if vim.fn.expand("%:e") == "tex" then
-		local output = io.popen("texcount %:t | awk 'FNR==3 {print $NF}'")
-		---@diagnostic disable-next-line: need-check-nil
-		local words = output:read("*a")
-		---@diagnostic disable-next-line: need-check-nil
-		output:close()
+	if vf.expand("%:e") == "tex" then
+		local words = vf.system("texcount " .. vf.expand("%:t") .. " | awk 'FNR==3 {printf $NF}'")
 		return words
 	else
 		return ""
 	end
 end
+
 require("lualine").setup({
 	options = {
 		theme = "catppuccin",
@@ -18,7 +17,9 @@ require("lualine").setup({
 		section_separators = "",
 		icons_enabled = true,
 		globalstatus = true,
+		disabled_filetypes = { "starter" },
 	},
+	extensions = { "quickfix", "nvim-tree" },
 	sections = {
 		lualine_a = {
 			{
@@ -30,15 +31,19 @@ require("lualine").setup({
 			},
 		},
 		lualine_b = {
-			{ "diff", colored = false },
 			{ "branch" },
+			{ "diff", colored = true },
 		},
 		lualine_c = {
 			{ "filename", file_status = true },
 			{ "diagnostics" },
 		},
-		lualine_x = { wordcount },
-		lualine_y = { "progress" },
+		lualine_x = {},
+		lualine_y = {
+			{
+				wordcount,
+			},
+		},
 		lualine_z = {
 			{ "location", color = { gui = "bold" } },
 		},
@@ -56,5 +61,4 @@ require("lualine").setup({
 			},
 		},
 	},
-	extensions = { "quickfix", "nvim-tree" },
 })
