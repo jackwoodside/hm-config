@@ -1,3 +1,4 @@
+-- FIX: should only run texcount when the buffer is written
 local function wordcount()
 	if vim.fn.expand("%:e") == "tex" then
 		local output = io.popen("texcount %:t | awk 'FNR==3 {print $NF}'")

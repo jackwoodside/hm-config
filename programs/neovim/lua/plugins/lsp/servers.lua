@@ -59,6 +59,7 @@ lsp.ltex.setup({
 		},
 	},
 })
+-- FIX: fix sioyek integration, build on every write
 lsp.texlab.setup({
 	flags = flags,
 	capabilities = capabilities,
