@@ -1,3 +1,6 @@
+local function map(m, k, v)
+	vim.keymap.set(m, k, v, { silent = true })
+end
 local actions = require("telescope.actions")
 local finders = require("telescope.builtin")
 
@@ -40,7 +43,7 @@ local Telescope = setmetatable({}, {
 })
 
 -- Leader-f = fuzzy finder
-vim.keymap.set("n", "<leader>f", function()
+map("n", "<leader>f", function()
 	local ok = vim.loop.fs_stat(vim.loop.cwd() .. "/.git")
 	if ok then
 		Telescope.git_files()
@@ -50,10 +53,16 @@ vim.keymap.set("n", "<leader>f", function()
 end)
 
 -- Leader-H = help pages
-vim.keymap.set("n", "<leader>H", Telescope.help_tags)
+map("n", "<leader>H", Telescope.help_tags)
 
 -- Leader-b = fuzzy find buffers
-vim.keymap.set("n", "<leader>b", Telescope.buffers)
+map("n", "<leader>b", Telescope.buffers)
 
 -- Leader-/ = live grep
-vim.keymap.set("n", "<leader>/", Telescope.live_grep)
+map("n", "<leader>/", Telescope.live_grep)
+
+-- Leader-g = git status
+map("n", "<leader>g", Telescope.git_status)
+
+-- Leader-n = todo-comments (notes)
+map("n", "<leader>n", "<CMD>TodoTelescope<CR>")
