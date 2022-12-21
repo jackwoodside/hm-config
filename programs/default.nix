@@ -70,7 +70,7 @@
         sshfs
         steam
         sxiv
-        #texlive.combined.scheme-full
+        texlive.combined.scheme-full
         tree
         ueberzug
         unzip
