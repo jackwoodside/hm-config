@@ -2,10 +2,11 @@
 local va = vim.api
 local vf = vim.fn
 va.nvim_create_autocmd("BufWritePost", {
-	pattern = { "*.tex" },
 	callback = function()
-		local words = vf.system("texcount " .. vf.expand("%:t") .. " | awk 'FNR==3 {printf $NF}'")
-		va.nvim_buf_set_var(0, "words", words)
+		if vf.expand("%:e") == "tex" then
+			local words = vf.system("texcount " .. vf.shellescape(vf.expand("%:p")) .. " | awk 'FNR==3 {printf $NF}'")
+			va.nvim_buf_set_var(0, "words", words)
+		end
 	end,
 })
 
