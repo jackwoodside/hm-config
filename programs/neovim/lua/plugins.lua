@@ -6,6 +6,7 @@ return require("packer").startup({
 		-- Dependencies
 		use("nvim-lua/plenary.nvim")
 		use("MunifTanjim/nui.nvim")
+		use("dstein64/vim-startuptime")
 
 		-- UI
 		use({
