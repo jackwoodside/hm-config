@@ -61,8 +61,8 @@ map("n", "<leader>b", Telescope.buffers)
 -- Leader-/ = live grep
 map("n", "<leader>/", Telescope.live_grep)
 
--- Leader-g = git status
-map("n", "<leader>g", Telescope.git_status)
+-- Leader-gs = git status
+map("n", "<leader>gs", Telescope.git_status)
 
 -- Leader-n = todo-comments (notes)
 map("n", "<leader>n", "<CMD>TodoTelescope<CR>")
