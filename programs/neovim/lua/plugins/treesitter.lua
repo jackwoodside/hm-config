@@ -1,8 +1,11 @@
 require("nvim-treesitter.configs").setup({
 	auto_install = true,
 	ensure_installed = {
+		"bash",
 		"regex",
 		"lua",
+		"markdown",
+		"markdown_inline",
 		"query",
 		"vim",
 	},

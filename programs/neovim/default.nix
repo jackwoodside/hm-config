@@ -5,7 +5,6 @@
         enable = true;
         vimAlias = true;
         withNodeJs = true;
-        plugins = with pkgs.vimPlugins; [ packer-nvim ];
     };
 
     home.packages = with pkgs; [
