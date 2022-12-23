@@ -2,11 +2,14 @@ require("nvim-treesitter.configs").setup({
 	auto_install = true,
 	ensure_installed = {
 		"bash",
-		"regex",
+		"gitattributes",
+		"gitcommit",
+		"git_rebase",
 		"lua",
 		"markdown",
 		"markdown_inline",
 		"query",
+		"regex",
 		"vim",
 	},
 	highlight = {
