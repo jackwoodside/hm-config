@@ -5,14 +5,6 @@ return require("lazy").setup({
 
 	-- LSP
 	{
-		"windwp/nvim-autopairs",
-		event = "InsertCharPre",
-		config = function()
-			require("plugins.pairs")
-		end,
-	},
-
-	{
 		"hrsh7th/nvim-cmp",
 		event = "InsertEnter",
 		config = function()
@@ -163,6 +155,13 @@ return require("lazy").setup({
 		"rcarriga/nvim-notify",
 		config = function()
 			require("plugins.notify")
+		end,
+	},
+
+	{
+		"echasnovski/mini.pairs",
+		config = function()
+			require("mini.pairs").setup()
 		end,
 	},
 
