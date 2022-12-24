@@ -3,6 +3,7 @@ starter.setup({
 	header = "",
 	items = {
 		starter.sections.recent_files(10, false),
+		starter.sections.recent_files(10, true),
 	},
 	footer = "",
 	content_hooks = {
