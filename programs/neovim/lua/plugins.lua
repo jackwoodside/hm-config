@@ -192,4 +192,4 @@ return require("lazy").setup({
 	},
 
 	{ "kyazdani42/nvim-web-devicons" },
-})
+}, { lockfile = vim.fn.stdpath("config") .. "/../nixpkgs/programs/neovim/lazy-lock.json" })
