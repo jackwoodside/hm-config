@@ -59,9 +59,6 @@ return require("lazy").setup({
 			require("telescope").load_extension("fzf")
 		end,
 	},
-	{
-		"nvim-telescope/telescope-symbols.nvim",
-	},
 
 	-- Treesitter
 	{
