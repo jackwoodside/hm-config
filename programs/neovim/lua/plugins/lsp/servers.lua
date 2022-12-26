@@ -61,13 +61,27 @@ lsp.ltex.setup({
 	},
 })
 
--- FIX: fix sioyek integration, build on every write
 lsp.texlab.setup({
 	flags = flags,
 	capabilities = capabilities,
 	on_attach = on_attach,
 	settings = {
 		texlab = {
+			build = {
+				onSave = true,
+				forwardSearchAfter = true,
+			},
+			chktek = { onOpenAndSave = true },
+			forwardSearch = {
+				executable = "sioyek",
+				args = {
+					"--forward-search-file",
+					"%f",
+					"--forward-search-line",
+					"%l",
+					"%p",
+				},
+			},
 			diagnostics = {
 				ignoredPatterns = {
 					"Underfull",
