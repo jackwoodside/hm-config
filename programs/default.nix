@@ -53,6 +53,7 @@
         jabref
         julia-bin
         kdenlive
+        lazygit
         libnotify
         maim
         networkmanager_dmenu
