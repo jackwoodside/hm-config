@@ -118,14 +118,6 @@ return require("lazy").setup({
 	},
 
 	{
-		"numToStr/Navigator.nvim",
-		event = "CursorHold",
-		config = function()
-			require("plugins.navigator")
-		end,
-	},
-
-	{
 		"folke/noice.nvim",
 		event = "VimEnter",
 		config = function()
