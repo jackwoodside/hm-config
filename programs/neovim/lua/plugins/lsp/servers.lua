@@ -56,9 +56,11 @@ lsp.ltex.setup({
 			dictionary = {
 				["en-AU"] = words,
 			},
+			checkFrequency = "save",
 		},
 	},
 })
+
 -- FIX: fix sioyek integration, build on every write
 lsp.texlab.setup({
 	flags = flags,
@@ -66,12 +68,6 @@ lsp.texlab.setup({
 	on_attach = on_attach,
 	settings = {
 		texlab = {
-			build = {
-				onSave = true,
-			},
-			chktex = {
-				onOpenAndSave = true,
-			},
 			diagnostics = {
 				ignoredPatterns = {
 					"Underfull",
