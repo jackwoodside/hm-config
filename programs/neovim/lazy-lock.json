@@ -1,5 +1,4 @@
 {
-  "FTerm.nvim": { "branch": "master", "commit": "d1320892cc2ebab472935242d9d992a2c9570180" },
   "LuaSnip": { "branch": "master", "commit": "5570fd797eae0790affb54ea669a150cad76db5d" },
   "Navigator.nvim": { "branch": "master", "commit": "a2e7d6ebd26e647469135d4096dfa89da4f070e5" },
   "catppuccin": { "branch": "main", "commit": "55f43a952856bc0029e6cef066297c6cfab3451d" },
@@ -32,5 +31,5 @@
   "telescope-fzf-native.nvim": { "branch": "main", "commit": "fab3e2212e206f4f8b3bbaa656e129443c9b802e" },
   "telescope.nvim": { "branch": "master", "commit": "e960efa60e97df58e089b00270f09d60f27202c8" },
   "todo-comments.nvim": { "branch": "main", "commit": "c1760010f46992165995aaa52ca967f473a2e8e6" },
-  "vim-fugitive": { "branch": "master", "commit": "5b0b138483de17a8fd8dfcec0b491782c8fbf102" }
+  "toggleterm.nvim": { "branch": "main", "commit": "b02a1674bd0010d7982b056fd3df4f717ff8a57a" }
 }

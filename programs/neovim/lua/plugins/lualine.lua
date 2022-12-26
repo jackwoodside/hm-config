@@ -25,7 +25,7 @@ require("lualine").setup({
 		section_separators = "",
 		icons_enabled = true,
 		globalstatus = true,
-		disabled_filetypes = { "starter" },
+		disabled_filetypes = { "starter", "toggleterm" },
 	},
 	extensions = { "quickfix", "nvim-tree" },
 	sections = {

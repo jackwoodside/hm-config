@@ -94,21 +94,6 @@ return require("lazy").setup({
 	},
 
 	{
-		"numToStr/FTerm.nvim",
-		event = "CursorHold",
-		config = function()
-			require("plugins.fterm")
-		end,
-	},
-
-	{
-		"tpope/vim-fugitive",
-		config = function()
-			require("plugins.fugitive")
-		end,
-	},
-
-	{
 		"lewis6991/gitsigns.nvim",
 		event = "BufRead",
 		config = function()
@@ -176,6 +161,13 @@ return require("lazy").setup({
 		},
 		config = function()
 			require("todo-comments").setup()
+		end,
+	},
+
+	{
+		"akinsho/toggleterm.nvim",
+		config = function()
+			require("plugins.toggleterm")
 		end,
 	},
 
