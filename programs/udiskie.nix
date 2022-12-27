@@ -1,8 +1,8 @@
 { ... }:
 
 {
-    services.udiskie = {
-        enable = true;
-        tray = "never";
-    };
+  services.udiskie = {
+    enable = true;
+    tray = "never";
+  };
 }

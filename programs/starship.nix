@@ -1,10 +1,8 @@
 { lib, ... }:
 
 {
-    programs.starship = {
-        enable = true;
-        settings = {
-            scan_timeout = 10;
-        };
-    };
+  programs.starship = {
+    enable = true;
+    settings = { scan_timeout = 10; };
+  };
 }

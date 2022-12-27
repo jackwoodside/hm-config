@@ -1,8 +1,9 @@
 [
-    (self: super: {
-        discord = super.discord.overrideAttrs (_: {
-            src = builtins.fetchTarball https://discord.com/api/download?platform=linux&format=tar.gz;
-        });
-        clisp = super.clisp.override { readline = super.pkgs.readline6; };
-    })
+  (self: super: {
+    discord = super.discord.overrideAttrs (_: {
+      src = builtins.fetchTarball
+        "https://discord.com/api/download?platform=linux&format=tar.gz";
+    });
+    clisp = super.clisp.override { readline = super.pkgs.readline6; };
+  })
 ]
