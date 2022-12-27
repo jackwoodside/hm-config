@@ -9,11 +9,12 @@
 
     home.packages = with pkgs; [
         clang-tools
+        cpplint
         gcc
         gnumake
         ltex-ls
         luajitPackages.luacheck
-        nixpkgs-fmt
+        nixfmt
         rnix-lsp
         rust-analyzer
         rustfmt

@@ -71,7 +71,7 @@ lsp.texlab.setup({
 				onSave = true,
 				forwardSearchAfter = true,
 			},
-			chktek = { onOpenAndSave = true },
+			chktex = { onOpenAndSave = true },
 			forwardSearch = {
 				executable = "sioyek",
 				args = {
