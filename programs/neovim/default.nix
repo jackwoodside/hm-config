@@ -23,7 +23,6 @@
         sumneko-lua-language-server
         texlab
     ];
-    # TODO: add latex snippets
     xdg.configFile = {
         "nvim/init.lua".source = ./init.lua;
         "nvim/lua/autocmds.lua".source = ./lua/autocmds.lua;
