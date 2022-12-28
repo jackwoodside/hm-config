@@ -15,13 +15,11 @@ nls.setup({
 		cmp.luasnip,
 		-- Diagnostics
 		dgn.checkmake,
-		dgn.cpplint,
 		dgn.luacheck.with({
 			extra_args = { "--globals", "vim", "--std", "luajit" },
 		}),
 		dgn.shellcheck,
 		-- Formatting
-		fmt.clang_format,
 		fmt.latexindent,
 		fmt.nixfmt,
 		fmt.rustfmt,

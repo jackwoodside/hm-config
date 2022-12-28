@@ -49,10 +49,5 @@
     "nvim/lua/plugins/lsp/servers.lua".source = ./lua/plugins/lsp/servers.lua;
     "nvim/lua/plugins/lsp/utils.lua".source = ./lua/plugins/lsp/utils.lua;
     "nvim/lua/plugins/lsp/words.txt".source = ./lua/plugins/lsp/words.txt;
-
-    "clangd/config.yaml".text = ''
-                  CompileFlags:
-      Add: [-ferror-limit=0, -std=c++17]
-    '';
   };
 }
