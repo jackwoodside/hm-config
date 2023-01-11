@@ -14,6 +14,7 @@
             nil
             python310Packages.jedi-language-server
             python310Packages.autopep8
+            shellcheck
             shfmt
             stylua
             sumneko-lua-language-server
@@ -26,6 +27,6 @@
         url = "git@github.com:jackwoodside/nvim-config.git";
         shallow = true;
         ref = "main";
-        rev = "fe4656d8932c46fd2912cb7d54b7793bd73b78cf";
+        rev = "e30afe42000addf1ed85676d54368f46f3b9a2db";
     };
 }
