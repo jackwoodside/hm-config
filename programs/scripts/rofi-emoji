@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Check for xclip
-xclip -h > /dev/null || exit
+xclip -h >/dev/null || exit
 
 chosen=$(grep -v "#" ~/.local/share/emoji | rofi -dmenu -i -p 'Emojis')
 

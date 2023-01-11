@@ -6,16 +6,16 @@ path="$folder/$name"
 
 ANS=$(echo -e "\n\n" | rofi -theme ~/.local/share/rofi-buttons.rasi -font "RobotoMono 300" -dmenu -i)
 if [ "$ANS" == "" ]; then
-    args="--delay=0.5 --select"
+	args="--delay=0.5 --select"
 elif [ "$ANS" == "" ]; then
-    args="--delay=1 --window=$(xdotool getactivewindow)"
+	args="--delay=1 --window=$(xdotool getactivewindow)"
 elif [ "$ANS" == "" ]; then
-    args="--delay=1"
+	args="--delay=1"
 else
-    exit 1
+	exit 1
 fi
 maim --hidecursor --quiet --quality=3 --format='png' $args "$path" && {
-    notify-send "Saved as $name"
+	notify-send "Saved as $name"
 
-    xclip -selection clipboard -target 'image/png' -in "$path"
+	xclip -selection clipboard -target 'image/png' -in "$path"
 }
