@@ -10,6 +10,7 @@
         extraPackages = with pkgs; [
             clang-tools
             fortran-language-server
+            fprettify
             ltex-ls
             nil
             python310Packages.jedi-language-server
@@ -27,6 +28,6 @@
         url = "git@github.com:jackwoodside/nvim-config.git";
         shallow = true;
         ref = "main";
-        rev = "af3ab4cb655fee8c10cfde2d4dce8f349bd3e651";
+        rev = "e9bac35f3f926d650bec3c3211a2d44e6cae6c7a";
     };
 }
