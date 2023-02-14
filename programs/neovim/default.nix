@@ -8,13 +8,13 @@
         withPython3 = true;
 # Required for LSPs, mason doesn't always work on nix
         extraPackages = with pkgs; [
+            black
             clang-tools
             fortran-language-server
             fprettify
             ltex-ls
             nil
             python310Packages.jedi-language-server
-            python310Packages.autopep8
             shellcheck
             shfmt
             stylua
