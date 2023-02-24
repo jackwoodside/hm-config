@@ -9,6 +9,9 @@
       "move_left" = "h";
       "move_right" = "l";
       "fit_to_page_width" = "f";
+      "fit_to_page_height" = "F";
+      "next_page" = "<pagedown>";
+      "previous_page" = "<pageup>";
       "close_window" = "q";
     };
     config = {
