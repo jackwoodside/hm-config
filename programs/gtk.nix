@@ -1,15 +1,25 @@
 { pkgs, ... }:
 
+
+
 {
   gtk = {
     enable = true;
     theme = {
-      package = pkgs.catppuccin-gtk;
-      name = "Catppuccin-Dark";
+      name = "Catppuccin-Mocha-Compact-Lavender-Dark";
+      package = pkgs.catppuccin-gtk.override {
+        accents = [ "lavender" ];
+        size = "compact";
+        variant = "mocha";
+      };
     };
     iconTheme = {
-      package = pkgs.catppuccin-gtk;
-      name = "Catppuccin-Dark";
+      name = "Catppuccin-Mocha-Compact-Lavender-Dark";
+      package = pkgs.catppuccin-gtk.override {
+        accents = [ "lavender" ];
+        size = "compact";
+        variant = "mocha";
+      };
     };
   };
 }
