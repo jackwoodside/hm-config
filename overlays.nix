@@ -4,5 +4,6 @@
       src = builtins.fetchTarball
         "https://discord.com/api/download?platform=linux&format=tar.gz";
     });
+    mathematica = super.mathematica.override { webdoc = true; };
   })
 ]

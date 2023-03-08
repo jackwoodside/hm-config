@@ -54,6 +54,7 @@
     lazygit
     libnotify
     maim
+    mathematica
     networkmanager_dmenu
     obs-studio
     playerctl
