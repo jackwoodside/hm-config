@@ -23,11 +23,11 @@
         ];
     };
 
-    home.packages = with pkgs; [ cargo gcc gnumake ];
+    home.packages = with pkgs; [ cargo gcc gnumake neovim-remote ];
     xdg.configFile."nvim".source = builtins.fetchGit {
         url = "git@github.com:jackwoodside/nvim-config.git";
         shallow = true;
         ref = "main";
-        rev = "e3457ef40391760c480302de56faf6baee2a39e0";
+        rev = "4d246cce15db13471661852541ce8c3f88dff95a";
     };
 }
