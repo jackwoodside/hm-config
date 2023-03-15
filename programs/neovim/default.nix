@@ -3,7 +3,6 @@
 {
     programs.neovim = {
         enable = true;
-        vimAlias = true;
         withNodeJs = true;
         withPython3 = true;
 # Required for LSPs, mason doesn't always work on nix
