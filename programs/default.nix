@@ -42,7 +42,7 @@
     exa
     fd
     feh
-    ffmpeg
+    ffmpeg-full
     ffmpegthumbnailer
     firefox
     gimp
