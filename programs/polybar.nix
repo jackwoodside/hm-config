@@ -84,7 +84,7 @@
       };
       "module/wifi" = {
         type = "internal/network";
-        interface = "wlo1";
+        interface = "wlp3s0";
         interval = 3;
         label-connected = "";
         label-disconnected = "";
