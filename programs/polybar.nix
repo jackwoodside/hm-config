@@ -102,7 +102,7 @@
       };
       "module/backlight" = {
         type = "internal/backlight";
-        card = "intel_backlight";
+        card = "amdgpu_bl0";
         format = "<label>";
         label = " %percentage%%";
       };
