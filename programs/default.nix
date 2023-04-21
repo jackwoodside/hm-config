@@ -79,4 +79,19 @@
     youtube-dl
     zoxide
   ];
+
+  # Default applications
+  xdg.mimeApps = {
+      enable = true;
+      defaultApplications = {
+        "application/pdf" = [
+            "sioyek.desktop"
+            "firefox.desktop"
+        ];
+        "image/png" = [
+            "sxiv.desktop"
+            "gimp.desktop"
+        ];
+    };
+  };
 }
