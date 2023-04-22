@@ -19,7 +19,6 @@
               *.Z) uncompress "$archive" ;;
               *.7z) 7z x "$archive" ;;
               *.xz) unxz "$archive" ;;
-              *.exe) cabextract "$archive" ;;
             esac
         }}'';
         find = ''''${{
@@ -31,12 +30,18 @@
                 fi
                 lf -remote "send $id $cmd $f"
         }}'';
+        open = ''''${{
+            case $(xdg-mime query filetype "$f") in
+                text/*) nvim "$f";;
+                *) xdg-open "$f" > /dev/null &;;
+            esac
+        }}'';
     };
 
     keybindings = {
         "/" = "search";
         "<c-f>" = "find";
-        "<c-h>" = "set hidden!";
+        "<backspace>" = "set hidden!"; # actually <c-h>
         "D" = "delete";
         "gg" = "top";
         "G" = "bottom";
@@ -45,6 +50,8 @@
         "gm" = "cd /run/media/jack";
     };
 
+    previewer.source = ./previewer;
+
     settings = {
       dircounts = true;
       dirfirst = true;
@@ -52,6 +59,7 @@
       icons = true;
       ignorecase = true;
       incsearch = true;
+      preview = true;
       scrolloff = 2;
     };
   };

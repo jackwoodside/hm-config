@@ -11,7 +11,7 @@
     ./gtk.nix
     ./htop.nix
     ./i3.nix
-    ./lf.nix
+    ./lf
     ./mpv.nix
     ./neovim
     ./networkmanager-dmenu.nix
@@ -35,7 +35,9 @@
     roboto-mono
     font-awesome
     (nerdfonts.override { fonts = [ "RobotoMono" ]; })
+
     arandr
+    bat
     bitwarden-cli
     brightnessctl
     discord
@@ -55,8 +57,10 @@
     libnotify
     maim
     mathematica
+    mediainfo
     networkmanager_dmenu
     obs-studio
+    p7zip
     playerctl
     poppler_utils
     pulseaudio
@@ -73,6 +77,7 @@
     texlive.combined.scheme-full
     tree
     ueberzug
+    unrar
     unzip
     xclip
     xdotool
