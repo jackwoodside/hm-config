@@ -180,21 +180,20 @@
                   set $workspace2 "2:"
                   set $workspace3 "3:"
                   set $workspace4 "4:"
-                  set $workspace5 "5:"
-                  set $workspace6 "6:"
+                  set $workspace5 "5:"
+                  set $workspace6 "6:"
                   set $workspace7 "7:"
-                  set $workspace8 "8:"
-                  set $workspace9 "9:"
-                  set $workspace10 "10:"
+                  set $workspace8 "8:"
+                  set $workspace9 "9:"
 
                   assign [class="(?i)firefox"] $workspace1
                   assign [class="discord"] $workspace2
                   assign [class="(?i)sioyek"] $workspace3
-                  assign [class="(?i)mathematica"] $workspace4
-                  assign [class="(?i)virt-viewer"] $workspace4
-                  assign [class="(?i)steam"] $workspace5
-                  assign [class="itch"] $workspace5
-                  for_window [class="Spotify"] move to workspace $workspace10
+                  assign [class="(?i)mathematica"] $workspace5
+                  assign [class="(?i)virt-viewer"] $workspace5
+                  assign [class="(?i)steam"] $workspace8
+                  assign [class="itch"] $workspace8
+                  for_window [class="Spotify"] move to workspace $workspace9
     '';
   };
 }
