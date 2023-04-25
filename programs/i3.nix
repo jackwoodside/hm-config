@@ -130,7 +130,6 @@
           "${modifier}+7" = "workspace $workspace7";
           "${modifier}+8" = "workspace $workspace8";
           "${modifier}+9" = "workspace $workspace9";
-          "${modifier}+0" = "workspace $workspace10";
 
           "${modifier}+Shift+1" = "move container to workspace $workspace1";
           "${modifier}+Shift+2" = "move container to workspace $workspace2";
@@ -141,7 +140,6 @@
           "${modifier}+Shift+7" = "move container to workspace $workspace7";
           "${modifier}+Shift+8" = "move container to workspace $workspace8";
           "${modifier}+Shift+9" = "move container to workspace $workspace9";
-          "${modifier}+Shift+0" = "move container to workspace $workspace10";
         };
 
       startup = [

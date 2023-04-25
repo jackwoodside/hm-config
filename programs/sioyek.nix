@@ -23,6 +23,7 @@
       "should_use_multiple_monitors" = "0";
       "overview_size" = "0.85 0.85";
       "inverse_search_command" = "nvr --remote \"%1\" +%2";
+      "synctex_highlight_color" = "0.0 0.0 0.0";
     };
   };
 }
