@@ -20,6 +20,7 @@
     ./rofi
     ./scripts
     ./sioyek.nix
+    ./spectrwm.nix
     ./starship.nix
     ./udiskie.nix
     ./unclutter.nix
