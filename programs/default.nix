@@ -72,6 +72,7 @@
     ripgrep
     root
     spotify
+    sqlite
     sshfs
     steam
     sxiv
