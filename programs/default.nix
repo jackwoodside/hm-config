@@ -13,7 +13,7 @@
     ./i3.nix
     ./lf
     ./mpv.nix
-    ./neovim
+    ./neovim.nix
     ./networkmanager-dmenu.nix
     ./picom.nix
     ./polybar.nix
