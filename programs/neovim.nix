@@ -5,7 +5,6 @@
         enable = true;
         withNodeJs = true;
         withPython3 = true;
-# Required for LSPs, mason doesn't always work on nix
         extraPackages = with pkgs; [
             black
             clang-tools
@@ -27,6 +26,6 @@
         url = "git@github.com:jackwoodside/nvim-config.git";
         shallow = true;
         ref = "main";
-        rev = "49ece404214e29c9ce27dfe7499d4711751cd96a";
+        rev = "2e6c2e85f67b6bb28a150c4c0a56756082699ffb";
     };
 }

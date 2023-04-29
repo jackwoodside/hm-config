@@ -6,6 +6,7 @@
     ./alacritty.nix
     ./direnv.nix
     ./dunst.nix
+    ./fish.nix
     ./fzf.nix
     ./git.nix
     ./gtk.nix
@@ -25,7 +26,6 @@
     ./udiskie.nix
     ./unclutter.nix
     ./x.nix
-    ./zsh.nix
   ];
 
   # Enable font management.
@@ -72,6 +72,7 @@
     ripgrep
     root
     spotify
+    sqlite
     sshfs
     steam
     sxiv

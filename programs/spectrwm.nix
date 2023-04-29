@@ -17,6 +17,7 @@
         emoji = "Mod+u";
         files = "Mod+w";
         latex = "Mod+l";
+        menu = "Mod+d";
         mount = "Mod+m";
         network = "Mod+n";
         power = "Mod+BackSpace";
@@ -40,6 +41,7 @@
         emoji = "~/.local/bin/rofi-emoji";
         files = "alacritty -e lf";
         latex = "~/.local/bin/rofi-latex";
+        menu = "rofi -show drun";
         mount = "~/.local/bin/rofi-mount";
         unmount = "~/.local/bin/rofi-umount";
         network = "networkmanager_dmenu";
@@ -55,13 +57,12 @@
 
     settings = {
         modkey = "Mod4";
-        workspace_limit = 10;
 
         # Statusbar
-        bar_at_bottom = 0;
+        bar_at_bottom = 1;
         bar_border_width = 0;
         bar_color = "rgb:1e/1e/2e";
-        bar_font = "RobotoMono:style=regular:pixelsize=12,Font Awesome 6 Brands Regular:style=regular:pixelsize=12, Font Awesome 6 Free Regular:style=regular:pixelsize=12,Font Awesome 6 Free Solid:style=regular:pixelsize=12";
+        bar_font = "RobotoMono Nerd Font:style=regular:pixelsize=12";
         bar_font_color = "rgb:cd/d6/f4";
         bar_format = "+I+D";
         bar_justify = "left";
@@ -70,7 +71,25 @@
         border_width = 2;
         color_focus = "rgb:cd/d6/f4";
         color_unfocus = "rgb:58/5b/70";
+        region_padding = 10;
         tile_gap = 10;
+
+        # Workspaces
+        workspace_limit = 10;
+        name = "ws[1]:";
+#        name = "ws[2]:";
+#        name = "ws[3]:";
+#        name = "ws[4]:";
+#        name = "ws[5]:";
+#        name = "ws[6]:";
+#        name = "ws[7]:";
+#        name = "ws[8]:";
+#        name = "ws[9]:";
+#        name = "ws[10]:";
     };
+
+    unbindings = [
+        "MOD+Shift+Delete"
+    ];
   };
 }
