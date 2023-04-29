@@ -26,6 +26,7 @@
     ./udiskie.nix
     ./unclutter.nix
     ./x.nix
+    ./xplr.nix
   ];
 
   # Enable font management.
@@ -83,6 +84,7 @@
     unzip
     xclip
     xdotool
+    xplr
     youtube-dl
     zoxide
   ];
