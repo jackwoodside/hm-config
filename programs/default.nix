@@ -26,7 +26,7 @@
     ./udiskie.nix
     ./unclutter.nix
     ./x.nix
-    ./xplr.nix
+#./xplr.nix
   ];
 
   # Enable font management.
