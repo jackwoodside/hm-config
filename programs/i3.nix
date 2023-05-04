@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, lib, ... }:
 
 {
   xsession.windowManager.i3 = {
@@ -48,7 +48,7 @@
 
       floating = {
         border = 2;
-        criteria = [ { instance = "taskmanager"; } { instance = "dropdown"; } ];
+        criteria = [{ instance = "taskmanager"; } { instance = "dropdown"; }];
       };
 
       fonts = {

@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   # Home Manager programs.
@@ -26,7 +26,7 @@
     ./udiskie.nix
     ./unclutter.nix
     ./x.nix
-#   ./xplr.nix
+    #   ./xplr.nix
   ];
 
   # Enable font management.
@@ -91,16 +91,16 @@
 
   # Default applications
   xdg.mimeApps = {
-      enable = true;
-      defaultApplications = {
-        "application/pdf" = [
-            "sioyek.desktop"
-            "firefox.desktop"
-        ];
-        "image/png" = [
-            "sxiv.desktop"
-            "gimp.desktop"
-        ];
+    enable = true;
+    defaultApplications = {
+      "application/pdf" = [
+        "sioyek.desktop"
+        "firefox.desktop"
+      ];
+      "image/png" = [
+        "sxiv.desktop"
+        "gimp.desktop"
+      ];
     };
   };
 }

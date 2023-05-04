@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ ... }:
 
 {
   # Let Home Manager install and manage itself
@@ -15,7 +15,3 @@
   # Home Manager release
   home.stateVersion = "20.09";
 }
-
-# TODO: catppuccin theming
-# spicetify
-# grub
