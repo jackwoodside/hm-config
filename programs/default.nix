@@ -49,6 +49,7 @@
     ffmpeg-full
     ffmpegthumbnailer
     firefox
+    freecad
     gimp
     imagemagick
     inkscape
