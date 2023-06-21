@@ -3,7 +3,7 @@
 {
   programs.git = {
     enable = true;
-    userEmail = "20267593+0003c9fe@users.noreply.github.com";
+    userEmail = "20267593+jackwoodside@users.noreply.github.com";
     userName = "jackwoodside";
   };
 }
