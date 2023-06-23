@@ -42,6 +42,7 @@
     bat
     bitwarden-cli
     brightnessctl
+    chafa
     discord
     exa
     fd
