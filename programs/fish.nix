@@ -37,7 +37,8 @@
       gs = "git status";
       gr = "git restore";
       vim = "nvim --listen /tmp/nvimsocket";
-      server = "ssh -Y -L 5901:127.0.0.1:5962 jaw103@nucl03";
+      server = "ssh -Y jaw103@nucl03";
+      server-tunnel = "ssh -Y -L 5901:127.0.0.1:5962 jaw103@nucl03";
       mountserver =
         "sshfs -o reconnect,ServerAliveInterval=20,idmap=user jaw103@nucl03:/scratch3/labr ~/Documents/server/labr && sshfs -o reconnect,ServerAliveInterval=20,idmap=user jaw103@nucl03:/home/jaw103 ~/Documents/server/jaw103";
     };
