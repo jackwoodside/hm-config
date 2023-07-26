@@ -81,6 +81,7 @@
         label-volume = " %percentage%%";
         label-muted = " %percentage%%";
         label-muted-foreground = "\${colors.foreground-alt}";
+        interval = 0;
       };
       "module/wifi" = {
         type = "internal/network";
