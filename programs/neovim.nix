@@ -23,6 +23,6 @@
     url = "git@github.com:jackwoodside/nvim-config.git";
     shallow = true;
     ref = "main";
-    rev = "f2540a1fdd63a34a4af6b9acb0238b0ca162362a";
+    rev = "c1661d1b42f2c4db18fd1cc9472667669b64953e";
   };
 }
