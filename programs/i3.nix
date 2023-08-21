@@ -173,6 +173,9 @@
                   for_window [instance="taskmanager"] resize set 1200 700
                   for_window [instance="taskmanager"] move position center
 
+      # vpn
+                  for_window [instance="gpclient"] move position center
+
       # workspace settings
                   set $workspace1 "1:"
                   set $workspace2 "2:"
