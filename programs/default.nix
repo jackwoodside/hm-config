@@ -26,7 +26,6 @@
     ./udiskie.nix
     ./unclutter.nix
     ./x.nix
-    #   ./xplr.nix
   ];
 
   # Enable font management.
@@ -34,23 +33,19 @@
 
   # Misc programs.
   home.packages = with pkgs; [
-    roboto-mono
     font-awesome
-    (nerdfonts.override { fonts = [ "RobotoMono" ]; })
+    jetbrains-mono
+    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
 
     arandr
     bat
     bitwarden-cli
     brightnessctl
-    chafa
     discord
-    exa
+    eza
     fd
     feh
-    ffmpeg-full
-    ffmpegthumbnailer
     firefox
-    freecad
     gimp
     imagemagick
     inkscape
@@ -60,34 +55,23 @@
     lazygit
     libnotify
     maim
-    mathematica
-    mediainfo
     networkmanager_dmenu
-    obs-studio
     p7zip
     playerctl
     poppler_utils
     pulseaudio
     pulsemixer
     pympress
-    qbittorrent
-    remmina
     ripgrep
-    root
     spotify
-    sqlite
-    sshfs
     steam
     sxiv
     texlive.combined.scheme-full
     tree
-    ueberzug
     unrar
     unzip
     xclip
     xdotool
-    xplr
-    youtube-dl
     zoxide
   ];
 

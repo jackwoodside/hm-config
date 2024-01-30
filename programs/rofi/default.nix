@@ -4,7 +4,7 @@
   programs.rofi = {
     enable = true;
     cycle = true;
-    font = "RobotoMono 20";
+    font = "JetBrainsMono Nerd Font 20";
     theme = ./rofi.rasi;
     extraConfig = {
       show-icons = false;

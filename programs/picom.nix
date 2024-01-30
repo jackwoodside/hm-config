@@ -3,7 +3,7 @@
 {
   services.picom = {
     enable = true;
-    backend = "glx";
+    backend = "xrender";
     fade = true;
     fadeDelta = 4;
     fadeSteps = [ 3.0e-2 3.0e-2 ];

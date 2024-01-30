@@ -60,7 +60,7 @@
       bar_at_bottom = 1;
       bar_border_width = 0;
       bar_color = "rgb:1e/1e/2e";
-      bar_font = "RobotoMono Nerd Font:style=regular:pixelsize=12";
+      bar_font = "JetBrainsMono Nerd Font:style=regular:pixelsize=12";
       bar_font_color = "rgb:cd/d6/f4";
       bar_format = "+I+D";
       bar_justify = "left";

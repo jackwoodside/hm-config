@@ -5,7 +5,7 @@
     enable = true;
     settings = {
       font = {
-        normal.family = "RobotoMono Nerd Font";
+        normal.family = "JetBrainsMono Nerd Font";
         size = 10.0;
       };
       colors = {

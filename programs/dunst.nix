@@ -12,7 +12,7 @@
         offset = "10x10";
         transparency = "20";
         frame_width = "2";
-        font = "RobotoMono 16";
+        font = "JetBrainsMono Nerd Font 16";
         idle_threshold = 120;
         line_height = 0;
         word_wrap = "yes";

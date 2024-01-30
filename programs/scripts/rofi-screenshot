@@ -4,7 +4,7 @@ folder="$HOME/Pictures"
 name="$(date +'%Y-%m-%d-%H%M%S').png"
 path="$folder/$name"
 
-ANS=$(echo -e "\n\n" | rofi -theme ~/.local/share/rofi-buttons.rasi -font "RobotoMono 300" -dmenu -i)
+ANS=$(echo -e "\n\n" | rofi -theme ~/.local/share/rofi-buttons.rasi -font "JetBrainsMono 300" -dmenu -i)
 if [ "$ANS" == "" ]; then
 	args="--delay=0.5 --select"
 elif [ "$ANS" == "" ]; then
@@ -14,7 +14,7 @@ elif [ "$ANS" == "" ]; then
 else
 	exit 1
 fi
-maim --hidecursor --quiet --quality=3 --format='png' $args "$path" && {
+maim --hidecursor --quiet --quality=3 --format='png' "$args" "$path" && {
 	notify-send "Saved as $name"
 
 	xclip -selection clipboard -target 'image/png' -in "$path"

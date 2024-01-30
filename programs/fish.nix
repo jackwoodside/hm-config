@@ -22,12 +22,13 @@
       --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
     '';
     shellAliases = {
-      ls = "exa --icons -T -L=1";
-      ls2 = "exa --icons -T -L=2";
-      ls3 = "exa --icons -T -L=3";
+      ls = "eza --icons -T -L=1";
+      ls2 = "eza --icons -T -L=2";
+      ls3 = "eza --icons -T -L=3";
       grep = "rg";
       find = "fd";
       c = "clear";
+      cat = "bat";
       pd = "mpv --really-quiet $PWD & disown && exit";
       ga = "git add";
       gc = "git commit";

@@ -52,7 +52,7 @@
       };
 
       fonts = {
-        names = [ "RobotoMono" ];
+        names = [ "JetBrains Mono" ];
         size = 10.0;
       };
 
