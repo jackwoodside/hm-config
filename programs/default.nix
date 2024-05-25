@@ -41,11 +41,8 @@
     bat
     bitwarden-cli
     brightnessctl
-<<<<<<< Updated upstream
-=======
     chafa
     desmume
->>>>>>> Stashed changes
     discord
     eza
     fd
@@ -69,10 +66,7 @@
     pympress
     ripgrep
     spotify
-<<<<<<< Updated upstream
-=======
-    sqlite
->>>>>>> Stashed changes
+    changes
     steam
     sxiv
     texlive.combined.scheme-full
@@ -81,10 +75,7 @@
     unzip
     xclip
     xdotool
-<<<<<<< Updated upstream
-=======
     youtube-dl
->>>>>>> Stashed changes
     zoxide
   ];
 
