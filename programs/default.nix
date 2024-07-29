@@ -42,6 +42,7 @@
     bat
     bitwarden-cli
     brightnessctl
+    chafa
     desmume
     discord
     eza
@@ -74,6 +75,7 @@
     unzip
     xclip
     xdotool
+    youtube-dl
     zoxide
   ];
 
