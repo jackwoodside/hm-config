@@ -166,6 +166,7 @@
 
       # picture-in-picture
                   for_window [title="(?i)picture-in-picture"] sticky enable
+                  for_window [title="(?i)windows projector (preview)"] sticky enable
                   for_window [title="(?i)picture-in-picture"] move scratchpad, scratchpad show
 
       # task manager

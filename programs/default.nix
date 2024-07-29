@@ -4,6 +4,7 @@
   # Home Manager programs.
   imports = [
     ./alacritty.nix
+    ./autorandr
     ./direnv.nix
     ./dunst.nix
     ./fish.nix
@@ -41,6 +42,7 @@
     bat
     bitwarden-cli
     brightnessctl
+    desmume
     discord
     eza
     fd
